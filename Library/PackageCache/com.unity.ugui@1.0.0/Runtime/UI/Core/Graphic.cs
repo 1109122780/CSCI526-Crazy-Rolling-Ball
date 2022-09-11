@@ -853,9 +853,6 @@ namespace UnityEngine.UI
                     var group = components[i] as CanvasGroup;
                     if (group != null)
                     {
-                        if (!group.enabled)
-                            continue;
-
                         if (ignoreParentGroups == false && group.ignoreParentGroups)
                         {
                             ignoreParentGroups = true;
