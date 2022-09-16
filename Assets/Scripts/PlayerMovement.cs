@@ -25,13 +25,13 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape)){
-            Application.Quit();
-        }
+        // if (Input.GetKeyDown(KeyCode.Escape)){
+        //     Application.Quit();
+        // }
         
         // Reset game when R is pressed:
         if (Input.GetKeyDown(KeyCode.R)){
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene("Game Scene 1");
             Time.timeScale = 1;
             return;
         }
