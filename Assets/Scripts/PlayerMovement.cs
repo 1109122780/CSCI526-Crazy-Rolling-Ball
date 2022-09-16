@@ -35,6 +35,12 @@ public class PlayerMovement : MonoBehaviour
             Time.timeScale = 1;
             return;
         }
+        // Enter the shop
+        if (Input.GetKeyDown(KeyCode.T)){
+            SceneManager.LoadScene("StoreScene");
+            Time.timeScale = 1;
+            return;
+        }
 
         // The left and right movement:
         float x = Input.GetAxis("Horizontal");
