@@ -68,8 +68,8 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate() {
         // If we can jump (preventing double jump in the air):
         if (canJump) {
-            rb.AddForce(0, jumpSpeed, 0, ForceMode.Impulse);
             canJump = false;
+            rb.AddForce(0, jumpSpeed, 0, ForceMode.Impulse);
         }
     }
 }
