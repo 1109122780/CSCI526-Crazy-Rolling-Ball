@@ -18,6 +18,7 @@ COMMAND LINE ARGUMENTS:
 -name
 AssetImportWorker1
 -projectPath
+<<<<<<< Updated upstream
 /Users/tiny/Desktop/usc_2022fall/cs526/CSCI526-Crazy-Rolling-Ball-main
 -logFile
 Logs/AssetImportWorker1.log
@@ -25,6 +26,15 @@ Logs/AssetImportWorker1.log
 61320
 Successfully changed project path to: /Users/tiny/Desktop/usc_2022fall/cs526/CSCI526-Crazy-Rolling-Ball-main
 /Users/tiny/Desktop/usc_2022fall/cs526/CSCI526-Crazy-Rolling-Ball-main
+=======
+/Users/tiny/Documents/GitHub/CSCI526-Crazy-Rolling-Ball
+-logFile
+Logs/AssetImportWorker1.log
+-srvPort
+54148
+Successfully changed project path to: /Users/tiny/Documents/GitHub/CSCI526-Crazy-Rolling-Ball
+/Users/tiny/Documents/GitHub/CSCI526-Crazy-Rolling-Ball
+>>>>>>> Stashed changes
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -54,11 +64,19 @@ Successfully changed project path to: /Users/tiny/Desktop/usc_2022fall/cs526/CSC
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
+<<<<<<< Updated upstream
 Refreshing native plugins compatible for Editor in 72.71 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.8f1 (b30333d56e81)
 [Subsystems] Discovering subsystems at path /Applications/Unity/Unity.app/Contents/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path /Users/tiny/Desktop/usc_2022fall/cs526/CSCI526-Crazy-Rolling-Ball-main/Assets
+=======
+Refreshing native plugins compatible for Editor in 79.34 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.8f1 (b30333d56e81)
+[Subsystems] Discovering subsystems at path /Applications/Unity/Unity.app/Contents/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path /Users/tiny/Documents/GitHub/CSCI526-Crazy-Rolling-Ball/Assets
+>>>>>>> Stashed changes
 GfxDevice: creating device client; threaded=0; jobified=0
  preferred device: Apple M1 Pro (high power)
 Metal devices available: 1
@@ -69,11 +87,16 @@ Initialize mono
 Mono path[0] = '/Applications/Unity/Unity.app/Contents/Managed'
 Mono path[1] = '/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit-macos'
 Mono config path = '/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/etc'
+<<<<<<< Updated upstream
 Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56621
+=======
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56292
+>>>>>>> Stashed changes
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: /Applications/Unity/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: /Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+<<<<<<< Updated upstream
 Registered in 0.002326 seconds.
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
@@ -84,11 +107,24 @@ Mono: successfully reloaded assembly
 Domain Reload Profiling:
 	ReloadAssembly (443ms)
 		BeginReloadAssembly (61ms)
+=======
+Registered in 0.000803 seconds.
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 90.54 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.478 seconds
+Domain Reload Profiling:
+	ReloadAssembly (478ms)
+		BeginReloadAssembly (70ms)
+>>>>>>> Stashed changes
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (0ms)
+<<<<<<< Updated upstream
 		EndReloadAssembly (312ms)
 			LoadAssemblies (66ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
@@ -103,12 +139,29 @@ Domain Reload Profiling:
 				BeforeProcessingInitializeOnLoad (1ms)
 				ProcessInitializeOnLoadAttributes (81ms)
 				ProcessInitializeOnLoadMethodAttributes (25ms)
+=======
+		EndReloadAssembly (338ms)
+			LoadAssemblies (71ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (73ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (23ms)
+			SetupLoadedEditorAssemblies (210ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (91ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (88ms)
+				ProcessInitializeOnLoadMethodAttributes (26ms)
+>>>>>>> Stashed changes
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
+<<<<<<< Updated upstream
 Registered in 0.001658 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image /Users/tiny/Desktop/usc_2022fall/cs526/CSCI526-Crazy-Rolling-Ball-main/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
@@ -145,10 +198,49 @@ Domain Reload Profiling:
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (2ms)
+=======
+Registered in 0.006656 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image /Users/tiny/Documents/GitHub/CSCI526-Crazy-Rolling-Ball/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/tiny/Documents/GitHub/CSCI526-Crazy-Rolling-Ball/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.45 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.797 seconds
+Domain Reload Profiling:
+	ReloadAssembly (797ms)
+		BeginReloadAssembly (142ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (84ms)
+		EndReloadAssembly (580ms)
+			LoadAssemblies (62ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (207ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (43ms)
+			SetupLoadedEditorAssemblies (238ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (64ms)
+				ProcessInitializeOnLoadAttributes (152ms)
+				ProcessInitializeOnLoadMethodAttributes (17ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (4ms)
+>>>>>>> Stashed changes
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launching external process: /Applications/Unity/Unity.app/Contents/Tools/UnityShaderCompiler
+<<<<<<< Updated upstream
 Launched and connected shader compiler UnityShaderCompiler after 0.05 seconds
 Refreshing native plugins compatible for Editor in 0.45 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
@@ -156,6 +248,15 @@ Unloading 3759 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 30 unused Assets / (154.9 KB). Loaded Objects now: 4234.
 Memory consumption went from 266.1 MB to 265.9 MB.
 Total: 2.600250 ms (FindLiveObjects: 0.122500 ms CreateObjectMapping: 0.048709 ms MarkObjects: 2.286041 ms  DeleteObjects: 0.142125 ms)
+=======
+Launched and connected shader compiler UnityShaderCompiler after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.39 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3819 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 30 unused Assets / (169.8 KB). Loaded Objects now: 4276.
+Memory consumption went from 257.2 MB to 257.0 MB.
+Total: 5.156667 ms (FindLiveObjects: 0.158083 ms CreateObjectMapping: 0.050500 ms MarkObjects: 4.713667 ms  DeleteObjects: 0.233167 ms)
+>>>>>>> Stashed changes
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -168,6 +269,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
+<<<<<<< Updated upstream
 Received Import Request.
   Time since last request: 1274224.339107 seconds.
   path: Assets/Cube (1) Variant.prefab
@@ -226,10 +328,29 @@ Mono: successfully reloaded assembly
 Domain Reload Profiling:
 	ReloadAssembly (674ms)
 		BeginReloadAssembly (143ms)
+=======
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001576 seconds.
+Begin MonoManager ReloadAssembly
+Thread 0x294087000 may have been prematurely finalized
+Symbol file LoadedFromMemory doesn't match image /Users/tiny/Documents/GitHub/CSCI526-Crazy-Rolling-Ball/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/tiny/Documents/GitHub/CSCI526-Crazy-Rolling-Ball/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.77 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.840 seconds
+Domain Reload Profiling:
+	ReloadAssembly (841ms)
+		BeginReloadAssembly (155ms)
+>>>>>>> Stashed changes
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (5ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
+<<<<<<< Updated upstream
 			CreateAndSetChildDomain (51ms)
 		EndReloadAssembly (467ms)
 			LoadAssemblies (58ms)
@@ -296,10 +417,21 @@ Domain Reload Profiling:
 			ReleaseScriptCaches (1ms)
 			RebuildScriptCaches (33ms)
 			SetupLoadedEditorAssemblies (221ms)
+=======
+			CreateAndSetChildDomain (59ms)
+		EndReloadAssembly (617ms)
+			LoadAssemblies (85ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (224ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (37ms)
+			SetupLoadedEditorAssemblies (264ms)
+>>>>>>> Stashed changes
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (6ms)
 				SetLoadedEditorAssemblies (1ms)
 				RefreshPlugins (1ms)
+<<<<<<< Updated upstream
 				BeforeProcessingInitializeOnLoad (48ms)
 				ProcessInitializeOnLoadAttributes (147ms)
 				ProcessInitializeOnLoadMethodAttributes (18ms)
@@ -384,6 +516,22 @@ Unloading 3737 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 23 unused Assets / (139.8 KB). Loaded Objects now: 4252.
 Memory consumption went from 277.6 MB to 277.4 MB.
 Total: 4.584625 ms (FindLiveObjects: 0.132083 ms CreateObjectMapping: 0.043583 ms MarkObjects: 4.299625 ms  DeleteObjects: 0.108417 ms)
+=======
+				BeforeProcessingInitializeOnLoad (50ms)
+				ProcessInitializeOnLoadAttributes (179ms)
+				ProcessInitializeOnLoadMethodAttributes (26ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (4ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.49 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3785 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 23 unused Assets / (131.9 KB). Loaded Objects now: 4280.
+Memory consumption went from 254.0 MB to 253.8 MB.
+Total: 7.372500 ms (FindLiveObjects: 0.173250 ms CreateObjectMapping: 0.078709 ms MarkObjects: 6.996084 ms  DeleteObjects: 0.123125 ms)
+>>>>>>> Stashed changes
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -398,16 +546,25 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
+<<<<<<< Updated upstream
 Registered in 0.001341 seconds.
 Begin MonoManager ReloadAssembly
 Thread 0x16defb000 may have been prematurely finalized
 Symbol file LoadedFromMemory doesn't match image /Users/tiny/Desktop/usc_2022fall/cs526/CSCI526-Crazy-Rolling-Ball-main/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image /Users/tiny/Desktop/usc_2022fall/cs526/CSCI526-Crazy-Rolling-Ball-main/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+=======
+Registered in 0.001391 seconds.
+Begin MonoManager ReloadAssembly
+Thread 0x16f56b000 may have been prematurely finalized
+Symbol file LoadedFromMemory doesn't match image /Users/tiny/Documents/GitHub/CSCI526-Crazy-Rolling-Ball/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/tiny/Documents/GitHub/CSCI526-Crazy-Rolling-Ball/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+>>>>>>> Stashed changes
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
 Refreshing native plugins compatible for Editor in 0.56 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
+<<<<<<< Updated upstream
 - Completed reload, in  0.624 seconds
 Domain Reload Profiling:
 	ReloadAssembly (625ms)
@@ -424,10 +581,29 @@ Domain Reload Profiling:
 			ReleaseScriptCaches (1ms)
 			RebuildScriptCaches (33ms)
 			SetupLoadedEditorAssemblies (200ms)
+=======
+- Completed reload, in  0.762 seconds
+Domain Reload Profiling:
+	ReloadAssembly (765ms)
+		BeginReloadAssembly (174ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (61ms)
+		EndReloadAssembly (524ms)
+			LoadAssemblies (72ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (199ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (32ms)
+			SetupLoadedEditorAssemblies (214ms)
+>>>>>>> Stashed changes
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (6ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (1ms)
+<<<<<<< Updated upstream
 				BeforeProcessingInitializeOnLoad (44ms)
 				ProcessInitializeOnLoadAttributes (133ms)
 				ProcessInitializeOnLoadMethodAttributes (16ms)
@@ -559,17 +735,31 @@ Domain Reload Profiling:
 				BeforeProcessingInitializeOnLoad (42ms)
 				ProcessInitializeOnLoadAttributes (131ms)
 				ProcessInitializeOnLoadMethodAttributes (16ms)
+=======
+				BeforeProcessingInitializeOnLoad (45ms)
+				ProcessInitializeOnLoadAttributes (144ms)
+				ProcessInitializeOnLoadMethodAttributes (18ms)
+>>>>>>> Stashed changes
 				AfterProcessingInitializeOnLoad (1ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (2ms)
 Platform modules already initialized, skipping
+<<<<<<< Updated upstream
 Refreshing native plugins compatible for Editor in 0.84 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3737 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 23 unused Assets / (157.2 KB). Loaded Objects now: 4261.
 Memory consumption went from 277.8 MB to 277.6 MB.
 Total: 2.263500 ms (FindLiveObjects: 0.122250 ms CreateObjectMapping: 0.046083 ms MarkObjects: 1.985334 ms  DeleteObjects: 0.109375 ms)
+=======
+Refreshing native plugins compatible for Editor in 1.34 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3785 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 23 unused Assets / (146.9 KB). Loaded Objects now: 4283.
+Memory consumption went from 254.1 MB to 254.0 MB.
+Total: 2.558083 ms (FindLiveObjects: 0.131291 ms CreateObjectMapping: 0.049125 ms MarkObjects: 2.263292 ms  DeleteObjects: 0.113500 ms)
+>>>>>>> Stashed changes
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -582,6 +772,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
+<<<<<<< Updated upstream
 Received Import Request.
   Time since last request: 50.008078 seconds.
   path: Assets/CollideDestroy.cs
@@ -610,10 +801,29 @@ Mono: successfully reloaded assembly
 Domain Reload Profiling:
 	ReloadAssembly (700ms)
 		BeginReloadAssembly (113ms)
+=======
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001364 seconds.
+Begin MonoManager ReloadAssembly
+Thread 0x16f56b000 may have been prematurely finalized
+Symbol file LoadedFromMemory doesn't match image /Users/tiny/Documents/GitHub/CSCI526-Crazy-Rolling-Ball/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/tiny/Documents/GitHub/CSCI526-Crazy-Rolling-Ball/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.82 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.901 seconds
+Domain Reload Profiling:
+	ReloadAssembly (902ms)
+		BeginReloadAssembly (211ms)
+>>>>>>> Stashed changes
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (5ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
+<<<<<<< Updated upstream
 			CreateAndSetChildDomain (50ms)
 		EndReloadAssembly (528ms)
 			LoadAssemblies (46ms)
@@ -640,6 +850,34 @@ Unloading 3737 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 23 unused Assets / (149.7 KB). Loaded Objects now: 4264.
 Memory consumption went from 278.0 MB to 277.9 MB.
 Total: 2.480583 ms (FindLiveObjects: 0.132750 ms CreateObjectMapping: 0.045125 ms MarkObjects: 2.181000 ms  DeleteObjects: 0.121084 ms)
+=======
+			CreateAndSetChildDomain (106ms)
+		EndReloadAssembly (614ms)
+			LoadAssemblies (82ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (229ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (37ms)
+			SetupLoadedEditorAssemblies (255ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (8ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (51ms)
+				ProcessInitializeOnLoadAttributes (172ms)
+				ProcessInitializeOnLoadMethodAttributes (22ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (3ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.87 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3785 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 23 unused Assets / (131.9 KB). Loaded Objects now: 4286.
+Memory consumption went from 254.4 MB to 254.2 MB.
+Total: 2.726250 ms (FindLiveObjects: 0.141666 ms CreateObjectMapping: 0.049000 ms MarkObjects: 2.417625 ms  DeleteObjects: 0.116875 ms)
+>>>>>>> Stashed changes
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -654,6 +892,7 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
+<<<<<<< Updated upstream
 Registered in 0.001164 seconds.
 Begin MonoManager ReloadAssembly
 Thread 0x16defb000 may have been prematurely finalized
@@ -687,17 +926,61 @@ Domain Reload Profiling:
 				BeforeProcessingInitializeOnLoad (43ms)
 				ProcessInitializeOnLoadAttributes (133ms)
 				ProcessInitializeOnLoadMethodAttributes (17ms)
+=======
+Registered in 0.001336 seconds.
+Begin MonoManager ReloadAssembly
+Thread 0x16f56b000 may have been prematurely finalized
+Symbol file LoadedFromMemory doesn't match image /Users/tiny/Documents/GitHub/CSCI526-Crazy-Rolling-Ball/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/tiny/Documents/GitHub/CSCI526-Crazy-Rolling-Ball/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.46 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.762 seconds
+Domain Reload Profiling:
+	ReloadAssembly (763ms)
+		BeginReloadAssembly (113ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (47ms)
+		EndReloadAssembly (588ms)
+			LoadAssemblies (53ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (229ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (34ms)
+			SetupLoadedEditorAssemblies (240ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (43ms)
+				ProcessInitializeOnLoadAttributes (170ms)
+				ProcessInitializeOnLoadMethodAttributes (20ms)
+>>>>>>> Stashed changes
 				AfterProcessingInitializeOnLoad (1ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (2ms)
 Platform modules already initialized, skipping
+<<<<<<< Updated upstream
 Refreshing native plugins compatible for Editor in 0.88 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3737 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 23 unused Assets / (149.7 KB). Loaded Objects now: 4267.
 Memory consumption went from 278.2 MB to 278.1 MB.
 Total: 2.331500 ms (FindLiveObjects: 0.121333 ms CreateObjectMapping: 0.045500 ms MarkObjects: 2.021250 ms  DeleteObjects: 0.142708 ms)
+=======
+Refreshing native plugins compatible for Editor in 0.95 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3785 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 23 unused Assets / (132.0 KB). Loaded Objects now: 4289.
+Memory consumption went from 254.6 MB to 254.4 MB.
+Total: 2.562666 ms (FindLiveObjects: 0.126875 ms CreateObjectMapping: 0.046209 ms MarkObjects: 2.274875 ms  DeleteObjects: 0.114083 ms)
+>>>>>>> Stashed changes
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -710,6 +993,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
+<<<<<<< Updated upstream
 Received Import Request.
   Time since last request: 123.277015 seconds.
   path: Assets/Cube (1) Variant.prefab
@@ -6434,6 +6718,54 @@ Unloading 3738 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 25 unused Assets / (145.8 KB). Loaded Objects now: 4547.
 Memory consumption went from 299.3 MB to 299.2 MB.
 Total: 2.462042 ms (FindLiveObjects: 0.140625 ms CreateObjectMapping: 0.048458 ms MarkObjects: 2.102916 ms  DeleteObjects: 0.169542 ms)
+=======
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001313 seconds.
+Begin MonoManager ReloadAssembly
+Thread 0x16f56b000 may have been prematurely finalized
+Symbol file LoadedFromMemory doesn't match image /Users/tiny/Documents/GitHub/CSCI526-Crazy-Rolling-Ball/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/tiny/Documents/GitHub/CSCI526-Crazy-Rolling-Ball/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.49 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.787 seconds
+Domain Reload Profiling:
+	ReloadAssembly (788ms)
+		BeginReloadAssembly (183ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (9ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (68ms)
+		EndReloadAssembly (543ms)
+			LoadAssemblies (78ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (203ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (32ms)
+			SetupLoadedEditorAssemblies (234ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (7ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (45ms)
+				ProcessInitializeOnLoadAttributes (160ms)
+				ProcessInitializeOnLoadMethodAttributes (19ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (3ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.32 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3786 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 23 unused Assets / (139.5 KB). Loaded Objects now: 4293.
+Memory consumption went from 254.8 MB to 254.7 MB.
+Total: 2.850833 ms (FindLiveObjects: 0.165333 ms CreateObjectMapping: 0.049709 ms MarkObjects: 2.529583 ms  DeleteObjects: 0.105416 ms)
+>>>>>>> Stashed changes
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -6448,6 +6780,7 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
+<<<<<<< Updated upstream
 Registered in 0.001587 seconds.
 Begin MonoManager ReloadAssembly
 Thread 0x16d86b000 may have been prematurely finalized
@@ -6474,24 +6807,68 @@ Domain Reload Profiling:
 			ReleaseScriptCaches (1ms)
 			RebuildScriptCaches (32ms)
 			SetupLoadedEditorAssemblies (200ms)
+=======
+Registered in 0.001357 seconds.
+Begin MonoManager ReloadAssembly
+Thread 0x16f56b000 may have been prematurely finalized
+Symbol file LoadedFromMemory doesn't match image /Users/tiny/Documents/GitHub/CSCI526-Crazy-Rolling-Ball/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/tiny/Documents/GitHub/CSCI526-Crazy-Rolling-Ball/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.46 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.769 seconds
+Domain Reload Profiling:
+	ReloadAssembly (770ms)
+		BeginReloadAssembly (206ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (91ms)
+		EndReloadAssembly (487ms)
+			LoadAssemblies (52ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (202ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (27ms)
+			SetupLoadedEditorAssemblies (197ms)
+>>>>>>> Stashed changes
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (5ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (0ms)
+<<<<<<< Updated upstream
 				BeforeProcessingInitializeOnLoad (43ms)
 				ProcessInitializeOnLoadAttributes (133ms)
 				ProcessInitializeOnLoadMethodAttributes (17ms)
 				AfterProcessingInitializeOnLoad (1ms)
+=======
+				BeforeProcessingInitializeOnLoad (42ms)
+				ProcessInitializeOnLoadAttributes (131ms)
+				ProcessInitializeOnLoadMethodAttributes (18ms)
+				AfterProcessingInitializeOnLoad (0ms)
+>>>>>>> Stashed changes
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (2ms)
 Platform modules already initialized, skipping
+<<<<<<< Updated upstream
 Refreshing native plugins compatible for Editor in 0.85 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3738 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 23 unused Assets / (149.7 KB). Loaded Objects now: 4550.
 Memory consumption went from 299.5 MB to 299.4 MB.
 Total: 2.270083 ms (FindLiveObjects: 0.133625 ms CreateObjectMapping: 0.044084 ms MarkObjects: 1.970916 ms  DeleteObjects: 0.120917 ms)
+=======
+Refreshing native plugins compatible for Editor in 1.29 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3786 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 23 unused Assets / (132.6 KB). Loaded Objects now: 4296.
+Memory consumption went from 255.0 MB to 254.9 MB.
+Total: 2.375917 ms (FindLiveObjects: 0.117000 ms CreateObjectMapping: 0.049125 ms MarkObjects: 2.102583 ms  DeleteObjects: 0.106417 ms)
+>>>>>>> Stashed changes
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -6504,6 +6881,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
+<<<<<<< Updated upstream
 Received Import Request.
   Time since last request: 23.173668 seconds.
   path: Assets/CollideDestroy.cs
@@ -6552,16 +6930,63 @@ Domain Reload Profiling:
 				ProcessInitializeOnLoadAttributes (126ms)
 				ProcessInitializeOnLoadMethodAttributes (16ms)
 				AfterProcessingInitializeOnLoad (1ms)
+=======
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001332 seconds.
+Begin MonoManager ReloadAssembly
+Thread 0x16f56b000 may have been prematurely finalized
+Symbol file LoadedFromMemory doesn't match image /Users/tiny/Documents/GitHub/CSCI526-Crazy-Rolling-Ball/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/tiny/Documents/GitHub/CSCI526-Crazy-Rolling-Ball/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.51 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.681 seconds
+Domain Reload Profiling:
+	ReloadAssembly (682ms)
+		BeginReloadAssembly (111ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (45ms)
+		EndReloadAssembly (510ms)
+			LoadAssemblies (44ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (193ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (39ms)
+			SetupLoadedEditorAssemblies (207ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (46ms)
+				ProcessInitializeOnLoadAttributes (136ms)
+				ProcessInitializeOnLoadMethodAttributes (18ms)
+				AfterProcessingInitializeOnLoad (0ms)
+>>>>>>> Stashed changes
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (2ms)
 Platform modules already initialized, skipping
+<<<<<<< Updated upstream
 Refreshing native plugins compatible for Editor in 0.82 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3738 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 25 unused Assets / (145.9 KB). Loaded Objects now: 4553.
 Memory consumption went from 299.8 MB to 299.6 MB.
 Total: 2.517459 ms (FindLiveObjects: 0.136042 ms CreateObjectMapping: 0.047500 ms MarkObjects: 2.123917 ms  DeleteObjects: 0.209333 ms)
+=======
+Refreshing native plugins compatible for Editor in 1.07 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3786 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 23 unused Assets / (132.4 KB). Loaded Objects now: 4299.
+Memory consumption went from 255.3 MB to 255.1 MB.
+Total: 3.145584 ms (FindLiveObjects: 0.139709 ms CreateObjectMapping: 0.056417 ms MarkObjects: 2.778125 ms  DeleteObjects: 0.170417 ms)
+>>>>>>> Stashed changes
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -6576,6 +7001,7 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
+<<<<<<< Updated upstream
 Registered in 0.001734 seconds.
 Begin MonoManager ReloadAssembly
 Thread 0x16d86b000 may have been prematurely finalized
@@ -6602,10 +7028,39 @@ Domain Reload Profiling:
 			ReleaseScriptCaches (1ms)
 			RebuildScriptCaches (32ms)
 			SetupLoadedEditorAssemblies (199ms)
+=======
+Registered in 0.001396 seconds.
+Begin MonoManager ReloadAssembly
+Thread 0x16f56b000 may have been prematurely finalized
+Symbol file LoadedFromMemory doesn't match image /Users/tiny/Documents/GitHub/CSCI526-Crazy-Rolling-Ball/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/tiny/Documents/GitHub/CSCI526-Crazy-Rolling-Ball/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.54 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.705 seconds
+Domain Reload Profiling:
+	ReloadAssembly (706ms)
+		BeginReloadAssembly (112ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (50ms)
+		EndReloadAssembly (529ms)
+			LoadAssemblies (49ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (208ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (30ms)
+			SetupLoadedEditorAssemblies (215ms)
+>>>>>>> Stashed changes
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (6ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (1ms)
+<<<<<<< Updated upstream
 				BeforeProcessingInitializeOnLoad (42ms)
 				ProcessInitializeOnLoadAttributes (132ms)
 				ProcessInitializeOnLoadMethodAttributes (18ms)
@@ -6620,6 +7075,22 @@ Unloading 3738 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 23 unused Assets / (149.8 KB). Loaded Objects now: 4556.
 Memory consumption went from 300.0 MB to 299.8 MB.
 Total: 2.397458 ms (FindLiveObjects: 0.155375 ms CreateObjectMapping: 0.051500 ms MarkObjects: 2.076250 ms  DeleteObjects: 0.113500 ms)
+=======
+				BeforeProcessingInitializeOnLoad (47ms)
+				ProcessInitializeOnLoadAttributes (142ms)
+				ProcessInitializeOnLoadMethodAttributes (18ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (3ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.98 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3786 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 23 unused Assets / (147.4 KB). Loaded Objects now: 4302.
+Memory consumption went from 255.5 MB to 255.3 MB.
+Total: 3.557916 ms (FindLiveObjects: 0.364625 ms CreateObjectMapping: 0.052958 ms MarkObjects: 3.016166 ms  DeleteObjects: 0.123416 ms)
+>>>>>>> Stashed changes
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -6632,6 +7103,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
+<<<<<<< Updated upstream
 Received Import Request.
   Time since last request: 20.371320 seconds.
   path: Assets/CollideDestroy.cs
@@ -6678,18 +7150,63 @@ Domain Reload Profiling:
 				RefreshPlugins (1ms)
 				BeforeProcessingInitializeOnLoad (46ms)
 				ProcessInitializeOnLoadAttributes (143ms)
+=======
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001225 seconds.
+Begin MonoManager ReloadAssembly
+Thread 0x16f56b000 may have been prematurely finalized
+Symbol file LoadedFromMemory doesn't match image /Users/tiny/Documents/GitHub/CSCI526-Crazy-Rolling-Ball/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/tiny/Documents/GitHub/CSCI526-Crazy-Rolling-Ball/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.59 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.768 seconds
+Domain Reload Profiling:
+	ReloadAssembly (768ms)
+		BeginReloadAssembly (173ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (93ms)
+		EndReloadAssembly (532ms)
+			LoadAssemblies (48ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (226ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (34ms)
+			SetupLoadedEditorAssemblies (198ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (45ms)
+				ProcessInitializeOnLoadAttributes (127ms)
+>>>>>>> Stashed changes
 				ProcessInitializeOnLoadMethodAttributes (17ms)
 				AfterProcessingInitializeOnLoad (1ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (3ms)
 Platform modules already initialized, skipping
+<<<<<<< Updated upstream
 Refreshing native plugins compatible for Editor in 0.98 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3738 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 23 unused Assets / (142.3 KB). Loaded Objects now: 4559.
 Memory consumption went from 300.0 MB to 299.8 MB.
 Total: 2.840708 ms (FindLiveObjects: 0.156375 ms CreateObjectMapping: 0.051542 ms MarkObjects: 2.490375 ms  DeleteObjects: 0.141500 ms)
+=======
+Refreshing native plugins compatible for Editor in 1.54 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3786 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 23 unused Assets / (139.8 KB). Loaded Objects now: 4305.
+Memory consumption went from 255.7 MB to 255.6 MB.
+Total: 2.632000 ms (FindLiveObjects: 0.133333 ms CreateObjectMapping: 0.050875 ms MarkObjects: 2.324500 ms  DeleteObjects: 0.121791 ms)
+>>>>>>> Stashed changes
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -6702,6 +7219,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
+<<<<<<< Updated upstream
 Received Import Request.
   Time since last request: 41.605522 seconds.
   path: Assets/CollideDestroy.cs
@@ -6742,11 +7260,42 @@ Domain Reload Profiling:
 			ReleaseScriptCaches (1ms)
 			RebuildScriptCaches (31ms)
 			SetupLoadedEditorAssemblies (204ms)
+=======
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001424 seconds.
+Begin MonoManager ReloadAssembly
+Thread 0x16f56b000 may have been prematurely finalized
+Symbol file LoadedFromMemory doesn't match image /Users/tiny/Documents/GitHub/CSCI526-Crazy-Rolling-Ball/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/tiny/Documents/GitHub/CSCI526-Crazy-Rolling-Ball/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.53 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.614 seconds
+Domain Reload Profiling:
+	ReloadAssembly (614ms)
+		BeginReloadAssembly (77ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (3ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (29ms)
+		EndReloadAssembly (483ms)
+			LoadAssemblies (30ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (173ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (31ms)
+			SetupLoadedEditorAssemblies (209ms)
+>>>>>>> Stashed changes
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (6ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (1ms)
 				BeforeProcessingInitializeOnLoad (44ms)
+<<<<<<< Updated upstream
 				ProcessInitializeOnLoadAttributes (135ms)
 				ProcessInitializeOnLoadMethodAttributes (17ms)
 				AfterProcessingInitializeOnLoad (1ms)
@@ -6760,6 +7309,21 @@ Unloading 3738 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 23 unused Assets / (142.4 KB). Loaded Objects now: 4562.
 Memory consumption went from 300.2 MB to 300.1 MB.
 Total: 2.387083 ms (FindLiveObjects: 0.134875 ms CreateObjectMapping: 0.047875 ms MarkObjects: 2.083167 ms  DeleteObjects: 0.120458 ms)
+=======
+				ProcessInitializeOnLoadAttributes (139ms)
+				ProcessInitializeOnLoadMethodAttributes (19ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (3ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.81 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3786 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 23 unused Assets / (132.4 KB). Loaded Objects now: 4308.
+Memory consumption went from 255.9 MB to 255.8 MB.
+Total: 2.537041 ms (FindLiveObjects: 0.126709 ms CreateObjectMapping: 0.048625 ms MarkObjects: 2.238209 ms  DeleteObjects: 0.123000 ms)
+>>>>>>> Stashed changes
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -6774,6 +7338,7 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
+<<<<<<< Updated upstream
 Registered in 0.001283 seconds.
 Begin MonoManager ReloadAssembly
 Thread 0x16d86b000 may have been prematurely finalized
@@ -6788,10 +7353,27 @@ Mono: successfully reloaded assembly
 Domain Reload Profiling:
 	ReloadAssembly (620ms)
 		BeginReloadAssembly (76ms)
+=======
+Registered in 0.001224 seconds.
+Begin MonoManager ReloadAssembly
+Thread 0x16f56b000 may have been prematurely finalized
+Symbol file LoadedFromMemory doesn't match image /Users/tiny/Documents/GitHub/CSCI526-Crazy-Rolling-Ball/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/tiny/Documents/GitHub/CSCI526-Crazy-Rolling-Ball/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.74 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.678 seconds
+Domain Reload Profiling:
+	ReloadAssembly (679ms)
+		BeginReloadAssembly (97ms)
+>>>>>>> Stashed changes
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (3ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
+<<<<<<< Updated upstream
 			CreateAndSetChildDomain (25ms)
 		EndReloadAssembly (486ms)
 			LoadAssemblies (38ms)
@@ -6818,6 +7400,34 @@ Unloading 3738 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 23 unused Assets / (142.2 KB). Loaded Objects now: 4565.
 Memory consumption went from 300.4 MB to 300.3 MB.
 Total: 2.864792 ms (FindLiveObjects: 0.152458 ms CreateObjectMapping: 0.051625 ms MarkObjects: 2.383042 ms  DeleteObjects: 0.276750 ms)
+=======
+			CreateAndSetChildDomain (40ms)
+		EndReloadAssembly (525ms)
+			LoadAssemblies (41ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (219ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (31ms)
+			SetupLoadedEditorAssemblies (202ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (44ms)
+				ProcessInitializeOnLoadAttributes (133ms)
+				ProcessInitializeOnLoadMethodAttributes (18ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (4ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.11 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3786 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 23 unused Assets / (140.0 KB). Loaded Objects now: 4311.
+Memory consumption went from 256.1 MB to 256.0 MB.
+Total: 2.853417 ms (FindLiveObjects: 0.148084 ms CreateObjectMapping: 0.046041 ms MarkObjects: 2.537292 ms  DeleteObjects: 0.120958 ms)
+>>>>>>> Stashed changes
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -6832,6 +7442,7 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
+<<<<<<< Updated upstream
 Registered in 0.001442 seconds.
 Begin MonoManager ReloadAssembly
 Thread 0x16d86b000 may have been prematurely finalized
@@ -6846,10 +7457,27 @@ Mono: successfully reloaded assembly
 Domain Reload Profiling:
 	ReloadAssembly (667ms)
 		BeginReloadAssembly (127ms)
+=======
+Registered in 0.001341 seconds.
+Begin MonoManager ReloadAssembly
+Thread 0x16f56b000 may have been prematurely finalized
+Symbol file LoadedFromMemory doesn't match image /Users/tiny/Documents/GitHub/CSCI526-Crazy-Rolling-Ball/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/tiny/Documents/GitHub/CSCI526-Crazy-Rolling-Ball/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.55 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.667 seconds
+Domain Reload Profiling:
+	ReloadAssembly (667ms)
+		BeginReloadAssembly (111ms)
+>>>>>>> Stashed changes
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
+<<<<<<< Updated upstream
 			CreateAndSetChildDomain (49ms)
 		EndReloadAssembly (481ms)
 			LoadAssemblies (47ms)
@@ -6876,6 +7504,34 @@ Unloading 3738 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 23 unused Assets / (157.4 KB). Loaded Objects now: 4568.
 Memory consumption went from 300.7 MB to 300.5 MB.
 Total: 2.512584 ms (FindLiveObjects: 0.137125 ms CreateObjectMapping: 0.048125 ms MarkObjects: 2.189791 ms  DeleteObjects: 0.136292 ms)
+=======
+			CreateAndSetChildDomain (50ms)
+		EndReloadAssembly (495ms)
+			LoadAssemblies (43ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (191ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (30ms)
+			SetupLoadedEditorAssemblies (203ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (47ms)
+				ProcessInitializeOnLoadAttributes (131ms)
+				ProcessInitializeOnLoadMethodAttributes (17ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (3ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.95 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3786 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 23 unused Assets / (139.8 KB). Loaded Objects now: 4314.
+Memory consumption went from 256.4 MB to 256.2 MB.
+Total: 2.674125 ms (FindLiveObjects: 0.142542 ms CreateObjectMapping: 0.046625 ms MarkObjects: 2.356542 ms  DeleteObjects: 0.127458 ms)
+>>>>>>> Stashed changes
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -6890,6 +7546,7 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
+<<<<<<< Updated upstream
 Registered in 0.001253 seconds.
 Begin MonoManager ReloadAssembly
 Thread 0x16d86b000 may have been prematurely finalized
@@ -6934,6 +7591,52 @@ Unloading 3738 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 23 unused Assets / (149.8 KB). Loaded Objects now: 4571.
 Memory consumption went from 300.9 MB to 300.7 MB.
 Total: 2.374208 ms (FindLiveObjects: 0.148292 ms CreateObjectMapping: 0.047041 ms MarkObjects: 2.060209 ms  DeleteObjects: 0.118083 ms)
+=======
+Registered in 0.001279 seconds.
+Begin MonoManager ReloadAssembly
+Thread 0x16f56b000 may have been prematurely finalized
+Symbol file LoadedFromMemory doesn't match image /Users/tiny/Documents/GitHub/CSCI526-Crazy-Rolling-Ball/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/tiny/Documents/GitHub/CSCI526-Crazy-Rolling-Ball/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.52 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.723 seconds
+Domain Reload Profiling:
+	ReloadAssembly (727ms)
+		BeginReloadAssembly (113ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (49ms)
+		EndReloadAssembly (551ms)
+			LoadAssemblies (56ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (218ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (34ms)
+			SetupLoadedEditorAssemblies (214ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (47ms)
+				ProcessInitializeOnLoadAttributes (142ms)
+				ProcessInitializeOnLoadMethodAttributes (17ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (3ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.01 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3786 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 23 unused Assets / (139.9 KB). Loaded Objects now: 4317.
+Memory consumption went from 256.6 MB to 256.4 MB.
+Total: 2.915750 ms (FindLiveObjects: 0.148042 ms CreateObjectMapping: 0.093666 ms MarkObjects: 2.532625 ms  DeleteObjects: 0.140375 ms)
+>>>>>>> Stashed changes
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -6946,6 +7649,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
+<<<<<<< Updated upstream
 Received Import Request.
   Time since last request: 88.627559 seconds.
   path: Assets/ColliderWall.cs
@@ -6968,10 +7672,29 @@ Mono: successfully reloaded assembly
 Domain Reload Profiling:
 	ReloadAssembly (685ms)
 		BeginReloadAssembly (126ms)
+=======
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001467 seconds.
+Begin MonoManager ReloadAssembly
+Thread 0x16f56b000 may have been prematurely finalized
+Symbol file LoadedFromMemory doesn't match image /Users/tiny/Documents/GitHub/CSCI526-Crazy-Rolling-Ball/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/tiny/Documents/GitHub/CSCI526-Crazy-Rolling-Ball/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.00 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.628 seconds
+Domain Reload Profiling:
+	ReloadAssembly (629ms)
+		BeginReloadAssembly (87ms)
+>>>>>>> Stashed changes
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
+<<<<<<< Updated upstream
 			CreateAndSetChildDomain (46ms)
 		EndReloadAssembly (503ms)
 			LoadAssemblies (56ms)
@@ -6987,17 +7710,43 @@ Domain Reload Profiling:
 				BeforeProcessingInitializeOnLoad (43ms)
 				ProcessInitializeOnLoadAttributes (134ms)
 				ProcessInitializeOnLoadMethodAttributes (17ms)
+=======
+			CreateAndSetChildDomain (33ms)
+		EndReloadAssembly (482ms)
+			LoadAssemblies (35ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (180ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (32ms)
+			SetupLoadedEditorAssemblies (203ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (8ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (42ms)
+				ProcessInitializeOnLoadAttributes (135ms)
+				ProcessInitializeOnLoadMethodAttributes (16ms)
+>>>>>>> Stashed changes
 				AfterProcessingInitializeOnLoad (1ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (3ms)
 Platform modules already initialized, skipping
+<<<<<<< Updated upstream
 Refreshing native plugins compatible for Editor in 0.84 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3738 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 23 unused Assets / (142.3 KB). Loaded Objects now: 4574.
 Memory consumption went from 301.1 MB to 300.9 MB.
 Total: 2.832500 ms (FindLiveObjects: 0.139333 ms CreateObjectMapping: 0.050042 ms MarkObjects: 2.536000 ms  DeleteObjects: 0.106209 ms)
+=======
+Refreshing native plugins compatible for Editor in 0.90 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3786 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 23 unused Assets / (139.9 KB). Loaded Objects now: 4320.
+Memory consumption went from 256.8 MB to 256.6 MB.
+Total: 2.896125 ms (FindLiveObjects: 0.139208 ms CreateObjectMapping: 0.071500 ms MarkObjects: 2.237167 ms  DeleteObjects: 0.447375 ms)
+>>>>>>> Stashed changes
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -7012,6 +7761,7 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
+<<<<<<< Updated upstream
 Registered in 0.001468 seconds.
 Begin MonoManager ReloadAssembly
 Thread 0x16d86b000 may have been prematurely finalized
@@ -7056,6 +7806,52 @@ Unloading 3738 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 23 unused Assets / (149.7 KB). Loaded Objects now: 4577.
 Memory consumption went from 301.3 MB to 301.1 MB.
 Total: 2.572959 ms (FindLiveObjects: 0.147417 ms CreateObjectMapping: 0.049583 ms MarkObjects: 2.259084 ms  DeleteObjects: 0.116083 ms)
+=======
+Registered in 0.001314 seconds.
+Begin MonoManager ReloadAssembly
+Thread 0x16f56b000 may have been prematurely finalized
+Symbol file LoadedFromMemory doesn't match image /Users/tiny/Documents/GitHub/CSCI526-Crazy-Rolling-Ball/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/tiny/Documents/GitHub/CSCI526-Crazy-Rolling-Ball/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.55 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.677 seconds
+Domain Reload Profiling:
+	ReloadAssembly (677ms)
+		BeginReloadAssembly (105ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (42ms)
+		EndReloadAssembly (513ms)
+			LoadAssemblies (39ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (200ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (31ms)
+			SetupLoadedEditorAssemblies (212ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (47ms)
+				ProcessInitializeOnLoadAttributes (139ms)
+				ProcessInitializeOnLoadMethodAttributes (18ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (3ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.08 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3786 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 23 unused Assets / (139.9 KB). Loaded Objects now: 4323.
+Memory consumption went from 257.0 MB to 256.8 MB.
+Total: 2.771208 ms (FindLiveObjects: 0.141500 ms CreateObjectMapping: 0.049291 ms MarkObjects: 2.446167 ms  DeleteObjects: 0.133041 ms)
+>>>>>>> Stashed changes
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -7068,6 +7864,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
+<<<<<<< Updated upstream
 Received Import Request.
   Time since last request: 46.402884 seconds.
   path: Assets/ColliderWall.cs
@@ -7120,6 +7917,54 @@ Unloading 3738 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 23 unused Assets / (149.8 KB). Loaded Objects now: 4580.
 Memory consumption went from 301.5 MB to 301.4 MB.
 Total: 2.551083 ms (FindLiveObjects: 0.145833 ms CreateObjectMapping: 0.049000 ms MarkObjects: 2.224708 ms  DeleteObjects: 0.130542 ms)
+=======
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001431 seconds.
+Begin MonoManager ReloadAssembly
+Thread 0x16f56b000 may have been prematurely finalized
+Symbol file LoadedFromMemory doesn't match image /Users/tiny/Documents/GitHub/CSCI526-Crazy-Rolling-Ball/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/tiny/Documents/GitHub/CSCI526-Crazy-Rolling-Ball/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.01 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.726 seconds
+Domain Reload Profiling:
+	ReloadAssembly (727ms)
+		BeginReloadAssembly (85ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (32ms)
+		EndReloadAssembly (581ms)
+			LoadAssemblies (36ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (182ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (92ms)
+			SetupLoadedEditorAssemblies (230ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (48ms)
+				ProcessInitializeOnLoadAttributes (157ms)
+				ProcessInitializeOnLoadMethodAttributes (18ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (3ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.03 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3786 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 23 unused Assets / (132.6 KB). Loaded Objects now: 4326.
+Memory consumption went from 257.2 MB to 257.1 MB.
+Total: 3.186000 ms (FindLiveObjects: 0.152709 ms CreateObjectMapping: 0.079000 ms MarkObjects: 2.813750 ms  DeleteObjects: 0.139541 ms)
+>>>>>>> Stashed changes
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -7134,6 +7979,7 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
+<<<<<<< Updated upstream
 Registered in 0.001354 seconds.
 Begin MonoManager ReloadAssembly
 Thread 0x16d86b000 may have been prematurely finalized
@@ -7148,10 +7994,27 @@ Mono: successfully reloaded assembly
 Domain Reload Profiling:
 	ReloadAssembly (656ms)
 		BeginReloadAssembly (86ms)
+=======
+Registered in 0.001470 seconds.
+Begin MonoManager ReloadAssembly
+Thread 0x16f56b000 may have been prematurely finalized
+Symbol file LoadedFromMemory doesn't match image /Users/tiny/Documents/GitHub/CSCI526-Crazy-Rolling-Ball/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/tiny/Documents/GitHub/CSCI526-Crazy-Rolling-Ball/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.58 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.767 seconds
+Domain Reload Profiling:
+	ReloadAssembly (768ms)
+		BeginReloadAssembly (139ms)
+>>>>>>> Stashed changes
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (5ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
+<<<<<<< Updated upstream
 			CreateAndSetChildDomain (26ms)
 		EndReloadAssembly (508ms)
 			LoadAssemblies (41ms)
@@ -7160,24 +8023,48 @@ Domain Reload Profiling:
 			ReleaseScriptCaches (1ms)
 			RebuildScriptCaches (34ms)
 			SetupLoadedEditorAssemblies (213ms)
+=======
+			CreateAndSetChildDomain (56ms)
+		EndReloadAssembly (564ms)
+			LoadAssemblies (58ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (210ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (33ms)
+			SetupLoadedEditorAssemblies (244ms)
+>>>>>>> Stashed changes
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (6ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (1ms)
+<<<<<<< Updated upstream
 				BeforeProcessingInitializeOnLoad (46ms)
 				ProcessInitializeOnLoadAttributes (142ms)
+=======
+				BeforeProcessingInitializeOnLoad (60ms)
+				ProcessInitializeOnLoadAttributes (158ms)
+>>>>>>> Stashed changes
 				ProcessInitializeOnLoadMethodAttributes (18ms)
 				AfterProcessingInitializeOnLoad (1ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (3ms)
 Platform modules already initialized, skipping
+<<<<<<< Updated upstream
 Refreshing native plugins compatible for Editor in 0.83 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3738 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 23 unused Assets / (142.3 KB). Loaded Objects now: 4583.
 Memory consumption went from 301.7 MB to 301.6 MB.
 Total: 2.482167 ms (FindLiveObjects: 0.142417 ms CreateObjectMapping: 0.047292 ms MarkObjects: 2.147291 ms  DeleteObjects: 0.143875 ms)
+=======
+Refreshing native plugins compatible for Editor in 1.03 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3786 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 23 unused Assets / (139.9 KB). Loaded Objects now: 4329.
+Memory consumption went from 257.4 MB to 257.3 MB.
+Total: 2.720125 ms (FindLiveObjects: 0.140292 ms CreateObjectMapping: 0.057208 ms MarkObjects: 2.409667 ms  DeleteObjects: 0.112125 ms)
+>>>>>>> Stashed changes
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -7192,6 +8079,7 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
+<<<<<<< Updated upstream
 Registered in 0.001272 seconds.
 Begin MonoManager ReloadAssembly
 Thread 0x16d86b000 may have been prematurely finalized
@@ -7225,17 +8113,61 @@ Domain Reload Profiling:
 				BeforeProcessingInitializeOnLoad (55ms)
 				ProcessInitializeOnLoadAttributes (174ms)
 				ProcessInitializeOnLoadMethodAttributes (22ms)
+=======
+Registered in 0.001282 seconds.
+Begin MonoManager ReloadAssembly
+Thread 0x16f56b000 may have been prematurely finalized
+Symbol file LoadedFromMemory doesn't match image /Users/tiny/Documents/GitHub/CSCI526-Crazy-Rolling-Ball/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/tiny/Documents/GitHub/CSCI526-Crazy-Rolling-Ball/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.51 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.622 seconds
+Domain Reload Profiling:
+	ReloadAssembly (622ms)
+		BeginReloadAssembly (75ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (3ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (27ms)
+		EndReloadAssembly (487ms)
+			LoadAssemblies (34ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (173ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (35ms)
+			SetupLoadedEditorAssemblies (208ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (45ms)
+				ProcessInitializeOnLoadAttributes (140ms)
+				ProcessInitializeOnLoadMethodAttributes (17ms)
+>>>>>>> Stashed changes
 				AfterProcessingInitializeOnLoad (1ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (3ms)
 Platform modules already initialized, skipping
+<<<<<<< Updated upstream
 Refreshing native plugins compatible for Editor in 1.06 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3738 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 23 unused Assets / (142.4 KB). Loaded Objects now: 4586.
 Memory consumption went from 302.2 MB to 302.1 MB.
 Total: 15.010542 ms (FindLiveObjects: 0.201250 ms CreateObjectMapping: 0.095333 ms MarkObjects: 14.503667 ms  DeleteObjects: 0.209208 ms)
+=======
+Refreshing native plugins compatible for Editor in 0.92 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3786 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 23 unused Assets / (133.0 KB). Loaded Objects now: 4332.
+Memory consumption went from 257.6 MB to 257.5 MB.
+Total: 2.483000 ms (FindLiveObjects: 0.171125 ms CreateObjectMapping: 0.059000 ms MarkObjects: 2.141583 ms  DeleteObjects: 0.110583 ms)
+>>>>>>> Stashed changes
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
