@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     // Jump parameters:
     public float jumpSpeed;
     private bool canJump;
+    private bool isgrounded;
     Rigidbody rb;
 
     // Start is called before the first frame update
@@ -57,12 +58,18 @@ public class PlayerMovement : MonoBehaviour
         } 
 
         // If space key is pressed, we jump:
-        if (rb.velocity.y <= 1.5 && rb.velocity.y >= -1.5 ) {
-            if (Input.GetKeyDown(KeyCode.Space)) {
-                canJump = true;
-            }
+        if (Input.GetKeyDown(KeyCode.Space) && isgrounded) {
+            canJump = true;
+            isgrounded = false;
         }
         
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.tag == "Ground") {
+            isgrounded = true;
+        }
     }
 
     void FixedUpdate() {
