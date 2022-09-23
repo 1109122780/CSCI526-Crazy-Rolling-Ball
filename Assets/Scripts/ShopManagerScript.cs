@@ -16,10 +16,11 @@ public class ShopManagerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        string fileName = @"Assets/Materials/Shop.json";
-        string jsonString = System.IO.File.ReadAllText(fileName);
-        shop = JsonUtility.FromJson<Shop>(jsonString);
-        CoinsText.text = "Coins: " + shop.Coins;
+        // string fileName = @"Assets/Materials/Shop.json";
+        // string jsonString = System.IO.File.ReadAllText(fileName);
+        // string jsonString = Resources.Load<TextAsset>("Shop").text;
+        // shop = JsonUtility.FromJson<Shop>(jsonString);
+        // CoinsText.text = "Coins: " + shop.Coins;
 
         foreach (ShopItem shopItem in shop.ShopItemList)
         {
