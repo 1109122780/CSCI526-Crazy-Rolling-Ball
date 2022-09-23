@@ -57,7 +57,7 @@ public class PlayerMovement : MonoBehaviour
         } 
 
         // If space key is pressed, we jump:
-        if (rb.velocity.y == 0) {
+        if (rb.velocity.y <= 1.5 && rb.velocity.y >= -1.5 ) {
             if (Input.GetKeyDown(KeyCode.Space)) {
                 canJump = true;
             }

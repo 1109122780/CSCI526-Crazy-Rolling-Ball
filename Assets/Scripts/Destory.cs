@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class Destory : MonoBehaviour
 {
-    public GameObject destroy;
+    private GameObject destroy;
     public GameObject lose;
     double change = 2;
     // public  int ballSize;
     // Start is called before the first frame update
+    void Start(){
+        destroy = GameObject.Find("ColliderDestroy");
+    }
 
     void OnCollisionEnter(Collision other)
     {

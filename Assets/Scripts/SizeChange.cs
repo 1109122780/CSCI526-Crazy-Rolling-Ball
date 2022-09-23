@@ -20,6 +20,9 @@ public class SizeChange : MonoBehaviour
     {
       
         if (Input.GetKeyDown(KeyCode.Q)) {
+            if(Time.timeScale == 0) {
+                return;
+            }
             v = transform.localPosition; 
             if(transform.localScale.y > 1.0f){
             v.y = 1;
@@ -36,6 +39,9 @@ public class SizeChange : MonoBehaviour
                 
         }
         if (Input.GetKeyDown(KeyCode.E)) {
+            if(Time.timeScale == 0) {
+                return;
+            }
             v = transform.localPosition;
             if(transform.localScale.y < 1.0f)
             {
