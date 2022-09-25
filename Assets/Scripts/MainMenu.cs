@@ -25,7 +25,7 @@ public class MainMenu : MonoBehaviour
         //SceneManager.LoadScene(0);
     }
 
-    public void StartTutorial()
+    public void StartOption()
     {
         SceneManager.LoadScene(secondLevel);
     }

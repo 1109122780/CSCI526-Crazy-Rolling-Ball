@@ -228,11 +228,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9076022936905817987, guid: c59deb650c1ea37408830079f2b03ea4, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.0000078678
+      value: -0.00001049
       objectReference: {fileID: 0}
     - target: {fileID: 9076022936905817987, guid: c59deb650c1ea37408830079f2b03ea4, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -84.6
+      value: 25.293
       objectReference: {fileID: 0}
     - target: {fileID: 9076022936905817987, guid: c59deb650c1ea37408830079f2b03ea4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -651,7 +651,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 9076022936905817984, guid: c59deb650c1ea37408830079f2b03ea4, type: 3}
       propertyPath: m_Name
-      value: TutorialButton
+      value: OptionButton
       objectReference: {fileID: 0}
     - target: {fileID: 9076022936905817986, guid: c59deb650c1ea37408830079f2b03ea4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -671,7 +671,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9076022936905817986, guid: c59deb650c1ea37408830079f2b03ea4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: StartTutorial
+      value: StartOption
       objectReference: {fileID: 0}
     - target: {fileID: 9076022936905817986, guid: c59deb650c1ea37408830079f2b03ea4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -751,7 +751,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9076022936905817987, guid: c59deb650c1ea37408830079f2b03ea4, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -72.8
       objectReference: {fileID: 0}
     - target: {fileID: 9076022936905817987, guid: c59deb650c1ea37408830079f2b03ea4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -767,7 +767,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9076022938054634424, guid: c59deb650c1ea37408830079f2b03ea4, type: 3}
       propertyPath: m_text
-      value: Tutorial
+      value: Option
       objectReference: {fileID: 0}
     - target: {fileID: 9076022938054634424, guid: c59deb650c1ea37408830079f2b03ea4, type: 3}
       propertyPath: m_fontSize
@@ -901,4 +901,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firstLevel: Game Scene 1
-  secondLevel: Game Scene 1
+  secondLevel: Option Scene
