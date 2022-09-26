@@ -8,6 +8,9 @@ public class SizeChange : MonoBehaviour
     private Vector3 v;
     private bool sizeCool;
     public bool jumpLock = false;
+    private PlayerMovement jump_script;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +23,9 @@ public class SizeChange : MonoBehaviour
     {
       
         if (Input.GetKeyDown(KeyCode.Q) && sizeCool) {
+            if(!jump_script.isgrounded) {
+                return;
+            }
             if(Time.timeScale == 0) {
                 return;
             }
@@ -45,6 +51,9 @@ public class SizeChange : MonoBehaviour
                 
         }
         if (Input.GetKeyDown(KeyCode.E) && sizeCool) {
+            if(!jump_script.isgrounded) {
+                return;
+            }
             if(Time.timeScale == 0) {
                 sizeCool = true;
                 return;
