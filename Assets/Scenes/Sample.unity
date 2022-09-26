@@ -2652,6 +2652,7 @@ MonoBehaviour:
   lose: {fileID: 449080253}
   currentScene: Tutorial
   jumpSpeed: 6
+  isgrounded: 0
 --- !u!135 &1367041189
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2759,6 +2760,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpLock: 0
+  jump_script: {fileID: 1367041188}
 --- !u!1 &1397502901
 GameObject:
   m_ObjectHideFlags: 0

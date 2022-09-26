@@ -8,7 +8,7 @@ public class SizeChange : MonoBehaviour
     private Vector3 v;
     private bool sizeCool;
     public bool jumpLock = false;
-    private PlayerMovement jump_script;
+    public PlayerMovement jump_script;
 
 
     // Start is called before the first frame update
