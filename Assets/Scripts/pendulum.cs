@@ -58,27 +58,4 @@ public class pendulum : MonoBehaviour
 		transform.rotation = Quaternion.Lerp(_start,_end,(Mathf.Sin(_startTime * _speed + Mathf.PI / 2) + 1.0f) / 2.0f);
 		
 	}
-	
-	void OnTriggerEnter(Collider other) {
-	    if (other.name == "Player")
-	    {
-	        if (player.GetComponent<PlayerMovement>().health > 0)
-	        {
-	            player.GetComponent<PlayerMovement>().health --;
-	            if (checkPoint.GetComponent<CheckPoint>().isTriggered)
-	            {
-	                player.transform.position = checkPoint.GetComponent<Transform>().position;
-	            }
-	            else
-	            {
-	                player.transform.position = new Vector3(0, 1, 0);
-	            }
-	        }
-	        else
-	        {
-	            lose.SetActive(true);
-	            Time.timeScale = 0;
-	        }
-	    }
-	}
 }
