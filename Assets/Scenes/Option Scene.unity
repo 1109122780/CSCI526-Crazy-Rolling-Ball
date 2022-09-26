@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -241,9 +241,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3721b8e1d89ca94085e43478d81cfc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tutorialLevel: Game Scene 1
-  firstLevel: Game Scene 1
-  secondLevel: Game Scene 1
+  tutorialLevel: Tutorial
+  firstLevel: FirstLevel
+  secondLevel: SecondLevel
   mainMenuLevel: Main Menu
 --- !u!1 &280041219
 GameObject:
@@ -766,7 +766,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000015259, y: 159}
+  m_AnchoredPosition: {x: 0, y: 150}
   m_SizeDelta: {x: 590.7102, y: 62.9417}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1126607242
@@ -823,8 +823,8 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -1225,7 +1225,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9076022938054634424, guid: c59deb650c1ea37408830079f2b03ea4, type: 3}
       propertyPath: m_text
-      value: Quit
+      value: Exit
       objectReference: {fileID: 0}
     - target: {fileID: 9076022938054634424, guid: c59deb650c1ea37408830079f2b03ea4, type: 3}
       propertyPath: m_fontSize

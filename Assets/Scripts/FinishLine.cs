@@ -16,9 +16,11 @@ public class FinishLine : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        win.SetActive(true);
-        Time.timeScale = 0;
-        StartCoroutine(DataAnalyst.GetComponent<DataAnalystScript>().Post(System.DateTime.Now.Ticks.ToString(), "True", Player.GetComponent<PlayerMovement>().health.ToString()));
+        if (other.gameObject.tag == "Player") {
+            win.SetActive(true);
+            Time.timeScale = 0;
+            StartCoroutine(DataAnalyst.GetComponent<DataAnalystScript>().Post(System.DateTime.Now.Ticks.ToString(), "True", Player.GetComponent<PlayerMovement>().health.ToString()));
+        }
     }
 
     void Update()

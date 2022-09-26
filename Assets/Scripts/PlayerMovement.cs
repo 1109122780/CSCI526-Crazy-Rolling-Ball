@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public float fallSpeed = -8;
     public int health = 3;
     public GameObject lose;
+    public string currentScene;
 
     // Jump parameters:
     public float jumpSpeed;
@@ -32,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
         
         // Reset game when R is pressed:
         if (Input.GetKeyDown(KeyCode.R)){
-            SceneManager.LoadScene("Game Scene 1");
+            SceneManager.LoadScene(currentScene);
             Time.timeScale = 1;
             return;
         }

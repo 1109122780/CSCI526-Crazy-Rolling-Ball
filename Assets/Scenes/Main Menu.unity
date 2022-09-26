@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -296,7 +296,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000019073, y: 140}
+  m_AnchoredPosition: {x: 0, y: 140}
   m_SizeDelta: {x: 591.2599, y: 94.9131}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &309210605
@@ -319,7 +319,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Crazy running ball
+  m_text: Crazy Running Ball
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -353,8 +353,8 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -382,7 +382,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -1.6899413, y: 0, z: 1.0687866, w: 3.3021088}
+  m_margin: {x: -1.6899413, y: 0, z: -33.116882, w: 3.3021088}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -767,7 +767,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9076022938054634424, guid: c59deb650c1ea37408830079f2b03ea4, type: 3}
       propertyPath: m_text
-      value: Option
+      value: 'Levels
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 9076022938054634424, guid: c59deb650c1ea37408830079f2b03ea4, type: 3}
       propertyPath: m_fontSize
@@ -900,5 +902,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd1f990a9f08d994ea3fe1df8c8760cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstLevel: Game Scene 1
-  secondLevel: Option Scene
+  tutorialLevel: Tutorial
+  optionScene: Option Scene

@@ -4,13 +4,14 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
-{
-    public string firstLevel;
-    public string secondLevel;
+{   
+    public string tutorialLevel;
+    public string optionScene;
+    private int clickTime = 0;
+
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -21,18 +22,16 @@ public class MainMenu : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene(firstLevel);
-        //SceneManager.LoadScene(0);
+        if (clickTime == 0) {
+            SceneManager.LoadScene(tutorialLevel);
+            clickTime++;
+        } else {
+            SceneManager.LoadScene(optionScene);
+        }
     }
 
     public void StartOption()
     {
-        SceneManager.LoadScene(secondLevel);
-    }
-
-    public void QuitGame()
-    {
-        Application.Quit();
-        Debug.Log("Quitting");
+        SceneManager.LoadScene(optionScene);
     }
 }
