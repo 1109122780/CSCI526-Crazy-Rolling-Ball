@@ -6,11 +6,13 @@ public class SizeChange : MonoBehaviour
 {
     private float timer = 3.0f;
     private Vector3 v;
+    private bool sizeCool;
 
     // Start is called before the first frame update
     void Start()
     {
                 v = new Vector3(0, 1, 0);
+                sizeCool = true;
 
 
     }
@@ -19,7 +21,7 @@ public class SizeChange : MonoBehaviour
     void Update()
     {
       
-        if (Input.GetKeyDown(KeyCode.Q)) {
+        if (Input.GetKeyDown(KeyCode.Q) && sizeCool) {
             if(Time.timeScale == 0) {
                 return;
             }
@@ -28,18 +30,23 @@ public class SizeChange : MonoBehaviour
             v.y = 1;
             transform.localPosition = v;
             transform.localScale = new Vector3(1, 1, 1);
+            
+            sizeCool = false;
+            StartCoroutine(CoolDown());
             }
             else 
             {
                 v.y = 2;
                 transform.localPosition = v;
                 transform.localScale = new Vector3(3, 3, 3);
+
                 StartCoroutine(FiveSeconds());
             }
                 
         }
-        if (Input.GetKeyDown(KeyCode.E)) {
+        if (Input.GetKeyDown(KeyCode.E) && sizeCool) {
             if(Time.timeScale == 0) {
+                sizeCool = true;
                 return;
             }
             v = transform.localPosition;
@@ -48,6 +55,9 @@ public class SizeChange : MonoBehaviour
             transform.localScale = new Vector3(1, 1, 1);
             v.y = 1;
             transform.localPosition = v;
+
+            sizeCool = false;
+            StartCoroutine(CoolDown());
             }
             else 
             {
@@ -63,13 +73,21 @@ public class SizeChange : MonoBehaviour
     private IEnumerator FiveSeconds() {
         // var v = transform.localPosition;
         while (timer > 0) {
-            yield return new WaitForSeconds(3.0f);
+            yield return new WaitForSeconds(5.0f);
             v = transform.localPosition;
             v.y = 1;
             transform.localPosition = v;
             transform.localScale = new Vector3(1, 1, 1);
             timer -= 3.0f;
+            sizeCool = false;
 
+            yield return new WaitForSeconds(2.0f);
+            sizeCool = true;
+        
         }
+    }
+    private IEnumerator CoolDown() {
+        yield return new WaitForSeconds(2.0f);
+        sizeCool = true;
     }
 }
