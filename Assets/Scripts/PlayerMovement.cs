@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
     // Jump parameters:
     public float jumpSpeed;
     private bool canJump;
-    private bool isgrounded;
+    public bool isgrounded;
     Rigidbody rb;
     private SizeChange bool_script;
 
