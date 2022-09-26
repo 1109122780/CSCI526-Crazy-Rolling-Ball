@@ -11,11 +11,8 @@ public class SizeChange : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-                v = new Vector3(0, 1, 0);
-                sizeCool = true;
-                
-
-
+        v = new Vector3(0, 1, 0);
+        sizeCool = true;
     }
 
     // Update is called once per frame
