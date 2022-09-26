@@ -17,11 +17,13 @@ public class PlayerMovement : MonoBehaviour
     private bool canJump;
     private bool isgrounded;
     Rigidbody rb;
+    private SizeChange bool_script;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        bool_script = GetComponent<SizeChange>();
     }
 
     // Update is called once per frame
@@ -60,6 +62,9 @@ public class PlayerMovement : MonoBehaviour
 
         // If space key is pressed, we jump:
         if (Input.GetKeyDown(KeyCode.Space) && isgrounded) {
+            if(bool_script.jumpLock) {
+                return;
+            }
             canJump = true;
             isgrounded = false;
         }

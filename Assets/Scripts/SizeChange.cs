@@ -7,12 +7,13 @@ public class SizeChange : MonoBehaviour
     private float timer = 3.0f;
     private Vector3 v;
     private bool sizeCool;
-
+    public bool jumpLock = false;
     // Start is called before the first frame update
     void Start()
     {
                 v = new Vector3(0, 1, 0);
                 sizeCool = true;
+                
 
 
     }
@@ -32,6 +33,7 @@ public class SizeChange : MonoBehaviour
             transform.localScale = new Vector3(1, 1, 1);
             
             sizeCool = false;
+            jumpLock = false;
             StartCoroutine(CoolDown());
             }
             else 
@@ -40,6 +42,7 @@ public class SizeChange : MonoBehaviour
                 transform.localPosition = v;
                 transform.localScale = new Vector3(3, 3, 3);
 
+                jumpLock = true;
                 StartCoroutine(FiveSeconds());
             }
                 
@@ -56,6 +59,7 @@ public class SizeChange : MonoBehaviour
             v.y = 1;
             transform.localPosition = v;
 
+            jumpLock = false;
             sizeCool = false;
             StartCoroutine(CoolDown());
             }
@@ -64,6 +68,8 @@ public class SizeChange : MonoBehaviour
                 v.y = 0.8f;
                 transform.localPosition = v;
                 transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+                
+                jumpLock = true;
                 StartCoroutine(FiveSeconds());
             }
                 
@@ -80,6 +86,7 @@ public class SizeChange : MonoBehaviour
             transform.localScale = new Vector3(1, 1, 1);
             timer -= 3.0f;
             sizeCool = false;
+            jumpLock = false;
 
             yield return new WaitForSeconds(2.0f);
             sizeCool = true;
