@@ -26,6 +26,10 @@ public class ColliderSc : MonoBehaviour
     private Transform spinObstacle;
     private int spinSpeed;
 
+    //RotatingCollider
+    private Transform rotateObstacle;
+    private int rotateSpeed;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -54,6 +58,12 @@ public class ColliderSc : MonoBehaviour
             spinObstacle = GameObject.Find("SpinningPivot").transform;
             spinSpeed = 90;
         }
+
+        if(gameObject.tag == "RotatingCollider")
+        {
+            rotateSpeed = 90;
+            rotateObstacle = gameObject.transform;
+        }
     }
 
     void Update()
@@ -81,6 +91,11 @@ public class ColliderSc : MonoBehaviour
         if(gameObject.tag == "SpinningCollider")
         {
             spinObstacle.transform.Rotate(0, spinSpeed * Time.deltaTime, 0);
+        }
+
+        if(gameObject.tag == "RotatingCollider")
+        {
+            rotateObstacle.transform.Rotate(0, 0, rotateSpeed * Time.deltaTime);
         }
 
     }
