@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657815, g: 0.49641192, b: 0.57481617, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -836,6 +836,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 192672586}
+  menu: 
+  optionScene: 
 --- !u!1 &348336125 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8362994567858586281, guid: 535bc85f577ae43c5af268aa3fd842c6, type: 3}
@@ -3419,7 +3421,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1279662545}
   m_HandleRect: {fileID: 1279662544}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -4192,7 +4194,9 @@ MonoBehaviour:
   fallSpeed: -8
   health: 3
   lose: {fileID: 449080253}
+  currentScene: 
   jumpSpeed: 6
+  isgrounded: 0
 --- !u!135 &1367041189
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4299,6 +4303,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f09a491299424078815e994a2dda75b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jumpLock: 0
 --- !u!114 &1367041195
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6361,7 +6366,7 @@ PrefabInstance:
       objectReference: {fileID: 1367041187}
     - target: {fileID: 8989173221487832811, guid: b76ba39b22dbb49dc86db32a5001480e, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8989173221487832811, guid: b76ba39b22dbb49dc86db32a5001480e, type: 3}
       propertyPath: checkPoint
