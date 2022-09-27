@@ -9,9 +9,6 @@ public class BackToGameScript : MonoBehaviour
 
     public void backToGame()
     {
-        // string fileName = @"Assets/Materials/Shop.json";
-        // string json = JsonUtility.ToJson(ShopManager.GetComponent<ShopManagerScript>().shop);
-        // System.IO.File.WriteAllText(fileName, json);
-        SceneManager.LoadScene("Game Scene 1");
+        SceneManager.LoadScene("Option Scene");
     }
 }

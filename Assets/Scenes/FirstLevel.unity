@@ -1773,7 +1773,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpLock: 0
-  jump_script: {fileID: 917332807}
 --- !u!114 &917332807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1790,7 +1789,7 @@ MonoBehaviour:
   turnSpeed: 4
   fallSpeed: -8
   health: 3
-  lose: {fileID: 0}
+  lose: {fileID: 449080253}
   currentScene: Tutorial
   jumpSpeed: 6
   isgrounded: 0
@@ -1808,7 +1807,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!135 &917332809
 SphereCollider:

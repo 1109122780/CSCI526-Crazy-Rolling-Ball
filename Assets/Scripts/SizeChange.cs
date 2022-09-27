@@ -95,7 +95,7 @@ public class SizeChange : MonoBehaviour
     private IEnumerator FiveSeconds() {
         // var v = transform.localPosition;
         while (timer > 0) {
-            yield return new WaitForSeconds(5.0f);
+            yield return new WaitForSeconds(1000.0f);
             v = transform.localPosition;
             v.y = 1;
             transform.localPosition = v;
