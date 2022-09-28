@@ -55,14 +55,14 @@ public class ColliderSc : MonoBehaviour
 
         if(gameObject.tag == "SpinningCollider")
         {
-            spinObstacle = GameObject.Find("SpinningPivot").transform;
+            spinObstacle = gameObject.transform;
             spinSpeed = 90;
         }
 
         if(gameObject.tag == "RotatingCollider")
         {
-            rotateSpeed = 90;
             rotateObstacle = gameObject.transform;
+            rotateSpeed = 90;
         }
     }
 
