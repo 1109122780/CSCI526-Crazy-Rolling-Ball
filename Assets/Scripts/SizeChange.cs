@@ -6,7 +6,7 @@ public class SizeChange : MonoBehaviour
 {
     private float timer = 5.0f;
     private Vector3 v;
-    // private bool sizeCool;
+    private bool sizeCool;
     public bool jumpLock = false;
     private PlayerMovement jump_script;
 
@@ -15,7 +15,7 @@ public class SizeChange : MonoBehaviour
     void Start()
     {
                 v = new Vector3(0, 1, 0);
-                // sizeCool = true;
+                sizeCool = true;
 
                 jump_script = GameObject.FindWithTag("Player").GetComponent<PlayerMovement>();
                 
@@ -27,23 +27,23 @@ public class SizeChange : MonoBehaviour
     void Update()
     {
       
-        if (Input.GetKeyDown(KeyCode.Q)) {
+        if (Input.GetKeyDown(KeyCode.Q) & sizeCool) {
             if(!jump_script.isgrounded) {
                 return;
             }
             if(Time.timeScale == 0) {
+                sizeCool = true;
                 return;
             }
             v = transform.localPosition; 
+
             if(transform.localScale.y > 1.0f){
             v.y = 1;
             transform.localPosition = v;
             transform.localScale = new Vector3(1, 1, 1);
-            
-            // sizeCool = false;
+            sizeCool = false;
             jumpLock = false;
-            // StartCoroutine(CoolDown());
-            StopAllCoroutines();
+            StartCoroutine(CoolDown());
             
             }
             else 
@@ -53,17 +53,17 @@ public class SizeChange : MonoBehaviour
                 transform.localPosition = v;
                 transform.localScale = new Vector3(3, 3, 3);
 
-                jumpLock = true;
+                // jumpLock = true;
                 StartCoroutine(FiveSeconds());
             }
                 
         }
-        if (Input.GetKeyDown(KeyCode.E)) {
+        if (Input.GetKeyDown(KeyCode.E) & sizeCool) {
             if(!jump_script.isgrounded) {
                 return;
             }
             if(Time.timeScale == 0) {
-                // sizeCool = true;
+                sizeCool = true;
                 return;
             }
             v = transform.localPosition;
@@ -74,9 +74,9 @@ public class SizeChange : MonoBehaviour
             transform.localPosition = v;
 
             jumpLock = false;
-            // sizeCool = false;
-            // StartCoroutine(CoolDown());
-            StopAllCoroutines();
+            sizeCool = false;
+            StartCoroutine(CoolDown());
+            // StopCoroutine(FiveSeconds());
             }
             else 
             {   
@@ -88,6 +88,7 @@ public class SizeChange : MonoBehaviour
                 // small ball can't jump:
                 // jumpLock = false;
                 jumpLock = true;
+                // sizeCool = true;
                 StartCoroutine(FiveSeconds());
             }
                 
@@ -103,17 +104,18 @@ public class SizeChange : MonoBehaviour
             transform.localPosition = v;
             transform.localScale = new Vector3(1, 1, 1);
             timer -= 5.0f;
-            // sizeCool = false;
+            sizeCool = false;
             jumpLock = false;
-            StopAllCoroutines();
 
-            // yield return new WaitForSeconds(2.0f);
-            // sizeCool = true;
+            yield return new WaitForSeconds(2.0f);
+            sizeCool = true;
+            StopAllCoroutines();
         
         }
     }
-    // private IEnumerator CoolDown() {
-    //     yield return new WaitForSeconds(2.0f);
-    //     sizeCool = true;
-    // }
+    private IEnumerator CoolDown() {
+        yield return new WaitForSeconds(2.0f);
+        sizeCool = true;
+        StopAllCoroutines();
+    }
 }
