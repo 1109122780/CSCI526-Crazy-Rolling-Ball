@@ -56,7 +56,7 @@ public class ColliderSc : MonoBehaviour
         if(gameObject.tag == "SpinningCollider")
         {
             spinObstacle = gameObject.transform;
-            spinSpeed = 90;
+            spinSpeed = 80;
         }
 
         if(gameObject.tag == "RotatingCollider")

@@ -85,7 +85,9 @@ public class SizeChange : MonoBehaviour
                 transform.localPosition = v;
                 transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
                 
-                jumpLock = false;
+                // small ball can't jump:
+                // jumpLock = false;
+                jumpLock = true;
                 StartCoroutine(FiveSeconds());
             }
                 

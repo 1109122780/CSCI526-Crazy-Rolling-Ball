@@ -491,7 +491,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Check point ahead! Go touch it.\nHit the wall in front, see what happens.
-    \nAfter that, maybe try Q key!\nNote! You can't jump when you get big!"
+    \nAfter that, maybe try Q key!\nNote! Jump is disabled when you change size!"
 --- !u!222 &215037248
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -650,7 +650,7 @@ Transform:
   m_GameObject: {fileID: 300806843}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.01, y: 2.5, z: 160}
-  m_LocalScale: {x: 8, y: 4, z: 2}
+  m_LocalScale: {x: 50, y: 50, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1999263037}
@@ -937,7 +937,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 94584fe64752a6d488d8673c73fe0a9d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1369,7 +1369,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 4f1162d8b4acc8c4fa1b307ec37b4f12, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2079,6 +2079,10 @@ PrefabInstance:
       propertyPath: respawnPoint
       value: 
       objectReference: {fileID: 348336129}
+    - target: {fileID: 7552726712816322130, guid: e131217bb24ec4ef0aa334971efccbd0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e6b9b44320f4448d9d5e0ee634259966, type: 2}
     - target: {fileID: 8795351552935120807, guid: e131217bb24ec4ef0aa334971efccbd0, type: 3}
       propertyPath: m_Name
       value: ColliderType1 (1)
@@ -2590,7 +2594,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: f68ab81b96d94e742bb22115f63b4f31, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3109,6 +3113,10 @@ PrefabInstance:
       propertyPath: respawnPoint
       value: 
       objectReference: {fileID: 348336129}
+    - target: {fileID: 7552726712816322130, guid: e131217bb24ec4ef0aa334971efccbd0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e6b9b44320f4448d9d5e0ee634259966, type: 2}
     - target: {fileID: 8795351552935120807, guid: e131217bb24ec4ef0aa334971efccbd0, type: 3}
       propertyPath: m_Name
       value: ColliderType1
@@ -3351,6 +3359,10 @@ PrefabInstance:
       propertyPath: respawnPoint
       value: 
       objectReference: {fileID: 348336129}
+    - target: {fileID: 7552726712816322130, guid: e131217bb24ec4ef0aa334971efccbd0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e6b9b44320f4448d9d5e0ee634259966, type: 2}
     - target: {fileID: 8795351552935120807, guid: e131217bb24ec4ef0aa334971efccbd0, type: 3}
       propertyPath: m_Name
       value: ColliderType1 (2)
@@ -4929,7 +4941,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1266
+  m_Name: pb_Mesh-55048
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6840,6 +6852,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1701838320}
+    - target: {fileID: 352034370651766854, guid: 22f5a7ea9fb5d483bb7bb91385997ac1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 94584fe64752a6d488d8673c73fe0a9d, type: 2}
     - target: {fileID: 352034370651766855, guid: 22f5a7ea9fb5d483bb7bb91385997ac1, type: 3}
       propertyPath: m_Size.z
       value: 0.001
@@ -7018,6 +7034,10 @@ PrefabInstance:
       propertyPath: respawnPoint
       value: 
       objectReference: {fileID: 348336129}
+    - target: {fileID: 7552726712816322130, guid: e131217bb24ec4ef0aa334971efccbd0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e6b9b44320f4448d9d5e0ee634259966, type: 2}
     - target: {fileID: 8795351552935120807, guid: e131217bb24ec4ef0aa334971efccbd0, type: 3}
       propertyPath: m_Name
       value: Collider123
@@ -7035,6 +7055,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: CheckPoint
       objectReference: {fileID: 0}
+    - target: {fileID: 8362994567858586281, guid: 535bc85f577ae43c5af268aa3fd842c6, type: 3}
+      propertyPath: m_TagString
+      value: CheckPoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 8362994567858586283, guid: 535bc85f577ae43c5af268aa3fd842c6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4f1162d8b4acc8c4fa1b307ec37b4f12, type: 2}
     - target: {fileID: 8362994567858593109, guid: 535bc85f577ae43c5af268aa3fd842c6, type: 3}
       propertyPath: m_RootOrder
       value: 5
