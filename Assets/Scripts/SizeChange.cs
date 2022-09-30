@@ -53,7 +53,7 @@ public class SizeChange : MonoBehaviour
                 transform.localPosition = v;
                 transform.localScale = new Vector3(3, 3, 3);
 
-                // jumpLock = true;
+                jumpLock = true;
                 StartCoroutine(FiveSeconds());
             }
                 
