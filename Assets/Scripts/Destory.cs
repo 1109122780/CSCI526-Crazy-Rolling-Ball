@@ -14,7 +14,6 @@ public class Destory : MonoBehaviour
     void Start(){
         destroy = GameObject.Find("ColliderDestroy");
         player = GameObject.Find("Player");
-        checkPoint = GameObject.Find("CheckPoint");
     }
 
     void OnTriggerEnter(Collider other)
@@ -35,9 +34,9 @@ public class Destory : MonoBehaviour
                     if (player.GetComponent<PlayerMovement>().health > 0)
                     {
                         player.GetComponent<PlayerMovement>().health --;
-                        if (checkPoint.GetComponent<CheckPoint>().isTriggered)
+                        if (player.GetComponent<PlayerMovement>().hasCheckPoint)
                         {
-                            player.transform.position = checkPoint.GetComponent<Transform>().position;
+                            player.transform.position = player.GetComponent<PlayerMovement>().checkPoint.GetComponent<Transform>().position;
                         }
                         else
                         {

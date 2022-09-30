@@ -12,6 +12,11 @@ public class PlayerMovement : MonoBehaviour
     public GameObject lose;
     public string currentScene;
 
+
+    [System.NonSerialized] public GameObject checkPoint;
+    [System.NonSerialized] public bool hasCheckPoint;
+
+
     // Jump parameters:
     public float jumpSpeed;
     private bool canJump;
@@ -24,6 +29,8 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         bool_script = GetComponent<SizeChange>();
+        Time.timeScale = 1;
+        hasCheckPoint = false;
     }
 
     // Update is called once per frame
@@ -41,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
         }
         // Enter the shop
         if (Input.GetKeyDown(KeyCode.T)){
-            SceneManager.LoadScene("StoreScene");
+            SceneManager.LoadScene("Option Scene");
             Time.timeScale = 1;
             return;
         }

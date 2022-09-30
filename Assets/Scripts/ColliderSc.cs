@@ -35,8 +35,7 @@ public class ColliderSc : MonoBehaviour
     {
         //General
         player = GameObject.Find("Player");
-        hiddenPlayer = GameObject.Find("HiddenPlayer");
-        checkPoint = GameObject.Find("CheckPoint");
+        //checkPoint = GameObject.Find("CheckPoint");
 
         //Special Colliders
         if(gameObject.tag == "FallingCollider")
@@ -106,9 +105,9 @@ public class ColliderSc : MonoBehaviour
             if (player.GetComponent<PlayerMovement>().health > 0)
             {
                 player.GetComponent<PlayerMovement>().health --;
-                if (checkPoint.GetComponent<CheckPoint>().isTriggered)
+                if (player.GetComponent<PlayerMovement>().hasCheckPoint)
                 {
-                    player.transform.position = checkPoint.GetComponent<Transform>().position;
+                    player.transform.position = player.GetComponent<PlayerMovement>().checkPoint.GetComponent<Transform>().position;
                 }
                 else
                 {

@@ -5,12 +5,13 @@ using UnityEngine;
 
 public class CheckPoint : MonoBehaviour
 {
-    public Boolean isTriggered;
+    private GameObject player;
+    public bool isTriggered;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        player = GameObject.Find("Player");
     }
 
     // Update is called once per frame
@@ -22,7 +23,8 @@ public class CheckPoint : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player")) {
-            isTriggered = true;
+            player.GetComponent<PlayerMovement>().checkPoint = gameObject;
+            player.GetComponent<PlayerMovement>().hasCheckPoint = true;
         }
     }
 }
