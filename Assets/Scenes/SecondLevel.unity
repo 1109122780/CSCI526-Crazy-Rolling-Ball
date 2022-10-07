@@ -172,6 +172,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lose: {fileID: 449080253}
   position: {x: 0, y: 0, z: 0}
+  colorTag1: 0
 --- !u!65 &84433139
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1216,6 +1217,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lose: {fileID: 449080253}
   position: {x: 0, y: 0, z: 0}
+  colorTag1: 0
 --- !u!136 &261100697
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3724,6 +3726,9 @@ MonoBehaviour:
   health: 3
   lose: {fileID: 449080253}
   currentScene: SecondLevel
+  colorTag: 9
+  worldTag: 0
+  inTest: 1
   jumpSpeed: 6
   isgrounded: 0
 --- !u!54 &917332808
@@ -4279,6 +4284,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lose: {fileID: 0}
   position: {x: 0, y: 0, z: 0}
+  colorTag1: 0
 --- !u!1001 &1015236874
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4705,7 +4711,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Congratulations! \nYou have reached the finish line!\nPress R to Try Again\nPress
-    T to Enter the Store"
+    T to Choose Level"
 --- !u!222 &1120151023
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4971,6 +4977,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lose: {fileID: 449080253}
   position: {x: 0, y: 0, z: 0}
+  colorTag1: 0
 --- !u!65 &1168240970
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6077,6 +6084,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lose: {fileID: 449080253}
   position: {x: 0, y: 0, z: 0}
+  colorTag1: 0
 --- !u!65 &1658742106
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7438,6 +7446,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lose: {fileID: 0}
   position: {x: 0, y: 0, z: 0}
+  colorTag1: 0
 --- !u!1 &2106391214
 GameObject:
   m_ObjectHideFlags: 0

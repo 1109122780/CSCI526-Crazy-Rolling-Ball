@@ -27,7 +27,7 @@ public class SizeChange : MonoBehaviour
     void Update()
     {
       
-        if (Input.GetKeyDown(KeyCode.Q) & sizeCool) {
+        if (Input.GetKeyDown(KeyCode.Q) & sizeCool & (jump_script.worldTag == 1 || jump_script.inTest)) {
             if(!jump_script.isgrounded) {
                 return;
             }
@@ -58,7 +58,7 @@ public class SizeChange : MonoBehaviour
             }
                 
         }
-        if (Input.GetKeyDown(KeyCode.E) & sizeCool) {
+        if (Input.GetKeyDown(KeyCode.E) & sizeCool & (jump_script.worldTag == 1 || jump_script.inTest)) {
             if(!jump_script.isgrounded) {
                 return;
             }

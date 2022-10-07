@@ -11,10 +11,13 @@ public class PlayerMovement : MonoBehaviour
     public int health = 3;
     public GameObject lose;
     public string currentScene;
+    public int colorTag;
+    public int worldTag;
+    public bool inTest;
 
 
     [System.NonSerialized] public GameObject checkPoint;
-    [System.NonSerialized] public bool hasCheckPoint;
+    [System.NonSerialized] public bool hasCheckPoint; 
 
 
     // Jump parameters:
@@ -68,7 +71,7 @@ public class PlayerMovement : MonoBehaviour
         } 
 
         // If space key is pressed, we jump:
-        if (Input.GetKeyDown(KeyCode.Space) && isgrounded) {
+        if (Input.GetKeyDown(KeyCode.Space) && isgrounded && (worldTag == 3 || inTest)){
             if(bool_script.jumpLock) {
                 return;
             }

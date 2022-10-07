@@ -11,6 +11,7 @@ public class ColliderSc : MonoBehaviour
     private GameObject hiddenPlayer;
     private GameObject checkPoint;
     public Vector3 position;
+    public int colorTag1;
 
     //FallingCollider
     private Transform fallObstacle;
@@ -100,8 +101,9 @@ public class ColliderSc : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other) {
-        if (other.name == "Player")
+        if (other.name == "Player" &&  player.GetComponent<PlayerMovement>().colorTag != colorTag1)
         {
+            Debug.Log("ss");
             if (player.GetComponent<PlayerMovement>().health > 0)
             {
                 player.GetComponent<PlayerMovement>().health --;
