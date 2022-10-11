@@ -17,8 +17,8 @@ public class PlayerMovement : MonoBehaviour
     public GameObject information;
 
 
-    [System.NonSerialized] public GameObject checkPoint;
-    [System.NonSerialized] public bool hasCheckPoint;
+    public GameObject checkPoint;
+    public bool hasCheckPoint;
 
 
     // Jump parameters:
@@ -46,11 +46,15 @@ public class PlayerMovement : MonoBehaviour
         // }
 
         // Reset game when R is pressed:
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            SceneManager.LoadScene(currentScene);
-            Time.timeScale = 1;
-            return;
+        if (Input.GetKeyDown(KeyCode.R)){
+            if(hasCheckPoint == false)
+            {
+                SceneManager.LoadScene(currentScene);
+                Time.timeScale = 1;
+                return;       
+            }
+            else
+                gameObject.transform.position = checkPoint.GetComponent<Transform>().position;
         }
         // Enter the shop
         if (Input.GetKeyDown(KeyCode.T))

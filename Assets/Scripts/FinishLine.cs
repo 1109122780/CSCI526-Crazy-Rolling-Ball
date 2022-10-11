@@ -34,11 +34,11 @@ public class FinishLine : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            SceneManager.LoadScene(0);
-            Time.timeScale = 1;
-            return;
-        }
+        // if (Input.GetKeyDown(KeyCode.R))
+        // {
+        //     SceneManager.LoadScene(0);
+        //     Time.timeScale = 1;
+        //     return;
+        // }
     }
 }

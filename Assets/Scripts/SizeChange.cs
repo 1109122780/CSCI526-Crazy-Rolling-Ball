@@ -66,7 +66,7 @@ public class SizeChange : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.E) & sizeCool & (jump_script.worldTag == 1 || jump_script.inTest))
         {
-            information.GetComponent<InformationScript>().times_QE++;
+            // information.GetComponent<InformationScript>().times_QE++;
             if (!jump_script.isgrounded)
             {
                 return;
