@@ -6,14 +6,15 @@ using UnityEngine.UI;
 public class ShopItemButton : MonoBehaviour
 {
     public int ItemID;
+    public Image Icon;
+    public Text NameText;
     public Text PriceText;
     public Text QuantityText;
-    public GameObject ShopManager;
+    public GameObject information;
 
     // Update is called once per frame
     void Update()
     {
-        PriceText.text = "Price: " + ShopManager.GetComponent<ShopManagerScript>().shop.ShopItemList[ItemID].Price.ToString();
-        QuantityText.text = ShopManager.GetComponent<ShopManagerScript>().shop.ShopItemList[ItemID].Quantity.ToString();
+        QuantityText.text = information.GetComponent<InformationScript>().ShopItemList[ItemID].quantity.ToString();
     }
 }

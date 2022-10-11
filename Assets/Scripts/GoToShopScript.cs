@@ -9,9 +9,6 @@ public class GoToShopScript : MonoBehaviour
 
     public void backToGame()
     {
-        string fileName = @"Assets/Materials/Shop.json";
-        string json = JsonUtility.ToJson(InventoryManager.GetComponent<InventoryManagerScript>().shop);
-        System.IO.File.WriteAllText(fileName, json);
         SceneManager.LoadScene("StoreScene");
     }
 }

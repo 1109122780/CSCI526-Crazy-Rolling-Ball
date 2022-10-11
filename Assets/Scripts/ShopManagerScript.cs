@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 public class ShopManagerScript : MonoBehaviour
 {
-    public Shop shop;
+    public GameObject information;
     public Text CoinsText;
     [SerializeField] GameObject shopItemPrefab;
     [SerializeField] Transform scrollview;
@@ -20,46 +20,31 @@ public class ShopManagerScript : MonoBehaviour
         // string jsonString = System.IO.File.ReadAllText(fileName);
         // string jsonString = Resources.Load<TextAsset>("Shop").text;
         // shop = JsonUtility.FromJson<Shop>(jsonString);
-        // CoinsText.text = "Coins: " + shop.Coins;
+        information = GameObject.Find("Information");
+        CoinsText.text = "Coins: " + information.GetComponent<InformationScript>().score;
 
-        foreach (ShopItem shopItem in shop.ShopItemList)
+        foreach (ShopItem shopItem in information.GetComponent<InformationScript>().ShopItemList)
         {
-            GameObject button = (GameObject)Instantiate(shopItemPrefab);
-            button.GetComponent<Button>().onClick.AddListener(Buy);
-            button.GetComponent<ShopItemButton>().ItemID = shopItem.ID;
-            button.GetComponent<ShopItemButton>().ShopManager = this.gameObject;
-            button.transform.SetParent(scrollview, false);
+            if (information.GetComponent<InformationScript>().score >= shopItem.price)
+            {
+                GameObject button = (GameObject)Instantiate(shopItemPrefab);
+                button.GetComponent<Button>().onClick.AddListener(Buy);
+                button.GetComponent<ShopItemButton>().ItemID = shopItem.id;
+                button.GetComponent<ShopItemButton>().Icon.sprite = shopItem.icon;
+                button.GetComponent<ShopItemButton>().NameText.text = shopItem.name.ToString();
+                button.GetComponent<ShopItemButton>().PriceText.text = "$" + shopItem.price.ToString();
+                button.GetComponent<ShopItemButton>().information = information;
+                button.transform.SetParent(scrollview, false);
+            }
         }
     }
 
     public void Buy()
     {
         GameObject ButtonRef = GameObject.FindGameObjectWithTag("Event").GetComponent<EventSystem>().currentSelectedGameObject;
-        float price = shop.ShopItemList[ButtonRef.GetComponent<ShopItemButton>().ItemID].Price;
-        if (shop.Coins >= price)
-        {
-            shop.Coins -= price;
-            CoinsText.text = "Coins: " + shop.Coins;
-            shop.ShopItemList[ButtonRef.GetComponent<ShopItemButton>().ItemID].Quantity++;
-            ButtonRef.GetComponent<ShopItemButton>().QuantityText.text = shop.ShopItemList[ButtonRef.GetComponent<ShopItemButton>().ItemID].Quantity.ToString();
-        }
+        information.GetComponent<InformationScript>().score -= information.GetComponent<InformationScript>().ShopItemList[ButtonRef.GetComponent<ShopItemButton>().ItemID].price;
+        CoinsText.text = "Coins: " + information.GetComponent<InformationScript>().score;
+        information.GetComponent<InformationScript>().ShopItemList[ButtonRef.GetComponent<ShopItemButton>().ItemID].quantity++;
+        ButtonRef.GetComponent<ShopItemButton>().QuantityText.text = information.GetComponent<InformationScript>().ShopItemList[ButtonRef.GetComponent<ShopItemButton>().ItemID].quantity.ToString();
     }
-}
-
-[Serializable]
-public class ShopItem
-{
-    // The Unity Serializer doesn't built-in support properties ({get; set; })! Use fields instead(=> remove all { get; set; })!
-    public int ID;
-    public string Name;
-    public float Price;
-    public int Quantity;
-    public string Icon;
-}
-
-[Serializable]
-public class Shop
-{
-    public float Coins;
-    public ShopItem[] ShopItemList;
 }

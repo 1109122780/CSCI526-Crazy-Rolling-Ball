@@ -14,10 +14,11 @@ public class PlayerMovement : MonoBehaviour
     public int colorTag;
     public int worldTag;
     public bool inTest;
+    public GameObject information;
 
 
     [System.NonSerialized] public GameObject checkPoint;
-    [System.NonSerialized] public bool hasCheckPoint; 
+    [System.NonSerialized] public bool hasCheckPoint;
 
 
     // Jump parameters:
@@ -34,6 +35,7 @@ public class PlayerMovement : MonoBehaviour
         bool_script = GetComponent<SizeChange>();
         Time.timeScale = 1;
         hasCheckPoint = false;
+        information = GameObject.Find("Information");
     }
 
     // Update is called once per frame
@@ -42,15 +44,17 @@ public class PlayerMovement : MonoBehaviour
         // if (Input.GetKeyDown(KeyCode.Escape)){
         //     Application.Quit();
         // }
-        
+
         // Reset game when R is pressed:
-        if (Input.GetKeyDown(KeyCode.R)){
+        if (Input.GetKeyDown(KeyCode.R))
+        {
             SceneManager.LoadScene(currentScene);
             Time.timeScale = 1;
             return;
         }
         // Enter the shop
-        if (Input.GetKeyDown(KeyCode.T)){
+        if (Input.GetKeyDown(KeyCode.T))
+        {
             SceneManager.LoadScene("Option Scene");
             Time.timeScale = 1;
             return;
@@ -62,32 +66,39 @@ public class PlayerMovement : MonoBehaviour
         transform.Translate(x * turnSpeed * Time.deltaTime, 0, y * speed * Time.deltaTime);
 
         // If dropped the ball, show lose information:
-        if (transform.position.y < -20){
+        if (transform.position.y < -20)
+        {
+            information.GetComponent<InformationScript>().times_fall = 1;
             lose.SetActive(true);
             Time.timeScale = 0;
-        } 
+        }
 
         // If space key is pressed, we jump:
-        if (Input.GetKeyDown(KeyCode.Space) && isgrounded && (worldTag == 3 || inTest)){
-            if(bool_script.jumpLock) {
+        if (Input.GetKeyDown(KeyCode.Space) && isgrounded && (worldTag == 3 || inTest))
+        {
+            if (bool_script.jumpLock)
+            {
                 return;
             }
             canJump = true;
             isgrounded = false;
         }
-        
+
     }
 
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.tag == "Ground") {
+        if (other.gameObject.tag == "Ground")
+        {
             isgrounded = true;
         }
     }
 
-    void FixedUpdate() {
+    void FixedUpdate()
+    {
         // If we can jump (preventing double jump in the air):
-        if (canJump) {
+        if (canJump)
+        {
             canJump = false;
             rb.AddForce(0, jumpSpeed, 0, ForceMode.Impulse);
         }

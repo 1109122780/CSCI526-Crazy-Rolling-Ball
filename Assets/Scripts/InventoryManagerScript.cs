@@ -8,25 +8,28 @@ using UnityEngine.UI;
 
 public class InventoryManagerScript : MonoBehaviour
 {
-    public Shop shop;
+    public GameObject information;
     [SerializeField] GameObject inventoryItemPrefab;
     [SerializeField] Transform scrollview;
 
     // Start is called before the first frame update
     void Start()
     {
-        string fileName = @"Assets/Materials/Shop.json";
-        string jsonString = System.IO.File.ReadAllText(fileName);
-        shop = JsonUtility.FromJson<Shop>(jsonString);
+        // string fileName = @"Assets/Materials/Shop.json";
+        // string jsonString = System.IO.File.ReadAllText(fileName);
+        // shop = JsonUtility.FromJson<Shop>(jsonString);
+        information = GameObject.Find("Information");
 
-        foreach (ShopItem shopItem in shop.ShopItemList)
+        foreach (ShopItem shopItem in information.GetComponent<InformationScript>().ShopItemList)
         {
-            if (shopItem.Quantity != 0)
+            if (shopItem.quantity != 0)
             {
                 GameObject button = (GameObject)Instantiate(inventoryItemPrefab);
                 button.GetComponent<Button>().onClick.AddListener(Consume);
-                button.GetComponent<InventoryItemButton>().ItemID = shopItem.ID;
-                button.GetComponent<InventoryItemButton>().InventoryManager = this.gameObject;
+                button.GetComponent<InventoryItemButton>().ItemID = shopItem.id;
+                button.GetComponent<InventoryItemButton>().Icon.sprite = shopItem.icon;
+                button.GetComponent<InventoryItemButton>().NameText.text = shopItem.name.ToString();
+                button.GetComponent<InventoryItemButton>().information = information;
                 button.transform.SetParent(scrollview, false);
             }
         }
@@ -35,14 +38,14 @@ public class InventoryManagerScript : MonoBehaviour
     public void Consume()
     {
         GameObject ButtonRef = GameObject.FindGameObjectWithTag("Event").GetComponent<EventSystem>().currentSelectedGameObject;
-        shop.ShopItemList[ButtonRef.GetComponent<InventoryItemButton>().ItemID].Quantity--;
-        if (shop.ShopItemList[ButtonRef.GetComponent<InventoryItemButton>().ItemID].Quantity == 0)
+        information.GetComponent<InformationScript>().ShopItemList[ButtonRef.GetComponent<InventoryItemButton>().ItemID].quantity--;
+        if (information.GetComponent<InformationScript>().ShopItemList[ButtonRef.GetComponent<InventoryItemButton>().ItemID].quantity == 0)
         {
             Destroy(ButtonRef);
         }
         else
         {
-            ButtonRef.GetComponent<InventoryItemButton>().QuantityText.text = shop.ShopItemList[ButtonRef.GetComponent<InventoryItemButton>().ItemID].Quantity.ToString();
+            ButtonRef.GetComponent<InventoryItemButton>().QuantityText.text = information.GetComponent<InformationScript>().ShopItemList[ButtonRef.GetComponent<InventoryItemButton>().ItemID].quantity.ToString();
         }
     }
 }
