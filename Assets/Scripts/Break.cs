@@ -6,18 +6,20 @@ public class Break : MonoBehaviour
 {
     private GameObject destroy;
     private GameObject player;
+    private GameObject glass;
     private bool high = false;
     double change = 2;
     // Start is called before the first frame update
     void Start()
     {
-        destroy = GameObject.Find("ColliderDestroy");
-        player = GameObject.Find("Player");
+        destroy = GameObject.FindWithTag("DestroyEffect");
+        player = GameObject.FindWithTag("Player");
+        glass = GameObject.FindWithTag("GlassGround");
     }
 
     // Update is called once per frame
     void Update(){
-        if (player.transform.localPosition.y > 2 && player.transform.localScale.x >1)
+        if (player.transform.localPosition.y - glass.transform.localPosition.y > 2 && player.transform.localScale.x >1)
         {
             high = true;
         }
