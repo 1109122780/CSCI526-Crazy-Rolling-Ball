@@ -56,13 +56,10 @@ public class PlayerMovement : MonoBehaviour
             return;
         }
 
-        // The left and right movement:
+        // The WASD basic movement of player:
         float x = Input.GetAxis("Horizontal");
-        transform.Translate(x * turnSpeed * Time.deltaTime, 0, speed * Time.deltaTime);
-        // If the ball is out of border, show the falling effect:
-        if (transform.position.x < -4 || transform.position.x > 4 || transform.position.y < 0 ){
-            transform.Translate(0, fallSpeed * Time.deltaTime, 0);
-        }
+        float y = Input.GetAxis("Vertical");
+        transform.Translate(x * turnSpeed * Time.deltaTime, 0, y * speed * Time.deltaTime);
 
         // If dropped the ball, show lose information:
         if (transform.position.y < -20){

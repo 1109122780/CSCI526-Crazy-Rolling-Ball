@@ -103,24 +103,24 @@ public class ColliderSc : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
         if (other.name == "Player" &&  player.GetComponent<PlayerMovement>().colorTag != colorTag1)
         {
-            Debug.Log("ss");
-            if (player.GetComponent<PlayerMovement>().health > 0)
-            {
-                player.GetComponent<PlayerMovement>().health --;
-                if (player.GetComponent<PlayerMovement>().hasCheckPoint)
-                {
-                    player.transform.position = player.GetComponent<PlayerMovement>().checkPoint.GetComponent<Transform>().position;
-                }
-                else
-                {
-                    player.transform.position = new Vector3(0, 1, 0);
-                }
-            }
-            else
-            {
-                lose.SetActive(true);
-                Time.timeScale = 0;
-            }
+            // Debug.Log("ss");
+            // if (player.GetComponent<PlayerMovement>().health > 0)
+            // {
+            //     player.GetComponent<PlayerMovement>().health --;
+            //     if (player.GetComponent<PlayerMovement>().hasCheckPoint)
+            //     {
+            //         player.transform.position = player.GetComponent<PlayerMovement>().checkPoint.GetComponent<Transform>().position;
+            //     }
+            //     else
+            //     {
+            //         player.transform.position = new Vector3(0, 1, 0);
+            //     }
+            // }
+            // else
+            // {
+            //     lose.SetActive(true);
+            //     Time.timeScale = 0;
+            // }
         }
     }
 
