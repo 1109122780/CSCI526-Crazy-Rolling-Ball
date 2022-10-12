@@ -72,9 +72,14 @@ public class PlayerMovement : MonoBehaviour
         // If dropped the ball, show lose information:
         if (transform.position.y < -20)
         {
-            information.GetComponent<InformationScript>().times_fall = 1;
-            lose.SetActive(true);
-            Time.timeScale = 0;
+            if(hasCheckPoint == false)
+            {
+                SceneManager.LoadScene(currentScene);
+                Time.timeScale = 1;
+                return;       
+            }
+            else
+                gameObject.transform.position = checkPoint.GetComponent<Transform>().position;
         }
 
         // If space key is pressed, we jump:
