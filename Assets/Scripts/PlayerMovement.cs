@@ -15,6 +15,8 @@ public class PlayerMovement : MonoBehaviour
     public int worldTag;
     public bool inTest;
     public GameObject information;
+    public Vector3 direction;
+
 
 
     public GameObject checkPoint;
@@ -64,10 +66,9 @@ public class PlayerMovement : MonoBehaviour
             return;
         }
 
+        //Movement v2
         // The WASD basic movement of player:
-        float x = Input.GetAxis("Horizontal");
-        float y = Input.GetAxis("Vertical");
-        transform.Translate(x * turnSpeed * Time.deltaTime, 0, y * speed * Time.deltaTime);
+        direction = new Vector3(Input.GetAxis("Horizontal"),0,Input.GetAxis("Vertical"));
 
         // If dropped the ball, show lose information:
         if (transform.position.y < -20)
@@ -111,5 +112,10 @@ public class PlayerMovement : MonoBehaviour
             canJump = false;
             rb.AddForce(0, jumpSpeed, 0, ForceMode.Impulse);
         }
+        moveCharacter(direction);
+    }
+
+    void moveCharacter(Vector3 direction){
+        rb.MovePosition(transform.position + (direction * speed * Time.deltaTime));
     }
 }
