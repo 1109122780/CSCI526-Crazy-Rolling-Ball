@@ -4,10 +4,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
-{   
-    public string tutorialLevel;
+{
+    //public string tutorialLevel;
     public string optionScene;
-    private int clickTime = 0;
+    //private int clickTime = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -17,9 +17,14 @@ public class MainMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.anyKeyDown)
+        {
+            SceneManager.LoadScene(optionScene);
+        }
+
     }
 
+    /*
     public void StartGame()
     {
         if (clickTime == 0) {
@@ -34,4 +39,5 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene(optionScene);
     }
+    */
 }
