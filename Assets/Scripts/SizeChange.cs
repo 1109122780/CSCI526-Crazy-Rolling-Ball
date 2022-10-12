@@ -10,6 +10,8 @@ public class SizeChange : MonoBehaviour
     public bool jumpLock = false;
     private PlayerMovement jump_script;
     public GameObject information;
+    public GameObject sphere;
+    public GameObject cube;
 
     private float sizeFloat = 0.005f;
     private float positonFloat = 0.005f;
@@ -28,11 +30,33 @@ public class SizeChange : MonoBehaviour
                 jump_script = GameObject.FindWithTag("Player").GetComponent<PlayerMovement>();
                 information = GameObject.Find("Information");
 
+        // Sphere and Cube change shape part
+                for (int i = 0; i < gameObject.transform.childCount; i++)
+                {
+                    if (gameObject.transform.GetChild(i).name == "Sphere")
+                    {
+                        sphere = gameObject.transform.GetChild(i).gameObject;
+                    }
+
+                    if (gameObject.transform.GetChild(i).name == "Cube")
+                    {
+                        cube = gameObject.transform.GetChild(i).gameObject;
+                    }
+                }
+                sphere.SetActive(true);
+                cube.SetActive(false);
+
     }
 
     // Update is called once per frame
     void Update()
-    {     
+    {
+
+        if (cube.activeInHierarchy)
+        {
+            transform.localScale = new Vector3(1, 1, 1);
+            return;
+        }
         if (Input.GetKeyDown(KeyCode.Q) & (jump_script.worldTag == 1 || jump_script.inTest)) {
             // information.GetComponent<InformationScript>().times_QE++;
             if(!jump_script.isgrounded) {
