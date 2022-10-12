@@ -7,6 +7,8 @@ public class ChangeItem : MonoBehaviour
     // Start is called before the first frame update
     private GameObject sphere;
     private GameObject cube;
+    private BoxCollider boxCollider;
+    private SphereCollider sphereCollider;
      
     void Start()
     {
@@ -15,11 +17,13 @@ public class ChangeItem : MonoBehaviour
             if (gameObject.transform.GetChild(i).name == "Sphere")
             {
                 sphere = gameObject.transform.GetChild(i).gameObject;
+                sphereCollider = gameObject.GetComponent<SphereCollider>();
             }
 
             if (gameObject.transform.GetChild(i).name == "Cube")
             {
                 cube = gameObject.transform.GetChild(i).gameObject;
+                boxCollider = gameObject.GetComponent<BoxCollider>();
             }
         }
         sphere.SetActive(true);
@@ -34,24 +38,30 @@ public class ChangeItem : MonoBehaviour
 
     public void changeItem()
     {
-        if (sphere.activeInHierarchy)
-        {
-            toCube();
-        } else
+        if (cube.activeInHierarchy)
         {
             toSphere();
+        } else
+        {
+            toCube();
         }
     }
 
     private void toSphere()
     {
-        sphere.SetActive(true);
         cube.SetActive(false);
+        //sphere.SetActive(true);
+        //Debug.Log("ToSphere!");
+        
+        boxCollider.enabled = false;
+        sphereCollider.enabled = true;
     }
 
     private void toCube()
     {
-        sphere.SetActive(false);
+        //sphere.SetActive(false);
+        sphereCollider.enabled = false;
+        boxCollider.enabled = true;
         cube.SetActive(true);
     }
 }

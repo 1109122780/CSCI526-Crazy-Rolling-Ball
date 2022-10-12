@@ -10,6 +10,7 @@ public class PlayerToCube : MonoBehaviour
     private Vector3 validDirection = Vector3.down;  // What you consider to be upwards
     private float contactThreshold = 60;          // Acceptable difference in degrees
     private ChangeItem changeItemScript;
+    private bool canChange = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -45,7 +46,8 @@ public class PlayerToCube : MonoBehaviour
     void OnCollisionEnter(Collision col)
     {
         Debug.Log("Collide!");
-        if (col.gameObject.tag == "Player")
+
+        if (canChange & col.gameObject.tag == "Player")
         {
             changeItemScript = col.gameObject.GetComponent<ChangeItem>();
             //changeItemScript.changeItem();
@@ -60,6 +62,8 @@ public class PlayerToCube : MonoBehaviour
                     break;
                 }
             }
+            //yield return new WaitForSeconds(2.0f);
+            StartCoroutine(FiveSeconds());
         }
         //if (col.gameObject.name == "Player")
         //{
@@ -72,5 +76,20 @@ public class PlayerToCube : MonoBehaviour
 
 
     }
+    private IEnumerator FiveSeconds()
+    {
+        canChange = false;
+        yield return new WaitForSeconds(1.0f);
+        canChange = true;
+        //while (timer > 0)
+        //{
+        //    yield return new WaitForSeconds(1000.0f);
 
+
+
+        //    // sizeCool = true;
+        //    StopAllCoroutines();
+
+        //}
+    }
 }
