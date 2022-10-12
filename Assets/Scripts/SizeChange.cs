@@ -93,7 +93,7 @@ public class SizeChange : MonoBehaviour
             if(sizeDown) {
                 sizeDown = false;
             }
-            sizeFloat = 0.006f;
+            sizeFloat = 0.008f;
             positonFloat = 0.006f;
             // jumpLock = true;
             v.y += positonFloat;
