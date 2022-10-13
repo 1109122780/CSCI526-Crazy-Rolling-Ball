@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SizeChange : MonoBehaviour
 {
-    private float timer = 5.0f;
+    // private float timer = 5.0f;
 
     private Vector3 v;
 
@@ -28,7 +28,7 @@ public class SizeChange : MonoBehaviour
 
     private float sizeFloat = 0.005f;
 
-    private float positonFloat = 0.005f;
+    // private float positonFloat = 0.005f;
 
     public bool canChange = true;
 
