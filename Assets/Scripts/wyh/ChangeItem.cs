@@ -9,9 +9,10 @@ public class ChangeItem : MonoBehaviour
     private GameObject cube;
     private BoxCollider boxCollider;
     private SphereCollider sphereCollider;
-     
+    private Rigidbody rb;
     void Start()
     {
+        rb = GetComponent<Rigidbody>();
         for (int i = 0; i < gameObject.transform.childCount; i++)
         {
             if (gameObject.transform.GetChild(i).name == "Sphere")
@@ -52,13 +53,14 @@ public class ChangeItem : MonoBehaviour
         cube.SetActive(false);
         //sphere.SetActive(true);
         //Debug.Log("ToSphere!");
-        
+        rb.freezeRotation = true;
         boxCollider.enabled = false;
         sphereCollider.enabled = true;
     }
 
     private void toCube()
     {
+        rb.freezeRotation = false;
         //sphere.SetActive(false);
         sphereCollider.enabled = false;
         boxCollider.enabled = true;
