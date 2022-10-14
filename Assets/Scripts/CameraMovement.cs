@@ -9,9 +9,9 @@ public class CameraMovement : MonoBehaviour
     public Transform zAxis;
     public Transform zoomAxis;
     public Transform player;
-    public float roSpeed = 1000;
-    public float scSpeed = 50;
-    public float limitAngle = 45;
+    public float roSpeed = 90;
+    public float scSpeed = 25;
+    public float limitAngle = 18;
     private float hor,ver,scrollView;
     float x = 0, sc = 10;
 

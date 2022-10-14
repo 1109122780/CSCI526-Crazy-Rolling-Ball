@@ -15,13 +15,13 @@ public class ChangeItem : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         for (int i = 0; i < gameObject.transform.childCount; i++)
         {
-            if (gameObject.transform.GetChild(i).name == "Sphere")
+            if (gameObject.transform.GetChild(i).name == "PlayerSphere")
             {
                 sphere = gameObject.transform.GetChild(i).gameObject;
                 sphereCollider = gameObject.GetComponent<SphereCollider>();
             }
 
-            if (gameObject.transform.GetChild(i).name == "Cube")
+            if (gameObject.transform.GetChild(i).name == "PlayerCube")
             {
                 cube = gameObject.transform.GetChild(i).gameObject;
                 boxCollider = gameObject.GetComponent<BoxCollider>();
