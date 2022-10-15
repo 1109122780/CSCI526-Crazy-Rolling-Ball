@@ -654,6 +654,7 @@ MonoBehaviour:
   win: {fileID: 1581980743}
   DataAnalyst: {fileID: 967238599}
   Player: {fileID: 917332805}
+  information: {fileID: 0}
 --- !u!65 &300806846
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -938,6 +939,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DataAnalyst: {fileID: 967238599}
+  information: {fileID: 0}
 --- !u!1 &497255237
 GameObject:
   m_ObjectHideFlags: 0
@@ -973,6 +975,7 @@ MonoBehaviour:
   win: {fileID: 1581980743}
   DataAnalyst: {fileID: 967238599}
   Player: {fileID: 917332805}
+  information: {fileID: 0}
 --- !u!65 &497255239
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1168,7 +1171,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5957aeda639a649e6b0d4b01e5dce2d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lose: {fileID: 449080253}
 --- !u!65 &552717562
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2142,6 +2144,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpLock: 0
+  information: {fileID: 0}
+  sphere: {fileID: 0}
+  cube: {fileID: 0}
+  smallSize: 0.5
+  normalSize: 1
+  largeSize: 1.5
+  canChange: 1
+  jumpHigh: 0
 --- !u!114 &917332807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2163,6 +2173,11 @@ MonoBehaviour:
   colorTag: 9
   worldTag: 0
   inTest: 1
+  information: {fileID: 0}
+  direction: {x: 0, y: 0, z: 0}
+  Camera: {fileID: 0}
+  checkPoint: {fileID: 0}
+  hasCheckPoint: 0
   jumpSpeed: 6
   isgrounded: 0
 --- !u!54 &917332808
@@ -2270,6 +2285,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: d13a65c9499b6e447b2811cb6d25ef0c, type: 2}
+    - target: {fileID: 7257849943850783633, guid: c57257a8164b84baa904b297e510b71a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7257849943850783634, guid: c57257a8164b84baa904b297e510b71a, type: 3}
       propertyPath: lose
       value: 
@@ -2345,26 +2364,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7257849943850783635, guid: c57257a8164b84baa904b297e510b71a, type: 3}
   m_PrefabInstance: {fileID: 936574767}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &936574769 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7257849943850783636, guid: c57257a8164b84baa904b297e510b71a, type: 3}
-  m_PrefabInstance: {fileID: 936574767}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &936574770
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 936574769}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e61fdcdbdb64340f9936175830ba100e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lose: {fileID: 0}
-  position: {x: 0, y: 0, z: 0}
-  colorTag1: 0
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -2478,8 +2477,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e693e839bb59c4df3939977ea3b124cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Target: {fileID: 917332805}
-  smooth: 2
+  yAxis: {fileID: 0}
+  xAxis: {fileID: 0}
+  zAxis: {fileID: 0}
+  zoomAxis: {fileID: 0}
+  player: {fileID: 0}
+  roSpeed: 90
+  scSpeed: 25
+  limitAngle: 18
 --- !u!1 &967238599
 GameObject:
   m_ObjectHideFlags: 0
@@ -2509,6 +2514,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a625f3d189f324c798c280940659268d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  information: {fileID: 0}
 --- !u!4 &967238601
 Transform:
   m_ObjectHideFlags: 0
@@ -3510,9 +3516,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cf173c1a03604f3a9690488effde289, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shop:
-    Coins: 0
-    ShopItemList: []
+  information: {fileID: 0}
   inventoryItemPrefab: {fileID: 2262899799644983947, guid: c43966647911c4e57a470e13f8199380, type: 3}
   scrollview: {fileID: 151244518}
 --- !u!1001 &1376421864
@@ -5345,7 +5349,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5957aeda639a649e6b0d4b01e5dce2d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lose: {fileID: 449080253}
 --- !u!65 &2040735762
 BoxCollider:
   m_ObjectHideFlags: 0

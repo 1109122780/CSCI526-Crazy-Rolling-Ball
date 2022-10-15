@@ -68,7 +68,7 @@ public class PlayerMovement : MonoBehaviour
 
 
         // If dropped the ball, show lose information:
-        if (transform.position.y < -20)
+        if (transform.position.y < -50)
         {
             if(hasCheckPoint == false)
             {
