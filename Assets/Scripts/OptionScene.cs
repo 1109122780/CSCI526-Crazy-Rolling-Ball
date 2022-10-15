@@ -12,11 +12,11 @@ public class OptionScene : MonoBehaviour
     public string level3;
     public string level4;
     public string level5;
-    public string level6;
-    public string level7;
-    public string level8;
-    public string level9;
-    public string level10;
+    // public string level6;
+    // public string level7;
+    // public string level8;
+    // public string level9;
+    // public string level10;
     public string mainMenuLevel;
     public Button[] levelButtons; 
     // Start is called before the first frame update
@@ -67,30 +67,30 @@ public class OptionScene : MonoBehaviour
         SceneManager.LoadScene(level5);
     }
 
-    public void StartLevel6()
-    {
-        SceneManager.LoadScene(level6);
-    }
+    // public void StartLevel6()
+    // {
+    //     SceneManager.LoadScene(level6);
+    // }
 
-    public void StartLevel7()
-    {
-        SceneManager.LoadScene(level7);
-    }
+    // public void StartLevel7()
+    // {
+    //     SceneManager.LoadScene(level7);
+    // }
 
-    public void StartLevel8()
-    {
-        SceneManager.LoadScene(level8);
-    }
+    // public void StartLevel8()
+    // {
+    //     SceneManager.LoadScene(level8);
+    // }
 
-    public void StartLevel9()
-    {
-        SceneManager.LoadScene(level9);
-    }
+    // public void StartLevel9()
+    // {
+    //     SceneManager.LoadScene(level9);
+    // }
 
-    public void StartLevel10()
-    {
-        SceneManager.LoadScene(level10);
-    }
+    // public void StartLevel10()
+    // {
+    //     SceneManager.LoadScene(level10);
+    // }
 
     public void ChangeScene(int sceneIndex)
     {
