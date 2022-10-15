@@ -18,6 +18,8 @@ public class PlayerMovement : MonoBehaviour
     public Vector3 direction;
     public GameObject Camera;
 
+    public float JumpGravity = 500f;
+    // public float gravityScale = 5;
 
     public GameObject checkPoint;
     public bool hasCheckPoint;
@@ -108,11 +110,12 @@ public class PlayerMovement : MonoBehaviour
         {
             canJump = false;
             if (bool_script.jumpHigh) {
-                jumpSpeed = 11;
-                rb.AddForce(0, jumpSpeed, 0, ForceMode.Impulse);
+                JumpGravity = 550f;
+                rb.velocity = new Vector3(rb.velocity.x, JumpGravity * Time.deltaTime,rb.velocity.z);
+
             }
             else {
-                jumpSpeed = 6;
+                // jumpSpeed = 6;
                 rb.AddForce(0, jumpSpeed, 0, ForceMode.Impulse);
             }
             
