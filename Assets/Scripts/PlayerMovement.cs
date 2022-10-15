@@ -107,7 +107,16 @@ public class PlayerMovement : MonoBehaviour
         if (canJump)
         {
             canJump = false;
-            rb.AddForce(0, jumpSpeed, 0, ForceMode.Impulse);
+            if (bool_script.jumpHigh) {
+                jumpSpeed = 11;
+                rb.AddForce(0, jumpSpeed, 0, ForceMode.Impulse);
+            }
+            else {
+                jumpSpeed = 6;
+                rb.AddForce(0, jumpSpeed, 0, ForceMode.Impulse);
+            }
+            
+            
         }
         direction = new Vector3(Input.GetAxis("Horizontal"),0,Input.GetAxis("Vertical"));
         float y = Camera.transform.rotation.eulerAngles.y;

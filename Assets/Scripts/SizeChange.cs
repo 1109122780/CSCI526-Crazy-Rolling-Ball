@@ -79,6 +79,7 @@ public class SizeChange : MonoBehaviour
                 return;
             }
             size = 2;
+            jumpHigh = false;
         }
         if (Input.GetKeyDown(KeyCode.K))
         {
@@ -91,6 +92,8 @@ public class SizeChange : MonoBehaviour
                 return;
             }
             size = 1;
+            jumpHigh = false;
+
         }
 
         if (Input.GetKeyDown(KeyCode.L))
@@ -102,13 +105,16 @@ public class SizeChange : MonoBehaviour
             if (canChange == false)
             {
                 size = 3;
+                
+
             }
             size = 3;
+            jumpHigh = true;
         }
         if (size == 1 && transform.localScale.y != normalSize)
         {
             if (transform.localScale.y > normalSize)
-            {
+            {   
                 sizeFloat = 0.005f;
                 transform.localScale -=
                     new Vector3(sizeFloat, sizeFloat, sizeFloat);
@@ -121,7 +127,8 @@ public class SizeChange : MonoBehaviour
             }
         }
         if (size == 2 && transform.localScale.y < largeSize)
-        {
+        {   
+            jumpHigh = false;
             sizeFloat = 0.005f;
             transform.localScale +=
                 new Vector3(sizeFloat, sizeFloat, sizeFloat);
