@@ -68,7 +68,7 @@ public class SizeChange : MonoBehaviour
             transform.localScale = new Vector3(1, 1, 1);
             return;
         }
-        if (Input.GetKeyDown(KeyCode.J))
+        if (Input.GetKeyDown(KeyCode.Q))
         {
             if (!jump_script.isgrounded)
             {
@@ -81,7 +81,7 @@ public class SizeChange : MonoBehaviour
             size = 2;
             jumpHigh = false;
         }
-        if (Input.GetKeyDown(KeyCode.K))
+        if (Input.GetKeyDown(KeyCode.F))
         {
             if (!jump_script.isgrounded)
             {
@@ -96,7 +96,7 @@ public class SizeChange : MonoBehaviour
 
         }
 
-        if (Input.GetKeyDown(KeyCode.L))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             if (!jump_script.isgrounded)
             {
