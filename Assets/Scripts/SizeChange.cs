@@ -32,7 +32,7 @@ public class SizeChange : MonoBehaviour
 
     public bool canChange = true;
 
-    private int size = 1;
+    public int size = 1;
 
     public bool jumpHigh;
 

@@ -83,7 +83,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // If space key is pressed, we jump:
-        if (Input.GetKeyDown(KeyCode.Space) && isgrounded && (worldTag == 3 || inTest))
+        if (Input.GetKeyDown(KeyCode.Space) && isgrounded && GetComponent<SizeChange>().size != 2)
         {
             if (bool_script.jumpLock)
             {
@@ -128,6 +128,6 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void moveCharacter(Vector3 direction){
-        rb.MovePosition(transform.position + (direction * speed * Time.fixedDeltaTime));
+        rb.MovePosition(rb.position + (direction * speed * Time.fixedDeltaTime));
     }
 }
