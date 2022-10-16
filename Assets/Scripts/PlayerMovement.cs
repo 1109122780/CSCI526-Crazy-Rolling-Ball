@@ -50,15 +50,21 @@ public class PlayerMovement : MonoBehaviour
         // }
 
         // Reset game when R is pressed:
-        if (Input.GetKeyDown(KeyCode.R)){
-            if(hasCheckPoint == false)
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            if (hasCheckPoint == false)
             {
+                information.GetComponent<InformationScript>().needInitialize = false;
                 SceneManager.LoadScene(currentScene);
                 Time.timeScale = 1;
-                return;       
+                information.GetComponent<InformationScript>().times_reset++;
+                return;
             }
             else
+            {
                 gameObject.transform.position = checkPoint.GetComponent<Transform>().position;
+                information.GetComponent<InformationScript>().times_reset++;
+            }
         }
         // Enter the shop
         if (Input.GetKeyDown(KeyCode.T))
@@ -72,14 +78,19 @@ public class PlayerMovement : MonoBehaviour
         // If dropped the ball, show lose information:
         if (transform.position.y < -30)
         {
-            if(hasCheckPoint == false)
+            if (hasCheckPoint == false)
             {
+                information.GetComponent<InformationScript>().needInitialize = false;
                 SceneManager.LoadScene(currentScene);
                 Time.timeScale = 1;
-                return;       
+                information.GetComponent<InformationScript>().times_fall++;
+                return;
             }
             else
+            {
                 gameObject.transform.position = checkPoint.GetComponent<Transform>().position;
+                information.GetComponent<InformationScript>().times_fall++;
+            }
         }
 
         // If space key is pressed, we jump:
@@ -109,25 +120,28 @@ public class PlayerMovement : MonoBehaviour
         if (canJump)
         {
             canJump = false;
-            if (bool_script.jumpHigh) {
+            if (bool_script.jumpHigh)
+            {
                 JumpGravity = 550f;
-                rb.velocity = new Vector3(rb.velocity.x, JumpGravity * Time.deltaTime,rb.velocity.z);
+                rb.velocity = new Vector3(rb.velocity.x, JumpGravity * Time.deltaTime, rb.velocity.z);
 
             }
-            else {
+            else
+            {
                 // jumpSpeed = 6;
                 rb.AddForce(0, jumpSpeed, 0, ForceMode.Impulse);
             }
-            
-            
+
+
         }
-        direction = new Vector3(Input.GetAxis("Horizontal"),0,Input.GetAxis("Vertical"));
+        direction = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
         float y = Camera.transform.rotation.eulerAngles.y;
         direction = Quaternion.Euler(0, y, 0) * direction;
         moveCharacter(direction);
     }
 
-    void moveCharacter(Vector3 direction){
+    void moveCharacter(Vector3 direction)
+    {
         rb.MovePosition(rb.position + (direction * speed * Time.fixedDeltaTime));
     }
 }

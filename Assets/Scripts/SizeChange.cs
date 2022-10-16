@@ -70,6 +70,7 @@ public class SizeChange : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Q))
         {
+            information.GetComponent<InformationScript>().times_QE++;
             if (!jump_script.isgrounded)
             {
                 return;
@@ -98,6 +99,7 @@ public class SizeChange : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E))
         {
+            information.GetComponent<InformationScript>().times_QE++;
             if (!jump_script.isgrounded)
             {
                 return;
@@ -105,7 +107,7 @@ public class SizeChange : MonoBehaviour
             if (canChange == false)
             {
                 size = 3;
-                
+
 
             }
             size = 3;
@@ -114,7 +116,7 @@ public class SizeChange : MonoBehaviour
         if (size == 1 && transform.localScale.y != normalSize)
         {
             if (transform.localScale.y > normalSize)
-            {   
+            {
                 sizeFloat = 0.005f;
                 transform.localScale -=
                     new Vector3(sizeFloat, sizeFloat, sizeFloat);
@@ -127,7 +129,7 @@ public class SizeChange : MonoBehaviour
             }
         }
         if (size == 2 && transform.localScale.y < largeSize)
-        {   
+        {
             jumpHigh = false;
             sizeFloat = 0.005f;
             transform.localScale +=

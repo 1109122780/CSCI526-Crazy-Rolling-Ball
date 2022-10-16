@@ -11,10 +11,11 @@ public class PlayerToCube : MonoBehaviour
     private float contactThreshold = 60;          // Acceptable difference in degrees
     private ChangeItem changeItemScript;
     private bool canChange = true;
+    public GameObject information;
     // Start is called before the first frame update
     void Start()
     {
-        
+        information = GameObject.Find("Information");
     }
 
     // Update is called once per frame
@@ -33,7 +34,7 @@ public class PlayerToCube : MonoBehaviour
             //used = true;
         }
     }
-    
+
     void Replace(GameObject obj1, GameObject obj2)
     {
         //Instantiate(obj2, obj1.transform.position, Quaternion.identity);
@@ -49,6 +50,7 @@ public class PlayerToCube : MonoBehaviour
 
         if (canChange & col.gameObject.tag == "Player")
         {
+            information.GetComponent<InformationScript>().shapeChange++;
             changeItemScript = col.gameObject.GetComponent<ChangeItem>();
             //changeItemScript.changeItem();
 

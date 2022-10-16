@@ -8,6 +8,8 @@ public class InformationScript : MonoBehaviour
     public string playerID;
     public string levelID;
     public DateTime levelStartTime;
+    public Boolean needInitialize;
+    public int times_reset;
     public int times_fall;
     public int times_QE;
     public float score;
@@ -19,6 +21,7 @@ public class InformationScript : MonoBehaviour
     {
         DontDestroyOnLoad(gameObject);
         playerID = Guid.NewGuid().ToString();
+        needInitialize = true;
         score = 150;
         ShopItemList.Add(new ShopItem(0, "IncreaseHealth", 100, 1, Resources.Load<Sprite>("ItemsIcon/Item1") as Sprite));
         ShopItemList.Add(new ShopItem(1, "Invincible", 200, 1, Resources.Load<Sprite>("ItemsIcon/Item2") as Sprite));

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657815, g: 0.49641192, b: 0.57481617, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1040,7 +1040,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3138167770057594535, guid: ce33f659697f0db45b9d550904dc3566, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6740788390136847464, guid: ce33f659697f0db45b9d550904dc3566, type: 3}
       propertyPath: m_Name
@@ -4565,6 +4565,7 @@ MonoBehaviour:
   information: {fileID: 0}
   direction: {x: 0, y: 0, z: 0}
   Camera: {fileID: 963194225}
+  JumpGravity: 500
   checkPoint: {fileID: 0}
   hasCheckPoint: 0
   jumpSpeed: 6
@@ -4589,6 +4590,7 @@ MonoBehaviour:
   normalSize: 1
   largeSize: 1.5
   canChange: 1
+  size: 1
   jumpHigh: 0
 --- !u!54 &1045036386
 Rigidbody:
@@ -8766,6 +8768,7 @@ MonoBehaviour:
   normalSize: 1
   largeSize: 1.5
   canChange: 1
+  size: 1
   jumpHigh: 0
 --- !u!54 &1980722332
 Rigidbody:

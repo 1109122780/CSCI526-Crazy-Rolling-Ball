@@ -12,22 +12,28 @@ public class DataAnalystScript : MonoBehaviour
     void Start()
     {
         information = GameObject.Find("Information");
-        information.GetComponent<InformationScript>().levelID = Guid.NewGuid().ToString();
-        information.GetComponent<InformationScript>().levelStartTime = DateTime.Now;
-        information.GetComponent<InformationScript>().times_fall = 0;
-        information.GetComponent<InformationScript>().times_QE = 0;
-        information.GetComponent<InformationScript>().star = 0;
-        information.GetComponent<InformationScript>().shapeChange = 0;
+        if (information.GetComponent<InformationScript>().needInitialize)
+        {
+            information.GetComponent<InformationScript>().levelID = Guid.NewGuid().ToString();
+            information.GetComponent<InformationScript>().levelStartTime = DateTime.Now;
+            information.GetComponent<InformationScript>().times_reset = 0;
+            information.GetComponent<InformationScript>().times_fall = 0;
+            information.GetComponent<InformationScript>().times_QE = 0;
+            information.GetComponent<InformationScript>().star = 0;
+            information.GetComponent<InformationScript>().shapeChange = 0;
+        }
+        else
+            information.GetComponent<InformationScript>().needInitialize = true;
     }
-    public IEnumerator Post(string playerID, string levelID, string current_level, string pass, string healthRemains, string times_fall, string times_QE, string time_spent, string star, string shapeChange)
+    public IEnumerator Post(string playerID, string levelID, string current_level, string healthRemains, string times_reset, string times_fall, string times_QE, string time_spent, string star, string shapeChange)
     {
         // Create the form and enter responses
         WWWForm form = new WWWForm();
         form.AddField("entry.590070741", playerID);
         form.AddField("entry.366340186", levelID);
         form.AddField("entry.1847675819", current_level);
-        form.AddField("entry.1955268382", pass);
         form.AddField("entry.644438793", healthRemains);
+        form.AddField("entry.1955268382", times_reset);
         form.AddField("entry.731008512", times_fall);
         form.AddField("entry.1852351675", times_QE);
         form.AddField("entry.1756017999", time_spent);

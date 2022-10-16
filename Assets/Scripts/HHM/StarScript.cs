@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class StarScript : MonoBehaviour
 {
+    public GameObject information;
     // Start is called before the first frame update
     void Start()
     {
-        
+        information = GameObject.Find("Information");
     }
     void Update()
     {
@@ -16,6 +17,10 @@ public class StarScript : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+        if (other.gameObject.tag == "Player")
+        {
+            information.GetComponent<InformationScript>().star++;
+        }
         Destroy(this.gameObject, 0.5f);
     }
 }
