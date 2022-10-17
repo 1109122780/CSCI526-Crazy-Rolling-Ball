@@ -21,18 +21,18 @@ public class PlayerToCube : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.C))
-        {
-            Replace(sphere, cube);
-            components = sphere.GetComponents<Component>();
-            for (int i = 0; i < components.Length; i++)
-            {
-                UnityEditorInternal.ComponentUtility.CopyComponent(components[i]);
-                UnityEditorInternal.ComponentUtility.PasteComponentAsNew(cube);
-            }
-            Debug.Log("Replaced");
-            //used = true;
-        }
+        // if (Input.GetKeyUp(KeyCode.C))
+        // {
+        //     Replace(sphere, cube);
+        //     components = sphere.GetComponents<Component>();
+        //     for (int i = 0; i < components.Length; i++)
+        //     {
+        //         UnityEditorInternal.ComponentUtility.CopyComponent(components[i]);
+        //         UnityEditorInternal.ComponentUtility.PasteComponentAsNew(cube);
+        //     }
+        //     Debug.Log("Replaced");
+        //     //used = true;
+        // }
     }
 
     void Replace(GameObject obj1, GameObject obj2)
