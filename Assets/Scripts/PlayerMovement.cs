@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed = 10;
+    public float speed = 5;
     public float turnSpeed = 4;
     public float fallSpeed = -8;
     public int health = 3;
@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     public GameObject information;
     public Vector3 direction;
     public GameObject Camera;
+    public float moveForce = 1000f;
 
     public float JumpGravity = 500f;
     // public float gravityScale = 5;
@@ -104,6 +105,8 @@ public class PlayerMovement : MonoBehaviour
             isgrounded = false;
         }
 
+        rb.velocity = new Vector3(Mathf.Clamp(rb.velocity.x,-speed,speed),rb.velocity.y,Mathf.Clamp(rb.velocity.z,-speed,speed));
+
     }
 
     private void OnCollisionEnter(Collision other)
@@ -142,6 +145,11 @@ public class PlayerMovement : MonoBehaviour
 
     void moveCharacter(Vector3 direction)
     {
+        // if(isgrounded)
+        //     rb.AddForce(direction*moveForce);
+        // else
+        //     rb.AddForce(direction*10f);
+
         rb.MovePosition(rb.position + (direction * speed * Time.fixedDeltaTime));
     }
 }
