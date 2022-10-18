@@ -17,11 +17,13 @@ public class ColliderSc : MonoBehaviour
     private Transform fallObstacle;
     private Vector3 fallDir;
     private int fallSpeed;
+    private float fallPos;
 
     //RollingCollider
     private Transform rollObstacle;
     private Vector3 rollDir;
     private int rollSpeed;
+    private float rollPos;
 
     //SpinningCollider
     private Transform spinObstacle;
@@ -43,7 +45,8 @@ public class ColliderSc : MonoBehaviour
         {
             fallObstacle = gameObject.transform;
             fallDir = Vector3.down;
-            fallSpeed = 5;
+            fallSpeed = 8;
+            fallPos =  fallObstacle.transform.position.y;
         }
         
         if(gameObject.tag == "RollingCollider")
@@ -51,6 +54,7 @@ public class ColliderSc : MonoBehaviour
             rollObstacle = gameObject.transform;
             rollDir = Vector3.left;
             rollSpeed = 5;
+            rollPos = rollObstacle.transform.position.x;
         }
 
         if(gameObject.tag == "SpinningCollider")
@@ -66,23 +70,23 @@ public class ColliderSc : MonoBehaviour
         }
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if(gameObject.tag == "FallingCollider")
         {
-            if (fallObstacle.transform.position.y <= 1.5) {
+            if (fallPos - fallObstacle.transform.position.y >= 3) {
                 fallDir = Vector3.up;
             } 
-            else if (fallObstacle.transform.position.y >= 5) {
+            else if (fallObstacle.transform.position.y - fallPos >= 3) {
                 fallDir = Vector3.down;
             }
             fallObstacle.transform.Translate(fallDir * Time.deltaTime * fallSpeed);
         }
         if(gameObject.tag == "RollingCollider")
         {
-            if (rollObstacle.transform.position.x <= -3.5) {
+            if (rollPos - rollObstacle.transform.position.x >= 3) {
                 rollDir = Vector3.right;
-            } else if (rollObstacle.transform.position.x >= 0) {
+            } else if (rollObstacle.transform.position.x - rollPos >= 3) {
                 rollDir = Vector3.left;
             }
             rollObstacle.transform.Translate(rollDir * Time.deltaTime * rollSpeed);
