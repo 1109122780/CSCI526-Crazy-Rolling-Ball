@@ -13,11 +13,11 @@ public class PlayerMovement : MonoBehaviour
     public string currentScene;
     public int colorTag;
     public int worldTag;
-    public bool inTest;
     public GameObject information;
     public Vector3 direction;
     public GameObject Camera;
     public float moveForce = 1000f;
+    public float timer = 0;
 
     public float JumpGravity = 500f;
     // public float gravityScale = 5;
@@ -127,7 +127,6 @@ public class PlayerMovement : MonoBehaviour
             {
                 JumpGravity = 550f;
                 rb.velocity = new Vector3(rb.velocity.x, JumpGravity * Time.deltaTime, rb.velocity.z);
-
             }
             else
             {
@@ -137,6 +136,10 @@ public class PlayerMovement : MonoBehaviour
 
 
         }
+        if(isgrounded && rb.velocity.y == 0)
+            timer = 0;
+        else
+            timer += 1;
         direction = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
         float y = Camera.transform.rotation.eulerAngles.y;
         direction = Quaternion.Euler(0, y, 0) * direction;
@@ -145,11 +148,14 @@ public class PlayerMovement : MonoBehaviour
 
     void moveCharacter(Vector3 direction)
     {
-        // if(isgrounded)
-        //     rb.AddForce(direction*moveForce);
+        // if(isgrounded && timer <= 20)
+        // {
+            rb.AddForce(direction*moveForce);
+        // }
+            
         // else
         //     rb.AddForce(direction*10f);
 
-        rb.MovePosition(rb.position + (direction * speed * Time.fixedDeltaTime));
+        // rb.MovePosition(rb.position + (direction * speed * Time.fixedDeltaTime));
     }
 }
