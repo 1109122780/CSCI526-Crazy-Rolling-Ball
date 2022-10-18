@@ -9,7 +9,7 @@ public class FinishLine : MonoBehaviour
     public GameObject win;
     public GameObject DataAnalyst;
     public GameObject Player;
-    public GameObject information;
+    // public GameObject information;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,13 +22,13 @@ public class FinishLine : MonoBehaviour
         {
             win.SetActive(true);
             Time.timeScale = 0;
-            information = GameObject.Find("Information");
-            Scene scene = SceneManager.GetActiveScene();
-            DateTime levelEndTime = DateTime.Now;
-            // Record health:
-            // StartCoroutine(DataAnalyst.GetComponent<DataAnalystScript>().Post(information.GetComponent<InformationScript>().playerID, information.GetComponent<InformationScript>().levelID, scene.name, "True", Player.GetComponent<PlayerMovement>().health.ToString(), information.GetComponent<InformationScript>().times_fall.ToString(), information.GetComponent<InformationScript>().times_QE.ToString(), (levelEndTime - information.GetComponent<InformationScript>().levelStartTime).ToString(), information.GetComponent<InformationScript>().star.ToString(), information.GetComponent<InformationScript>().shapeChange.ToString()));
-            // Don't record health
-            StartCoroutine(DataAnalyst.GetComponent<DataAnalystScript>().Post(information.GetComponent<InformationScript>().playerID, information.GetComponent<InformationScript>().levelID, scene.name, "1", information.GetComponent<InformationScript>().times_reset.ToString(), information.GetComponent<InformationScript>().times_fall.ToString(), information.GetComponent<InformationScript>().times_QE.ToString(), (levelEndTime - information.GetComponent<InformationScript>().levelStartTime).ToString(), information.GetComponent<InformationScript>().star.ToString(), information.GetComponent<InformationScript>().shapeChange.ToString()));
+            // information = GameObject.Find("Information");
+            // Scene scene = SceneManager.GetActiveScene();
+            // DateTime levelEndTime = DateTime.Now;
+            // // Record health:
+            // // StartCoroutine(DataAnalyst.GetComponent<DataAnalystScript>().Post(information.GetComponent<InformationScript>().playerID, information.GetComponent<InformationScript>().levelID, scene.name, "True", Player.GetComponent<PlayerMovement>().health.ToString(), information.GetComponent<InformationScript>().times_fall.ToString(), information.GetComponent<InformationScript>().times_QE.ToString(), (levelEndTime - information.GetComponent<InformationScript>().levelStartTime).ToString(), information.GetComponent<InformationScript>().star.ToString(), information.GetComponent<InformationScript>().shapeChange.ToString()));
+            // // Don't record health
+            // StartCoroutine(DataAnalyst.GetComponent<DataAnalystScript>().Post(information.GetComponent<InformationScript>().playerID, information.GetComponent<InformationScript>().levelID, scene.name, "1", information.GetComponent<InformationScript>().times_reset.ToString(), information.GetComponent<InformationScript>().times_fall.ToString(), information.GetComponent<InformationScript>().times_QE.ToString(), (levelEndTime - information.GetComponent<InformationScript>().levelStartTime).ToString(), information.GetComponent<InformationScript>().star.ToString(), information.GetComponent<InformationScript>().shapeChange.ToString()));
         }
     }
 

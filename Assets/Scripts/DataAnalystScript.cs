@@ -7,23 +7,23 @@ using UnityEngine.Networking;
 public class DataAnalystScript : MonoBehaviour
 {
     private string URL = "https://docs.google.com/forms/u/1/d/e/1FAIpQLSdD1P7c2r0liTfV2Bu-OVGgnsJxhE-5QWaA1sKtmoL0MMlW5A/formResponse";
-    public GameObject information;
+    // public GameObject information;
 
     void Start()
     {
-        information = GameObject.Find("Information");
-        if (information.GetComponent<InformationScript>().needInitialize)
-        {
-            information.GetComponent<InformationScript>().levelID = Guid.NewGuid().ToString();
-            information.GetComponent<InformationScript>().levelStartTime = DateTime.Now;
-            information.GetComponent<InformationScript>().times_reset = 0;
-            information.GetComponent<InformationScript>().times_fall = 0;
-            information.GetComponent<InformationScript>().times_QE = 0;
-            information.GetComponent<InformationScript>().star = 0;
-            information.GetComponent<InformationScript>().shapeChange = 0;
-        }
-        else
-            information.GetComponent<InformationScript>().needInitialize = true;
+        // information = GameObject.Find("Information");
+        // if (information.GetComponent<InformationScript>().needInitialize)
+        // {
+        //     information.GetComponent<InformationScript>().levelID = Guid.NewGuid().ToString();
+        //     information.GetComponent<InformationScript>().levelStartTime = DateTime.Now;
+        //     information.GetComponent<InformationScript>().times_reset = 0;
+        //     information.GetComponent<InformationScript>().times_fall = 0;
+        //     information.GetComponent<InformationScript>().times_QE = 0;
+        //     information.GetComponent<InformationScript>().star = 0;
+        //     information.GetComponent<InformationScript>().shapeChange = 0;
+        // }
+        // else
+        //     information.GetComponent<InformationScript>().needInitialize = true;
     }
     public IEnumerator Post(string playerID, string levelID, string current_level, string healthRemains, string times_reset, string times_fall, string times_QE, string time_spent, string star, string shapeChange)
     {

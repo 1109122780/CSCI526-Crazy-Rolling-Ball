@@ -13,14 +13,14 @@ public class WinPanel : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        information = GameObject.Find("Information");
+        // information = GameObject.Find("Information");
     }
 
     // Update is called once per frame
     void Update()
     {
-        string stars = information.GetComponent<InformationScript>().star.ToString();
-        message.text = "Congratulations!\n" + stars + " Stars Found!";
+        // string stars = information.GetComponent<InformationScript>().star.ToString();
+        // message.text = "Congratulations!\n" + stars + " Stars Found!";
     }
 
     public void NextLevel(int sceneIndex)

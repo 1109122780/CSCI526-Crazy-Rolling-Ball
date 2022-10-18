@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     public string currentScene;
     // public int colorTag;
     // public int worldTag;
-    [System.NonSerialized] public GameObject information;
+    // [System.NonSerialized] public GameObject information;
     [System.NonSerialized] public Vector3 direction;
     public GameObject Camera;
     public float moveForce = 100f;
@@ -40,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
         bool_script = GetComponent<SizeChange>();
         Time.timeScale = 1;
         hasCheckPoint = false;
-        information = GameObject.Find("Information");
+        // information = GameObject.Find("Information");
     }
 
     // Update is called once per frame
@@ -55,16 +55,16 @@ public class PlayerMovement : MonoBehaviour
         {
             if (hasCheckPoint == false)
             {
-                information.GetComponent<InformationScript>().needInitialize = false;
+                // information.GetComponent<InformationScript>().needInitialize = false;
                 SceneManager.LoadScene(currentScene);
                 Time.timeScale = 1;
-                information.GetComponent<InformationScript>().times_reset++;
+                // information.GetComponent<InformationScript>().times_reset++;
                 return;
             }
             else
             {
                 gameObject.transform.position = checkPoint.GetComponent<Transform>().position;
-                information.GetComponent<InformationScript>().times_reset++;
+                // information.GetComponent<InformationScript>().times_reset++;
             }
         }
         // Enter the shop
@@ -81,16 +81,16 @@ public class PlayerMovement : MonoBehaviour
         {
             if (hasCheckPoint == false)
             {
-                information.GetComponent<InformationScript>().needInitialize = false;
+                // information.GetComponent<InformationScript>().needInitialize = false;
                 SceneManager.LoadScene(currentScene);
                 Time.timeScale = 1;
-                information.GetComponent<InformationScript>().times_fall++;
+                // information.GetComponent<InformationScript>().times_fall++;
                 return;
             }
             else
             {
                 gameObject.transform.position = checkPoint.GetComponent<Transform>().position;
-                information.GetComponent<InformationScript>().times_fall++;
+                // information.GetComponent<InformationScript>().times_fall++;
             }
         }
 
@@ -105,7 +105,7 @@ public class PlayerMovement : MonoBehaviour
             isgrounded = false;
         }
 
-        rb.velocity = new Vector3(Mathf.Clamp(rb.velocity.x,-speed,speed),rb.velocity.y,Mathf.Clamp(rb.velocity.z,-speed,speed));
+        rb.velocity = new Vector3(Mathf.Clamp(rb.velocity.x, -speed, speed), rb.velocity.y, Mathf.Clamp(rb.velocity.z, -speed, speed));
 
     }
 
@@ -150,9 +150,9 @@ public class PlayerMovement : MonoBehaviour
     {
         // if(isgrounded && timer <= 20)
         // {
-            rb.AddForce(direction*moveForce);
+        rb.AddForce(direction * moveForce);
         // }
-            
+
         // else
         //     rb.AddForce(direction*10f);
 
