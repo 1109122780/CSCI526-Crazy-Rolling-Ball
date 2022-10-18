@@ -6,30 +6,30 @@ using UnityEngine.SceneManagement;
 public class PlayerMovement : MonoBehaviour
 {
     public float speed = 5;
-    public float turnSpeed = 4;
-    public float fallSpeed = -8;
-    public int health = 3;
-    public GameObject lose;
+    // public float turnSpeed = 4;
+    // public float fallSpeed = -8;
+    // public int health = 3;
+    // public GameObject lose;
     public string currentScene;
-    public int colorTag;
-    public int worldTag;
-    public GameObject information;
-    public Vector3 direction;
+    // public int colorTag;
+    // public int worldTag;
+    [System.NonSerialized] public GameObject information;
+    [System.NonSerialized] public Vector3 direction;
     public GameObject Camera;
-    public float moveForce = 1000f;
-    public float timer = 0;
+    public float moveForce = 100f;
+    // public float timer = 0;
 
-    public float JumpGravity = 500f;
+    public float JumpGravity = 300f;
     // public float gravityScale = 5;
 
-    public GameObject checkPoint;
-    public bool hasCheckPoint;
+    [System.NonSerialized] public GameObject checkPoint;
+    [System.NonSerialized] public bool hasCheckPoint;
 
 
     // Jump parameters:
-    public float jumpSpeed;
+    public float jumpSpeed = 6;
     private bool canJump;
-    public bool isgrounded;
+    [System.NonSerialized] public bool isgrounded;
     Rigidbody rb;
     private SizeChange bool_script;
 
@@ -136,10 +136,10 @@ public class PlayerMovement : MonoBehaviour
 
 
         }
-        if(isgrounded && rb.velocity.y == 0)
-            timer = 0;
-        else
-            timer += 1;
+        // if(isgrounded && rb.velocity.y == 0)
+        //     timer = 0;
+        // else
+        //     timer += 1;
         direction = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
         float y = Camera.transform.rotation.eulerAngles.y;
         direction = Quaternion.Euler(0, y, 0) * direction;
