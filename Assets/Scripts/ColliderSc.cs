@@ -101,8 +101,8 @@ public class ColliderSc : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other) {
-        if (other.name == "Player" &&  player.GetComponent<PlayerMovement>().colorTag != colorTag1)
-        {
+        // if (other.name == "Player" &&  player.GetComponent<PlayerMovement>().colorTag != colorTag1)
+        // {
             // Debug.Log("ss");
             // if (player.GetComponent<PlayerMovement>().health > 0)
             // {
@@ -121,7 +121,7 @@ public class ColliderSc : MonoBehaviour
             //     lose.SetActive(true);
             //     Time.timeScale = 0;
             // }
-        }
+        // }
     }
 
     // Update is called once per frame
