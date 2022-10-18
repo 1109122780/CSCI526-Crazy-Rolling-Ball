@@ -33,6 +33,15 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody rb;
     private SizeChange bool_script;
 
+    // Cube and Sphere parameters
+    [SerializeField] private float forceMagnitude;
+    GameObject cube;
+    Renderer cubeRend;
+    GameObject sphere;
+    Renderer sphereRend;
+    float originalMass = 0;
+    float cubeMass = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,6 +50,24 @@ public class PlayerMovement : MonoBehaviour
         Time.timeScale = 1;
         hasCheckPoint = false;
         // information = GameObject.Find("Information");
+
+        cubeMass = GetComponent<ChangeItem>().cubeMass;
+        Debug.Log(cubeMass);
+        for (int i = 0; i < gameObject.transform.childCount; i++)
+        {
+            if (gameObject.transform.GetChild(i).name == "PlayerSphere")
+            {
+                sphere = gameObject.transform.GetChild(i).gameObject;
+                sphereRend = sphere.GetComponent<Renderer>();
+            }
+
+            if (gameObject.transform.GetChild(i).name == "PlayerCube")
+            {
+                cube = gameObject.transform.GetChild(i).gameObject;
+                cubeRend = cube.GetComponent<Renderer>();
+            }
+        }
+        originalMass = GetComponent<Rigidbody>().mass;
     }
 
     // Update is called once per frame
@@ -95,7 +122,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // If space key is pressed, we jump:
-        if (Input.GetKeyDown(KeyCode.Space) && isgrounded && GetComponent<SizeChange>().size != 2)
+        if (!cube.activeInHierarchy && Input.GetKeyDown(KeyCode.Space) && isgrounded && GetComponent<SizeChange>().size != 2)
         {
             if (bool_script.jumpLock)
             {
@@ -111,10 +138,61 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.tag == "Ground")
+        if (other.gameObject.tag == "Ground" || other.gameObject.tag == "MovableBox")
         {
             isgrounded = true;
         }
+
+        Rigidbody rigidbody1 = other.collider.attachedRigidbody;
+
+        if (other.gameObject.tag == "MovableBox" && rigidbody1 != null && cube.activeSelf)
+        {
+            if (cubeRend.sharedMaterial == other.gameObject.GetComponent<Renderer>().sharedMaterial)
+            {
+                Vector3 forceDirection = other.gameObject.transform.position - transform.position;
+                forceDirection.y = 0;
+                forceDirection.Normalize();
+                rigidbody1.AddForceAtPosition(forceDirection * forceMagnitude, transform.position, ForceMode.Impulse);
+            }
+            else
+            {
+                GetComponent<Rigidbody>().mass = originalMass;
+            }
+
+        }
+    }
+
+    private void OnCollisionStay(Collision other)
+    {
+        Rigidbody rigidbody1 = other.collider.attachedRigidbody;
+
+        if (other.gameObject.tag == "MovableBox" && rigidbody1 != null && cube.activeSelf
+            && cubeRend.sharedMaterial == other.gameObject.GetComponent<Renderer>().sharedMaterial)
+        {
+            Vector3 forceDirection = other.gameObject.transform.position - transform.position;
+            forceDirection.y = 0;
+            forceDirection.Normalize();
+            rigidbody1.AddForceAtPosition(forceDirection * forceMagnitude, transform.position, ForceMode.Force);
+        }
+
+
+    }
+
+    private void OnCollisionExit(Collision other)
+    {
+        if (other.gameObject.tag == "MovableBox")
+        {
+            Rigidbody rigidbody1 = other.collider.attachedRigidbody;
+            if (rigidbody1 != null && cube.activeSelf)
+            {
+                if (cubeRend.sharedMaterial != other.gameObject.GetComponent<Renderer>().sharedMaterial)
+                {
+                    GetComponent<Rigidbody>().mass = cubeMass;
+                }
+
+            }
+        }
+
     }
 
     void FixedUpdate()

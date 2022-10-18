@@ -47,12 +47,12 @@ public class SizeChange : MonoBehaviour
 
         for (int i = 0; i < gameObject.transform.childCount; i++)
         {
-            if (gameObject.transform.GetChild(i).name == "Sphere")
+            if (gameObject.transform.GetChild(i).name == "PlayerSphere")
             {
                 sphere = gameObject.transform.GetChild(i).gameObject;
             }
 
-            if (gameObject.transform.GetChild(i).name == "Cube")
+            if (gameObject.transform.GetChild(i).name == "PlayerCube")
             {
                 cube = gameObject.transform.GetChild(i).gameObject;
             }

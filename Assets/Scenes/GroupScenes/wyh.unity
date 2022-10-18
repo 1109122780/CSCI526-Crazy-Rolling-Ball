@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1485,7 +1485,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a625f3d189f324c798c280940659268d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  information: {fileID: 0}
 --- !u!4 &493210848
 Transform:
   m_ObjectHideFlags: 0
@@ -2515,13 +2514,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpLock: 0
-  information: {fileID: 0}
   sphere: {fileID: 0}
   cube: {fileID: 0}
   smallSize: 0.5
   normalSize: 1
   largeSize: 1.5
   canChange: 1
+  size: 1
   jumpHigh: 0
 --- !u!54 &831965699
 Rigidbody:
@@ -2632,21 +2631,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 9
-  turnSpeed: 4
-  fallSpeed: -8
-  health: 3
-  lose: {fileID: 2066664506}
   currentScene: FirstLevel
-  colorTag: 9
-  worldTag: 0
-  inTest: 1
-  information: {fileID: 0}
-  direction: {x: 0, y: 0, z: 0}
   Camera: {fileID: 0}
-  checkPoint: {fileID: 0}
-  hasCheckPoint: 0
+  moveForce: 100
+  JumpGravity: 300
   jumpSpeed: 6
-  isgrounded: 0
+  forceMagnitude: 0
 --- !u!114 &831965705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2659,6 +2649,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46d26aedc0bafa346b3c5a8dc897e0dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cubeMass: 20
+  sphereMass: 1
 --- !u!65 &831965706
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3488,7 +3480,7 @@ GameObject:
   - component: {fileID: 1149835834}
   - component: {fileID: 1149835833}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: PlayerSphere
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3507,13 +3499,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpLock: 0
-  information: {fileID: 0}
   sphere: {fileID: 0}
   cube: {fileID: 0}
   smallSize: 0.5
   normalSize: 1
   largeSize: 1.5
   canChange: 1
+  size: 1
   jumpHigh: 0
 --- !u!54 &1149835834
 Rigidbody:
@@ -5349,7 +5341,6 @@ MonoBehaviour:
   win: {fileID: 597825971}
   DataAnalyst: {fileID: 493210846}
   Player: {fileID: 831965696}
-  information: {fileID: 0}
 --- !u!65 &1669490841
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6153,7 +6144,6 @@ MonoBehaviour:
   win: {fileID: 597825971}
   DataAnalyst: {fileID: 493210846}
   Player: {fileID: 831965696}
-  information: {fileID: 0}
 --- !u!65 &1920828202
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6320,7 +6310,7 @@ GameObject:
   - component: {fileID: 1999619157}
   - component: {fileID: 1999619156}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: PlayerCube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6575,9 +6565,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7eb9ab3d7cbdec947be8fc81d7b1ef9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 831965696}
-  checkPoint: {fileID: 855789853}
-  healthRemains: {fileID: 1464917692}
 --- !u!81 &2013279874
 AudioListener:
   m_ObjectHideFlags: 0

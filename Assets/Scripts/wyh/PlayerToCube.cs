@@ -8,7 +8,7 @@ public class PlayerToCube : MonoBehaviour
     public GameObject sphere;
     private Component[] components;
     private Vector3 validDirection = Vector3.down;  // What you consider to be upwards
-    private float contactThreshold = 60;          // Acceptable difference in degrees
+    private float contactThreshold = 180;          // Acceptable difference in degrees
     private ChangeItem changeItemScript;
     private bool canChange = true;
     // public GameObject information;
@@ -35,36 +35,25 @@ public class PlayerToCube : MonoBehaviour
         // }
     }
 
-    void Replace(GameObject obj1, GameObject obj2)
-    {
-        //Instantiate(obj2, obj1.transform.position, Quaternion.identity);
-        //Destroy(obj1);
-        //obj1.SetActive(false);
-    }
-
-
 
     void OnCollisionEnter(Collision col)
     {
-        Debug.Log("Collide!");
-
         if (canChange & col.gameObject.tag == "Player")
         {
-            // information.GetComponent<InformationScript>().shapeChange++;
+            //information.GetComponent<InformationScript>().shapeChange++;
             changeItemScript = col.gameObject.GetComponent<ChangeItem>();
             //changeItemScript.changeItem();
 
             for (int k = 0; k < col.contacts.Length; k++)
             {
+
                 if (Vector3.Angle(col.contacts[k].normal, validDirection) <= contactThreshold)
                 {
                     // Collided with a surface facing mostly upwards
-                    changeItemScript.changeItem();
-                    Debug.Log("changeItemScript.changeItem() executed");
+                    changeItemScript.changeItem(GetComponent<Renderer>().sharedMaterial);
                     break;
                 }
             }
-            //yield return new WaitForSeconds(2.0f);
             StartCoroutine(FiveSeconds());
         }
         //if (col.gameObject.name == "Player")
@@ -81,7 +70,7 @@ public class PlayerToCube : MonoBehaviour
     private IEnumerator FiveSeconds()
     {
         canChange = false;
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(0.5f);
         canChange = true;
         //while (timer > 0)
         //{
