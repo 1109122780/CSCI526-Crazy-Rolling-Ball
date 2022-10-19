@@ -152,7 +152,7 @@ public class PlayerMovement : MonoBehaviour
                 Vector3 forceDirection = other.gameObject.transform.position - transform.position;
                 forceDirection.y = 0;
                 forceDirection.Normalize();
-                rigidbody1.AddForceAtPosition(forceDirection * forceMagnitude, transform.position, ForceMode.Impulse);
+                rigidbody1.AddForceAtPosition(forceDirection * forceMagnitude, transform.position, ForceMode.Force);
             }
             else
             {

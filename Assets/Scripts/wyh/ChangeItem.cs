@@ -16,7 +16,7 @@ public class ChangeItem : MonoBehaviour
     private Renderer rend;
     public float cubeMass = 1;
     public float sphereMass = 1;
-    private float speedChange = 4;
+    private float speedChange = 2;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
