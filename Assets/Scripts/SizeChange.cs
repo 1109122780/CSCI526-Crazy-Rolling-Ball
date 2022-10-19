@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SizeChange : MonoBehaviour
 {
@@ -68,6 +69,9 @@ public class SizeChange : MonoBehaviour
             transform.localScale = new Vector3(1, 1, 1);
             return;
         }
+
+        if (SceneManager.GetActiveScene().name.Equals("wyh CubeGame")) return;
+
         if (Input.GetKeyDown(KeyCode.Q))
         {
             // information.GetComponent<InformationScript>().times_QE++;
