@@ -15,7 +15,7 @@ public class SizeChange : MonoBehaviour
 
     private PlayerMovement jump_script;
 
-    // public GameObject information;
+    public GameObject information;
 
     public GameObject sphere;
 
@@ -44,7 +44,7 @@ public class SizeChange : MonoBehaviour
         jumpHigh = false;
         jump_script =
             GameObject.FindWithTag("Player").GetComponent<PlayerMovement>();
-        // information = GameObject.Find("Information");
+        information = GameObject.Find("Information");
 
         for (int i = 0; i < gameObject.transform.childCount; i++)
         {
@@ -74,7 +74,7 @@ public class SizeChange : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            // information.GetComponent<InformationScript>().times_QE++;
+            information.GetComponent<InformationScript>().times_QE++;
             if (!jump_script.isgrounded)
             {
                 return;
@@ -103,7 +103,7 @@ public class SizeChange : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-            // information.GetComponent<InformationScript>().times_QE++;
+            information.GetComponent<InformationScript>().times_QE++;
             if (!jump_script.isgrounded)
             {
                 return;

@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     public string currentScene;
     // public int colorTag;
     // public int worldTag;
-    // [System.NonSerialized] public GameObject information;
+    [System.NonSerialized] public GameObject information;
     [System.NonSerialized] public Vector3 direction;
     public GameObject Camera;
     public float moveForce = 100f;
@@ -53,7 +53,7 @@ public class PlayerMovement : MonoBehaviour
         bool_script = GetComponent<SizeChange>();
         Time.timeScale = 1;
         hasCheckPoint = false;
-        // information = GameObject.Find("Information");
+        information = GameObject.Find("Information");
 
         cubeMass = GetComponent<ChangeItem>().cubeMass;
         Debug.Log(cubeMass);
@@ -86,16 +86,16 @@ public class PlayerMovement : MonoBehaviour
         {
             if (hasCheckPoint == false)
             {
-                // information.GetComponent<InformationScript>().needInitialize = false;
+                information.GetComponent<InformationScript>().needInitialize = false;
                 SceneManager.LoadScene(currentScene);
                 Time.timeScale = 1;
-                // information.GetComponent<InformationScript>().times_reset++;
+                information.GetComponent<InformationScript>().times_reset++;
                 return;
             }
             else
             {
                 gameObject.transform.position = checkPoint.GetComponent<Transform>().position;
-                // information.GetComponent<InformationScript>().times_reset++;
+                information.GetComponent<InformationScript>().times_reset++;
             }
         }
         // Enter the shop
@@ -112,16 +112,16 @@ public class PlayerMovement : MonoBehaviour
         {
             if (hasCheckPoint == false)
             {
-                // information.GetComponent<InformationScript>().needInitialize = false;
+                information.GetComponent<InformationScript>().needInitialize = false;
                 SceneManager.LoadScene(currentScene);
                 Time.timeScale = 1;
-                // information.GetComponent<InformationScript>().times_fall++;
+                information.GetComponent<InformationScript>().times_fall++;
                 return;
             }
             else
             {
                 gameObject.transform.position = checkPoint.GetComponent<Transform>().position;
-                // information.GetComponent<InformationScript>().times_fall++;
+                information.GetComponent<InformationScript>().times_fall++;
             }
         }
 
