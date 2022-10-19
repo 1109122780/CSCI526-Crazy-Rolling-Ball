@@ -42,6 +42,10 @@ public class PlayerMovement : MonoBehaviour
     float originalMass = 0;
     float cubeMass = 0;
 
+    // New Feature: wind area created by pinwheel
+    public bool inWindArea = false;
+    public GameObject windArea;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -143,6 +147,13 @@ public class PlayerMovement : MonoBehaviour
             isgrounded = true;
         }
 
+        // New Feature: wind area created by pinwheel
+        if (other.gameObject.tag == "SpinningBlade")
+        {
+            Destroy(windArea);
+            inWindArea = false;
+        }
+
         Rigidbody rigidbody1 = other.collider.attachedRigidbody;
 
         if (other.gameObject.tag == "MovableBox" && rigidbody1 != null && cube.activeSelf)
@@ -222,6 +233,13 @@ public class PlayerMovement : MonoBehaviour
         float y = Camera.transform.rotation.eulerAngles.y;
         direction = Quaternion.Euler(0, y, 0) * direction;
         moveCharacter(direction);
+
+        // New Feature: wind area created by pinwheel
+        if (windArea & inWindArea)
+        {
+            if (Mathf.Abs(rb.transform.localScale.x - rb.GetComponent<SizeChange>().largeSize) > 0.02)
+                rb.AddForce(windArea.GetComponent<WindArea>().direction * windArea.GetComponent<WindArea>().strength);
+        }
     }
 
     void moveCharacter(Vector3 direction)
@@ -235,5 +253,24 @@ public class PlayerMovement : MonoBehaviour
         //     rb.AddForce(direction*10f);
 
         // rb.MovePosition(rb.position + (direction * speed * Time.fixedDeltaTime));
+    }
+
+    // New Feature: wind area created by pinwheel
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "WindArea")
+        {
+            windArea = other.gameObject;
+            inWindArea = true;
+        }
+    }
+
+    // New Feature: wind area created by pinwheel
+    void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "WindArea")
+        {
+            inWindArea = false;
+        }
     }
 }
