@@ -21,4 +21,15 @@ public class RotateVertical : MonoBehaviour
         Quaternion deltaRotation = Quaternion.Euler(m_EulerAngleVelocity * Time.fixedDeltaTime);
         m_Rigidbody.MoveRotation(m_Rigidbody.rotation * deltaRotation);
     }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            if (Mathf.Abs(collision.gameObject.transform.localScale.x - collision.gameObject.GetComponent<SizeChange>().largeSize) < 0.02)
+            {
+                m_EulerAngleVelocity = new Vector3(0, 0, 0);
+            }
+        }
+    }
 }
