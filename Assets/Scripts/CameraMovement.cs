@@ -14,29 +14,54 @@ public class CameraMovement : MonoBehaviour
     public float limitAngle = 18;
     private float hor,ver,scrollView;
     float x = 0, sc = 10;
+    public Camera catchingCamera = null;
+    // the defaultDistance keep the distance from the camera and the player start at the beginning
+    // the defaultDistance will only change when zoom in and out
+    public float defaultDistance = -10f;
+    public Vector3 relativePostition;
+    public bool initialized = false;
+    //public bool setTheCamera = false;
 
-    public void LateUpdate()
+
+    void Start()
     {
-        Zoom();
-        CameraSet();
+        catchingCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>() as Camera;
+    }
 
-        // RaycastHit hit;
-        // // two remaining problem: 1. m_transsform should be what in our code 2. whether the distance between the
-        // // player change in all different transformation except zoom in and zoom out ?
-        // if (Physics.Linecast(player.position + Vector3.up, m_transsform.position, out hit))
-        // {
-        //     string name = hit.collider.gameObject.tag;
-        //     if (name != "MainCamera")
-        //     {
-        //         //如果射线碰撞的不是相机，那么就取得射线碰撞点到玩家的距离
-        //         float currentDistance = Vector3.Distance(hit.point, player.position);
-        //         //如果射线碰撞点小于玩家与相机本来的距离，就说明角色身后是有东西，为了避免穿墙，就把相机拉近
-        //         if (currentDistance < m_distanceAway)
-        //         {
-        //             m_transsform.position = hit.point;
-        //         }
-        //     }
-        // }
+    public void FixedUpdate()
+    {
+        // initialize the distance and the position after pushing any key
+        // to avoid initialization before the camera be placed into the correct location
+        if(Input.anyKey && initialized == false){
+            defaultDistance = Vector3.Distance(catchingCamera.transform.position, player.position);
+            relativePostition = player.position - catchingCamera.transform.position;
+            initialized = true;
+        }
+        yAxis.position = Vector3.Lerp(yAxis.position,player.position+Vector3.up,Time.fixedDeltaTime*10f);
+        
+        if(initialized == true){
+            Zoom();
+            CameraSet();
+            //Debug.Log("relativePostition" +  relativePostition + "player.position.ToStiring()" + player.position + "catchingCamera.transform.position.ToStiring()" + catchingCamera.transform.position);
+            RaycastHit hit;
+            //player.position - relativePostition indicates the postion of the camera should be
+            if (Physics.Linecast(player.position + Vector3.up, player.position - relativePostition, out hit))
+            {
+                string name = hit.collider.gameObject.tag;
+                if (name != "MainCamera")
+                {
+                    //如果射线碰撞的不是相机，那么就取得射线碰撞点到玩家的距离
+                    float currentDistance = Vector3.Distance(hit.point, player.position);
+                    //如果射线碰撞点小于玩家与相机本来的距离，就说明角色身后是有东西，为了避免穿墙，就把相机拉近
+                    if (currentDistance < defaultDistance)
+                    {
+                        catchingCamera.transform.position = hit.point;
+                    }
+                }
+            }
+
+        }
+
     }
 
     void Zoom()
@@ -47,6 +72,9 @@ public class CameraMovement : MonoBehaviour
             sc -= scrollView * scSpeed;
             sc = Mathf.Clamp(sc, 3, 10);
             zoomAxis.transform.localPosition = new Vector3(0,0, -sc);
+            
+            defaultDistance = Vector3.Distance(catchingCamera.transform.position, player.position);
+            relativePostition = player.position - catchingCamera.transform.position;
         }
 
     }
@@ -65,39 +93,16 @@ public class CameraMovement : MonoBehaviour
                 Quaternion q = Quaternion.identity;
                 q = Quaternion.Euler(new Vector3(x, xAxis.eulerAngles.y,xAxis.eulerAngles.z));
                 xAxis.rotation = Quaternion.Lerp(xAxis.rotation, q, roSpeed*Time.fixedDeltaTime);
-            } 
+            }
+            relativePostition = player.position - catchingCamera.transform.position;
         }
-
-        // //取得相机旋转的角度
-        // float m_wangtedRotationAngel = m_player.transform.eulerAngles.y;
-        // //获取相机移动的高度
-        // float m_wangtedHeight = m_player.transform.position.y + m_distanceUp;
-        // //获得相机当前角度
-        // float m_currentRotationAngle = m_transsform.eulerAngles.y;
-        // //获取相机当前的高度
-        // float m_currentHeight = m_transsform.position.y;
-        // //在一定时间内将当前角度更改为角色面对的角度
-        // m_currentRotationAngle = Mathf.LerpAngle(m_currentRotationAngle, m_wangtedRotationAngel, m_smooth * Time.deltaTime);
-        // //更改当前高度
-        // m_currentHeight = Mathf.Lerp(m_currentHeight, m_wangtedHeight, m_smooth * Time.deltaTime);
-        // //返回一个Y轴旋转玩家当前角度那么多的度数
-        // Quaternion m_currentRotation = Quaternion.Euler(0, m_currentRotationAngle, 0);
-        // //玩家的位置
-        // Vector3 m_position = m_player.transform.position;
-        // //相机位置差不多计算出来了
-        // m_position -= m_currentRotation * Vector3.forward * m_distanceAway;
-        // //将相机应当到达的高度加进应当到达的坐标，这就是相机的新位置
-        // m_position = new Vector3(m_position.x, m_currentHeight, m_position.z);
-        // m_transsform.position = Vector3.Lerp(m_transsform.position, m_position, Time.time);
-        // //注视玩家
-        // m_transsform.LookAt(m_player);
     }
 
 
-    public void FixedUpdate()
-    {
-        yAxis.position = Vector3.Lerp(yAxis.position,player.position+Vector3.up,Time.fixedDeltaTime*10f);
-    }
+    // public void FixedUpdate()
+    // {
+        
+    // }
 
     // public GameObject Target;
     // Vector3 finalOffset;
