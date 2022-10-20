@@ -102,4 +102,18 @@ public class RightRotateDoor : MonoBehaviour
             time += Time.deltaTime * speed;
         }
     }
+
+    private void OnCollisionEnter(Collision coll)
+    {
+        if (coll.gameObject.tag == "Player")
+        {
+            if (Mathf.Abs(coll.gameObject.transform.localScale.x - coll.gameObject.GetComponent<SizeChange>().largeSize) < 0.02)
+            {
+                if (coll.gameObject.transform.localPosition.x < transform.localPosition.x & !isOpen)
+                {
+                    Open(coll.gameObject.transform.position);
+                }
+            }
+        }
+    }
 }
