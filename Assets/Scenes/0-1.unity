@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657815, g: 0.49641192, b: 0.57481617, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -725,6 +725,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 241536284}
   m_CullTransparentMesh: 1
+--- !u!1 &297227759
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 297227761}
+  - component: {fileID: 297227760}
+  m_Layer: 0
+  m_Name: DataAnalyst
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &297227760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 297227759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a625f3d189f324c798c280940659268d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  information: {fileID: 0}
+--- !u!4 &297227761
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 297227759}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.2034836, y: 1.415431, z: 107.27602}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &373435103
 GameObject:
   m_ObjectHideFlags: 0
@@ -2867,8 +2912,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpLock: 0
+  information: {fileID: 0}
   sphere: {fileID: 1604713355}
   cube: {fileID: 1748594579}
+  superJump: 15
   smallSize: 0.5
   normalSize: 1
   largeSize: 1.5
@@ -3228,8 +3275,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpLock: 0
+  information: {fileID: 0}
   sphere: {fileID: 0}
   cube: {fileID: 0}
+  superJump: 15
   smallSize: 0.5
   normalSize: 1
   largeSize: 1.5
@@ -3955,8 +4004,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   win: {fileID: 2114512406}
-  DataAnalyst: {fileID: 0}
+  DataAnalyst: {fileID: 297227759}
   Player: {fileID: 1271469908}
+  information: {fileID: 0}
 --- !u!65 &1890878518
 BoxCollider:
   m_ObjectHideFlags: 0

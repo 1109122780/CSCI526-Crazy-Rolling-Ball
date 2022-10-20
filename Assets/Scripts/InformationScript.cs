@@ -19,7 +19,9 @@ public class InformationScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        DontDestroyOnLoad(gameObject);
+        int numOfInformation = FindObjectsOfType<InformationScript>().Length;
+        if (numOfInformation != 1) Destroy(gameObject);
+        else DontDestroyOnLoad(gameObject);
         playerID = Guid.NewGuid().ToString();
         needInitialize = true;
         score = 150;
