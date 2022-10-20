@@ -15,6 +15,8 @@ public class CameraMovement : MonoBehaviour
     private float hor,ver,scrollView;
     float x = 0, sc = 10;
     public Camera catchingCamera = null;
+    private List<MeshRenderer> obstacleCollider;
+    private MeshRenderer tempRenderer;
     // the defaultDistance keep the distance from the camera and the player start at the beginning
     // the defaultDistance will only change when zoom in and out
     public float defaultDistance = -10f;
@@ -26,9 +28,10 @@ public class CameraMovement : MonoBehaviour
     void Start()
     {
         catchingCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>() as Camera;
+        obstacleCollider = new List<MeshRenderer>();
     }
 
-    public void FixedUpdate()
+    public void LateUpdate()
     {
         // initialize the distance and the position after pushing any key
         // to avoid initialization before the camera be placed into the correct location
@@ -37,31 +40,36 @@ public class CameraMovement : MonoBehaviour
             relativePostition = player.position - catchingCamera.transform.position;
             initialized = true;
         }
-        yAxis.position = Vector3.Lerp(yAxis.position,player.position+Vector3.up,Time.fixedDeltaTime*10f);
         
         if(initialized == true){
             Zoom();
             CameraSet();
+            ColliderDetection();
             //Debug.Log("relativePostition" +  relativePostition + "player.position.ToStiring()" + player.position + "catchingCamera.transform.position.ToStiring()" + catchingCamera.transform.position);
-            RaycastHit hit;
+            // RaycastHit hit;
             //player.position - relativePostition indicates the postion of the camera should be
-            if (Physics.Linecast(player.position + Vector3.up, player.position - relativePostition, out hit))
-            {
-                string name = hit.collider.gameObject.tag;
-                if (name != "MainCamera")
-                {
-                    //如果射线碰撞的不是相机，那么就取得射线碰撞点到玩家的距离
-                    float currentDistance = Vector3.Distance(hit.point, player.position);
-                    //如果射线碰撞点小于玩家与相机本来的距离，就说明角色身后是有东西，为了避免穿墙，就把相机拉近
-                    if (currentDistance < defaultDistance)
-                    {
-                        catchingCamera.transform.position = hit.point;
-                    }
-                }
-            }
+            // if (Physics.Linecast(player.position + Vector3.up, player.position - relativePostition, out hit))
+            // {
+            //     string name = hit.collider.gameObject.tag;
+            //     if (name != "MainCamera")
+            //     {
+            //         //如果射线碰撞的不是相机，那么就取得射线碰撞点到玩家的距离
+            //         float currentDistance = Vector3.Distance(hit.point, player.position);
+            //         //如果射线碰撞点小于玩家与相机本来的距离，就说明角色身后是有东西，为了避免穿墙，就把相机拉近
+            //         if (currentDistance < defaultDistance)
+            //         {
+            //             catchingCamera.transform.position = hit.point;
+            //         }
+            //     }
+            // }
 
         }
 
+    }
+
+    public void FixedUpdate()
+    {
+        yAxis.position = Vector3.Lerp(yAxis.position,player.position+Vector3.up,Time.fixedDeltaTime*10f);
     }
 
     void Zoom()
@@ -70,7 +78,7 @@ public class CameraMovement : MonoBehaviour
         if(scrollView != 0)
         {
             sc -= scrollView * scSpeed;
-            sc = Mathf.Clamp(sc, 3, 10);
+            sc = Mathf.Clamp(sc, 3, 50);
             zoomAxis.transform.localPosition = new Vector3(0,0, -sc);
             
             defaultDistance = Vector3.Distance(catchingCamera.transform.position, player.position);
@@ -97,12 +105,67 @@ public class CameraMovement : MonoBehaviour
             relativePostition = player.position - catchingCamera.transform.position;
         }
     }
+    
+    void ColliderDetection()
+    { 
+        #if UNITY_EDITOR
+        Debug.DrawLine(player.position, transform.position, Color.red);
+        #endif
+        for (int i = 0; i < obstacleCollider.Count; i++)
+        {
+            tempRenderer = obstacleCollider[i];
+            SetMaterialsAlpha(tempRenderer, 1f);
+        }
+        obstacleCollider.Clear();
+        Vector3 tarDir = (player.position - transform.position).normalized;
+        // Debug.DrawLine(tar.position, transform.position, Color.red);
+        float tarDis = Vector3.Distance(player.position, transform.position);
+        RaycastHit[] listHitObj = Physics.RaycastAll(transform.position, tarDir, tarDis);
+        for (int i = 0; i < listHitObj.Length; i++)
+        {
+            Debug.Log(listHitObj[i].collider.name);
+            RaycastHit hit = listHitObj[i];
+            if (hit.transform == player.transform)
+            {
+                continue;
+            }
+        // RaycastHit[] hit;
+        // hit = Physics.RaycastAll(player.position, transform.position);
+        // //  如果碰撞信息数量大于0条
+        // if (hit.Length > 0)
+        // {   // 设置障碍物透明度为0.5
+        //     for (int i = 0; i < hit.Length; i++)
+        //     {
+            tempRenderer = hit.collider.gameObject.GetComponent<MeshRenderer>();
+            obstacleCollider.Add(tempRenderer);
+            SetMaterialsAlpha(tempRenderer, 0.5f);
+            Debug.Log(hit.collider.name);
+        }
+        // }
+    }
+       
+    // 修改障碍物的透明度
+    private void SetMaterialsAlpha(MeshRenderer renderer, float Transpa)
+    {
+        // renderer.material.shader = Shader.Find("Transparent/Diffuse");
+        // renderer.material.color = new Color(renderer.material.color.r, renderer.material.color.g, renderer.material.color.b, Transpa);
+        // 一个游戏物体的某个部分都可以有多个材质球
+        int materialsCount = renderer.materials.Length;
+        for (int i = 0; i < materialsCount; i++)
+        {
+ 
+            // 获取当前材质球颜色
+            Color color = renderer.material.color;
+            // Debug.Log("change color");
+            // 设置透明度（0--1）
+            color.a = Transpa;
+ 
+            // 设置当前材质球颜色（游戏物体上右键SelectShader可以看见属性名字为_Color）
+            renderer.material.SetColor("_Color", color);
+        }
+ 
+    }
 
-
-    // public void FixedUpdate()
-    // {
-        
-    // }
 
     // public GameObject Target;
     // Vector3 finalOffset;

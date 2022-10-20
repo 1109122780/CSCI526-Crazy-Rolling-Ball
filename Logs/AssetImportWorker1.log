@@ -1,30 +1,23 @@
-Unity Editor version:    2021.3.8f1 (b30333d56e81)
-Branch:                  2021.3/staging
-Build type:              Release
-Batch mode:              YES
-macOS version:           Version 12.4 (Build 21F79)
-Darwin version:          21.5.0
-Architecture:            x86_64
-Running under Rosetta:   YES
-Available memory:        16384 MB
 Using pre-set license
-Pro License: YES
+Built from '2021.3/staging' branch; Version is '2021.3.8f1 (b30333d56e81) revision 11731763'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19043) 64bit Professional' Language: 'zh' Physical Memory: 32655 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
 
 COMMAND LINE ARGUMENTS:
-/Applications/Unity/Hub/Editor/2021.3.8f1/Unity.app/Contents/MacOS/Unity
+E:\3.8f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker1
 -projectPath
-/Users/samuelwang/Documents/GitHub/CSCI526-Crazy-Rolling-Ball/CSCI526-Crazy-Rolling-Ball
+E:/CSCI526-Crazy-Rolling-Ball
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-50256
-Successfully changed project path to: /Users/samuelwang/Documents/GitHub/CSCI526-Crazy-Rolling-Ball/CSCI526-Crazy-Rolling-Ball
-/Users/samuelwang/Documents/GitHub/CSCI526-Crazy-Rolling-Ball/CSCI526-Crazy-Rolling-Ball
+3671
+Successfully changed project path to: E:/CSCI526-Crazy-Rolling-Ball
+E:/CSCI526-Crazy-Rolling-Ball
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -54,122 +47,231 @@ Successfully changed project path to: /Users/samuelwang/Documents/GitHub/CSCI526
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 95.98 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 102.06 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.8f1 (b30333d56e81)
-[Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2021.3.8f1/Unity.app/Contents/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path /Users/samuelwang/Documents/GitHub/CSCI526-Crazy-Rolling-Ball/CSCI526-Crazy-Rolling-Ball/Assets
+[Subsystems] Discovering subsystems at path E:/3.8f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path E:/CSCI526-Crazy-Rolling-Ball/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
- preferred device: Apple M1 Pro (high power)
-Metal devices available: 1
-0: Apple M1 Pro (high power)
-Using device Apple M1 Pro (high power)
-Initializing Metal device caps: Apple M1 Pro
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3070 (ID=0x2484)
+    Vendor:   NVIDIA
+    VRAM:     8043 MB
+    Driver:   30.0.15.1215
 Initialize mono
-Mono path[0] = '/Applications/Unity/Hub/Editor/2021.3.8f1/Unity.app/Contents/Managed'
-Mono path[1] = '/Applications/Unity/Hub/Editor/2021.3.8f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit-macos'
-Mono config path = '/Applications/Unity/Hub/Editor/2021.3.8f1/Unity.app/Contents/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56102
+Mono path[0] = 'E:/3.8f1/Editor/Data/Managed'
+Mono path[1] = 'E:/3.8f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'E:/3.8f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56036
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: /Applications/Unity/Hub/Editor/2021.3.8f1/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
-Register platform support module: /Applications/Unity/Hub/Editor/2021.3.8f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
-Registered in 0.000619 seconds.
-Native extension for OSXStandalone target not found
+Register platform support module: E:/3.8f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: E:/3.8f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002609 seconds.
+Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 97.84 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 92.60 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.500 seconds
+- Completed reload, in  0.565 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1501ms)
-		BeginReloadAssembly (156ms)
+	ReloadAssembly (565ms)
+		BeginReloadAssembly (80ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (3ms)
-		EndReloadAssembly (1097ms)
-			LoadAssemblies (153ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (398ms)
+			LoadAssemblies (80ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (139ms)
+			SetupTypeCache (79ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (39ms)
-			SetupLoadedEditorAssemblies (767ms)
+			RebuildScriptCaches (22ms)
+			SetupLoadedEditorAssemblies (254ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (18ms)
+				InitializePlatformSupportModulesInManaged (6ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (98ms)
-				BeforeProcessingInitializeOnLoad (3ms)
-				ProcessInitializeOnLoadAttributes (478ms)
-				ProcessInitializeOnLoadMethodAttributes (169ms)
+				RefreshPlugins (93ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (113ms)
+				ProcessInitializeOnLoadMethodAttributes (41ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.005516 seconds.
+Registered in 0.005508 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image /Users/samuelwang/Documents/GitHub/CSCI526-Crazy-Rolling-Ball/CSCI526-Crazy-Rolling-Ball/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image /Users/samuelwang/Documents/GitHub/CSCI526-Crazy-Rolling-Ball/CSCI526-Crazy-Rolling-Ball/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
-Native extension for OSXStandalone target not found
+Symbol file LoadedFromMemory doesn't match image E:\CSCI526-Crazy-Rolling-Ball\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image E:\CSCI526-Crazy-Rolling-Ball\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.68 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 1.50 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.521 seconds
+- Completed reload, in  0.893 seconds
 Domain Reload Profiling:
-	ReloadAssembly (2524ms)
-		BeginReloadAssembly (231ms)
+	ReloadAssembly (893ms)
+		BeginReloadAssembly (104ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (37ms)
+			DisableScriptedObjects (5ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (30ms)
-		EndReloadAssembly (1993ms)
-			LoadAssemblies (138ms)
+			CreateAndSetChildDomain (21ms)
+		EndReloadAssembly (700ms)
+			LoadAssemblies (92ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (351ms)
+			SetupTypeCache (209ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (70ms)
-			SetupLoadedEditorAssemblies (1259ms)
+			RebuildScriptCaches (47ms)
+			SetupLoadedEditorAssemblies (324ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (16ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (135ms)
-				ProcessInitializeOnLoadAttributes (983ms)
-				ProcessInitializeOnLoadMethodAttributes (121ms)
-				AfterProcessingInitializeOnLoad (1ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (78ms)
+				ProcessInitializeOnLoadAttributes (212ms)
+				ProcessInitializeOnLoadMethodAttributes (25ms)
+				AfterProcessingInitializeOnLoad (3ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (12ms)
+			AwakeInstancesAfterBackupRestoration (11ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launching external process: /Applications/Unity/Hub/Editor/2021.3.8f1/Unity.app/Contents/Tools/UnityShaderCompiler
-Launched and connected shader compiler UnityShaderCompiler after 0.07 seconds
-Refreshing native plugins compatible for Editor in 0.71 ms, found 2 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
+Refreshing native plugins compatible for Editor in 1.97 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3855 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 28 unused Assets / (115.3 KB). Loaded Objects now: 4318.
-Memory consumption went from 260.2 MB to 260.1 MB.
-Total: 3.306208 ms (FindLiveObjects: 0.231875 ms CreateObjectMapping: 0.104500 ms MarkObjects: 2.820875 ms  DeleteObjects: 0.147917 ms)
+Unloading 27 unused Assets / (137.2 KB). Loaded Objects now: 4320.
+Memory consumption went from 139.5 MB to 139.3 MB.
+Total: 3.510100 ms (FindLiveObjects: 0.327000 ms CreateObjectMapping: 0.277100 ms MarkObjects: 2.724500 ms  DeleteObjects: 0.180600 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 429882.154744 seconds.
-  path: Assets/Materials/Player&Wall.physicMaterial
-  artifactKey: Guid(406a6bfd9cf68f544b4b19184ad19e50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Player&Wall.physicMaterial using Guid(406a6bfd9cf68f544b4b19184ad19e50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4add7189874044758c13f84c60c52998') in 0.155659 seconds 
+  Time since last request: 489350.012989 seconds.
+  path: Assets/PBR Material Bundle Vol1/Ultimate Wood Materials/Materials/mat_Wood_Plank_2.mat
+  artifactKey: Guid(2fc2cb63c0bd47e4795fb1cc29aa6ccf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PBR Material Bundle Vol1/Ultimate Wood Materials/Materials/mat_Wood_Plank_2.mat using Guid(2fc2cb63c0bd47e4795fb1cc29aa6ccf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '945902abc6a8d156c1d98aa96998b268') in 0.143440 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/PBR Material Bundle Vol1/Ultimate Material Pack 1-2/Material/Wood/mat_wood_floor_red_new.mat
+  artifactKey: Guid(1f442455de51b4d4b9fe48a9b425f16b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PBR Material Bundle Vol1/Ultimate Material Pack 1-2/Material/Wood/mat_wood_floor_red_new.mat using Guid(1f442455de51b4d4b9fe48a9b425f16b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b61ae0701f8f598bd17d0c722830ea4') in 0.021828 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/PBR Material Bundle Vol1/Ultimate Wood Materials/Materials/mat_Wood_log_3.mat
+  artifactKey: Guid(82a404034f10de24387ed1f01cf28b7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PBR Material Bundle Vol1/Ultimate Wood Materials/Materials/mat_Wood_log_3.mat using Guid(82a404034f10de24387ed1f01cf28b7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0f4621de02870a69e607985353ba47c') in 0.019799 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/PBR Material Bundle Vol1/Ultimate Material Pack 1-2/Material/Wood/mat_wood_floor_modern_used.mat
+  artifactKey: Guid(9ea7a263f5dd6304184cbdc93bb08d16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PBR Material Bundle Vol1/Ultimate Material Pack 1-2/Material/Wood/mat_wood_floor_modern_used.mat using Guid(9ea7a263f5dd6304184cbdc93bb08d16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2e08a2b10b2fd6373d0f260be67af62') in 0.021877 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000054 seconds.
+  path: Assets/PBR Material Bundle Vol1/Ultimate Wood Materials/Materials/mat_Wood_Panel_3.mat
+  artifactKey: Guid(aaec2d7c72700ec468fd2c0414e4d0de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PBR Material Bundle Vol1/Ultimate Wood Materials/Materials/mat_Wood_Panel_3.mat using Guid(aaec2d7c72700ec468fd2c0414e4d0de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68f01b902a14a70b8caee7eb09099540') in 0.018182 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/PBR Material Bundle Vol1/Ultimate Wood Materials/Materials/mat_Wood_Panel_4.mat
+  artifactKey: Guid(2d5d9073af1e48a46aa796d5e1b62f05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PBR Material Bundle Vol1/Ultimate Wood Materials/Materials/mat_Wood_Panel_4.mat using Guid(2d5d9073af1e48a46aa796d5e1b62f05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb278827e028065d22b868b9c186c5fe') in 0.015986 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/PBR Material Bundle Vol1/Ultimate Wood Materials/Materials/mat_Wood_lattice_3.mat
+  artifactKey: Guid(495401cc0661fbb4ba8c7b4f2276f40c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PBR Material Bundle Vol1/Ultimate Wood Materials/Materials/mat_Wood_lattice_3.mat using Guid(495401cc0661fbb4ba8c7b4f2276f40c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f7ee6d9c31e2f82c0c25cc537ea4a23') in 0.219735 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.750553 seconds.
+  path: Assets/PBR Material Bundle Vol1/Ultimate Wood Materials/Materials/mat_wood_10.mat
+  artifactKey: Guid(d5b85f756fe12f447b1e376ad5bf5a04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PBR Material Bundle Vol1/Ultimate Wood Materials/Materials/mat_wood_10.mat using Guid(d5b85f756fe12f447b1e376ad5bf5a04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5ca53381b5502459311a3e0375ba91b') in 0.026011 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/PBR Material Bundle Vol1/Ultimate Material Pack 1-2/Material/Wood/mat_wood_floor_8.mat
+  artifactKey: Guid(bb05d6fe2a1463d4e94f1875dd6eb909) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PBR Material Bundle Vol1/Ultimate Material Pack 1-2/Material/Wood/mat_wood_floor_8.mat using Guid(bb05d6fe2a1463d4e94f1875dd6eb909) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7fe91682e34ce2a9271178d662a9d504') in 0.037549 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005466 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image E:\CSCI526-Crazy-Rolling-Ball\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image E:\CSCI526-Crazy-Rolling-Ball\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.16 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.921 seconds
+Domain Reload Profiling:
+	ReloadAssembly (921ms)
+		BeginReloadAssembly (140ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (44ms)
+		EndReloadAssembly (705ms)
+			LoadAssemblies (98ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (226ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (43ms)
+			SetupLoadedEditorAssemblies (300ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (13ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (57ms)
+				ProcessInitializeOnLoadAttributes (200ms)
+				ProcessInitializeOnLoadMethodAttributes (27ms)
+				AfterProcessingInitializeOnLoad (3ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (13ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.41 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3817 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 20 unused Assets / (105.3 KB). Loaded Objects now: 4363.
+Memory consumption went from 140.7 MB to 140.6 MB.
+Total: 3.313600 ms (FindLiveObjects: 0.363400 ms CreateObjectMapping: 0.244500 ms MarkObjects: 2.602300 ms  DeleteObjects: 0.102800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
