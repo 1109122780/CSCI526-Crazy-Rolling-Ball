@@ -18,13 +18,13 @@ public class pendulumCollider : MonoBehaviour
     // }
     private void OnCollisionStay(Collision other)
     {
-        Debug.Log("while");
+        //Debug.Log("while");
         player.GetComponent<SizeChange>().canChange = false;
     }
 
     private void OnCollisionExit(Collision other)
     {
-        Debug.Log("leave");
+        // Debug.Log("leave");
         player.GetComponent<SizeChange>().canChange = true;
     }
 
