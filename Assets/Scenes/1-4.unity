@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657815, g: 0.49641192, b: 0.57481617, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2101,7 +2101,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 4
+          m_IntArgument: 11
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2777,6 +2777,10 @@ MonoBehaviour:
   roSpeed: 90
   scSpeed: 25
   limitAngle: 18
+  catchingCamera: {fileID: 0}
+  defaultDistance: -10
+  relativePostition: {x: 0, y: 0, z: 0}
+  initialized: 0
 --- !u!1 &967238599
 GameObject:
   m_ObjectHideFlags: 0
@@ -3023,6 +3027,7 @@ MonoBehaviour:
   information: {fileID: 0}
   sphere: {fileID: 1980722329}
   cube: {fileID: 1541711511}
+  superJump: 15
   smallSize: 0.5
   normalSize: 1
   largeSize: 1.5
@@ -5132,6 +5137,7 @@ MonoBehaviour:
   information: {fileID: 0}
   sphere: {fileID: 1980722329}
   cube: {fileID: 1541711511}
+  superJump: 15
   smallSize: 0.5
   normalSize: 1
   largeSize: 1.5
