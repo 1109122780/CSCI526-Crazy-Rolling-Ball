@@ -74,7 +74,7 @@ public class SizeChange : MonoBehaviour
             return;
         }
 
-        if (SceneManager.GetActiveScene().name.Equals("wyh CubeGame")) return;
+        if (SceneManager.GetActiveScene().name.Equals("2-1")) return;
 
         if (Input.GetKeyDown(KeyCode.Q))
         {
