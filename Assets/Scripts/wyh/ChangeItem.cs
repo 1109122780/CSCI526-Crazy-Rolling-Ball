@@ -14,7 +14,7 @@ public class ChangeItem : MonoBehaviour
     private Renderer cubeRend;
     private Renderer sphereRend;
     private Renderer rend;
-    public float cubeMass = 1;
+    public float cubeMass = 3;
     public float sphereMass = 1;
     private float speedChange = 2;
     void Start()
