@@ -266,19 +266,20 @@ public class PlayerMovement : MonoBehaviour
         if (canJump)
         {
             canJump = false;
-            if (bool_script.jumpHigh)
-            {
-                JumpGravity = 550f;
-                rb.velocity =
-                    new Vector3(rb.velocity.x,
-                        JumpGravity * Time.deltaTime,
-                        rb.velocity.z);
-            }
-            else
-            {
-                // jumpSpeed = 6;
-                rb.AddForce(0, jumpSpeed, 0, ForceMode.Impulse);
-            }
+
+            // if (bool_script.jumpHigh)
+            // {
+            //     JumpGravity = 550f;
+            //     rb.velocity =
+            //         new Vector3(rb.velocity.x,
+            //             JumpGravity * Time.deltaTime,
+            //             rb.velocity.z);
+            // }
+            // else
+            // {
+            // jumpSpeed = 6;
+            rb.AddForce(0, jumpSpeed, 0, ForceMode.Impulse);
+            // }
         }
 
         // if(isgrounded && rb.velocity.y == 0)

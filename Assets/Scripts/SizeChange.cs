@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class SizeChange : MonoBehaviour
 {
     // private float timer = 5.0f;
-
     private Vector3 v;
 
     private bool sizeCool;
@@ -21,6 +20,10 @@ public class SizeChange : MonoBehaviour
 
     public GameObject cube;
 
+    public float superJump = 15f;
+
+    private float normalJump;
+
     public float smallSize = 0.5f;
 
     public float normalSize = 1f;
@@ -30,7 +33,6 @@ public class SizeChange : MonoBehaviour
     private float sizeFloat = 0.005f;
 
     // private float positonFloat = 0.005f;
-
     public bool canChange = true;
 
     public int size = 1;
@@ -45,6 +47,8 @@ public class SizeChange : MonoBehaviour
         jump_script =
             GameObject.FindWithTag("Player").GetComponent<PlayerMovement>();
         information = GameObject.Find("Information");
+
+        normalJump = jump_script.jumpSpeed;
 
         for (int i = 0; i < gameObject.transform.childCount; i++)
         {
@@ -98,7 +102,6 @@ public class SizeChange : MonoBehaviour
             }
             size = 1;
             jumpHigh = false;
-
         }
 
         if (Input.GetKeyDown(KeyCode.E))
@@ -111,14 +114,13 @@ public class SizeChange : MonoBehaviour
             if (canChange == false)
             {
                 size = 3;
-
-
             }
             size = 3;
             jumpHigh = true;
         }
         if (size == 1 && transform.localScale.y != normalSize)
         {
+            jump_script.jumpSpeed = normalJump;
             if (transform.localScale.y > normalSize)
             {
                 sizeFloat = 0.005f;
@@ -145,6 +147,7 @@ public class SizeChange : MonoBehaviour
             sizeFloat = 0.005f;
             transform.localScale -=
                 new Vector3(sizeFloat, sizeFloat, sizeFloat);
+            jump_script.jumpSpeed = superJump;
         }
     }
     // Update is called once per frame
