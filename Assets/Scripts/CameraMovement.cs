@@ -16,7 +16,9 @@ public class CameraMovement : MonoBehaviour
     float x = 0, sc = 10;
     public Camera catchingCamera = null;
     private List<MeshRenderer> obstacleCollider;
+    public List<Material> materialBackup;
     private MeshRenderer tempRenderer;
+    private Material tempMaterial;
     // the defaultDistance keep the distance from the camera and the player start at the beginning
     // the defaultDistance will only change when zoom in and out
     public float defaultDistance = -10f;
@@ -29,6 +31,7 @@ public class CameraMovement : MonoBehaviour
     {
         catchingCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>() as Camera;
         obstacleCollider = new List<MeshRenderer>();
+        materialBackup = new List<Material>();
     }
 
     public void LateUpdate()
@@ -114,9 +117,10 @@ public class CameraMovement : MonoBehaviour
         for (int i = 0; i < obstacleCollider.Count; i++)
         {
             tempRenderer = obstacleCollider[i];
-            SetMaterialsAlpha(tempRenderer, 1f);
+            RendererRecover(tempRenderer, 1f);
         }
         obstacleCollider.Clear();
+        materialBackup.Clear();
         Vector3 tarDir = (player.position - transform.position).normalized;
         // Debug.DrawLine(tar.position, transform.position, Color.red);
         float tarDis = Vector3.Distance(player.position, transform.position);
@@ -137,7 +141,9 @@ public class CameraMovement : MonoBehaviour
         //     for (int i = 0; i < hit.Length; i++)
         //     {
             tempRenderer = hit.collider.gameObject.GetComponent<MeshRenderer>();
+            // tempMaterial = hit.collider.gameObject.GetComponent<MeshRenderer>().material;
             obstacleCollider.Add(tempRenderer);
+            // materialBackup.Add(tempMaterial);
             SetMaterialsAlpha(tempRenderer, 0.5f);
             Debug.Log(hit.collider.name);
         }
@@ -145,25 +151,15 @@ public class CameraMovement : MonoBehaviour
     }
        
     // 修改障碍物的透明度
-    private void SetMaterialsAlpha(MeshRenderer renderer, float Transpa)
+    private void SetMaterialsAlpha(MeshRenderer renderer, float a)
     {
-        // renderer.material.shader = Shader.Find("Transparent/Diffuse");
-        // renderer.material.color = new Color(renderer.material.color.r, renderer.material.color.g, renderer.material.color.b, Transpa);
-        // 一个游戏物体的某个部分都可以有多个材质球
-        int materialsCount = renderer.materials.Length;
-        for (int i = 0; i < materialsCount; i++)
-        {
- 
-            // 获取当前材质球颜色
-            Color color = renderer.material.color;
-            // Debug.Log("change color");
-            // 设置透明度（0--1）
-            color.a = Transpa;
- 
-            // 设置当前材质球颜色（游戏物体上右键SelectShader可以看见属性名字为_Color）
-            renderer.material.SetColor("_Color", color);
-        }
- 
+        renderer.material.shader = Shader.Find("Transparent/Diffuse");
+        renderer.material.color = new Color(renderer.material.color.r, renderer.material.color.g, renderer.material.color.b, a);
+    }
+    private void RendererRecover(MeshRenderer renderer, float a)
+    {
+        renderer.material.shader = Shader.Find("Standard");
+        renderer.material.color = new Color(renderer.material.color.r, renderer.material.color.g, renderer.material.color.b, a);
     }
 
 
