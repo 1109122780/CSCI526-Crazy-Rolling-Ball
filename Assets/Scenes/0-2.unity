@@ -3203,11 +3203,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  currentScene: L1
+  currentScene: 0-2
   Camera: {fileID: 1801192890}
   moveForce: 100
   JumpGravity: 300
-  jumpSpeed: 6
+  jumpSpeed: 10
   forceMagnitude: 0
   inWindArea: 0
   windArea: {fileID: 0}
@@ -4311,7 +4311,7 @@ GameObject:
   - component: {fileID: 1801192894}
   - component: {fileID: 1801192893}
   - component: {fileID: 1801192892}
-  - component: {fileID: 1801192891}
+  - component: {fileID: 1801192895}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -4319,30 +4319,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1801192891
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1801192890}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e693e839bb59c4df3939977ea3b124cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  yAxis: {fileID: 323588064}
-  xAxis: {fileID: 414398631}
-  zAxis: {fileID: 1352021182}
-  zoomAxis: {fileID: 1267315871}
-  player: {fileID: 1271469916}
-  roSpeed: 90
-  scSpeed: 25
-  limitAngle: 18
-  catchingCamera: {fileID: 0}
-  defaultDistance: -10
-  relativePostition: {x: 0, y: 0, z: 0}
-  initialized: 0
 --- !u!81 &1801192892
 AudioListener:
   m_ObjectHideFlags: 0
@@ -4409,6 +4385,30 @@ Transform:
   m_Father: {fileID: 1267315871}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1801192895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1801192890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e1eb8e6bd2019e45927b45cb5e65a4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  yAxis: {fileID: 323588064}
+  xAxis: {fileID: 414398631}
+  zAxis: {fileID: 1352021182}
+  zoomAxis: {fileID: 1267315871}
+  player: {fileID: 1271469916}
+  roSpeed: 300
+  scSpeed: 25
+  limitAngle: 18
+  catchingCamera: {fileID: 1801192893}
+  defaultDistance: -10
+  relativePostition: {x: 0, y: 0, z: 0}
+  initialized: 0
 --- !u!1 &1890878515
 GameObject:
   m_ObjectHideFlags: 0

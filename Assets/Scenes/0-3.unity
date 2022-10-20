@@ -2987,7 +2987,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  currentScene: L1
+  currentScene: 0-3
   Camera: {fileID: 1801192890}
   moveForce: 100
   JumpGravity: 300
@@ -4407,7 +4407,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1801192890}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e693e839bb59c4df3939977ea3b124cd, type: 3}
+  m_Script: {fileID: 11500000, guid: 0e1eb8e6bd2019e45927b45cb5e65a4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   yAxis: {fileID: 323588064}
@@ -4415,10 +4415,10 @@ MonoBehaviour:
   zAxis: {fileID: 1352021182}
   zoomAxis: {fileID: 1267315871}
   player: {fileID: 1271469916}
-  roSpeed: 90
+  roSpeed: 300
   scSpeed: 25
   limitAngle: 18
-  catchingCamera: {fileID: 0}
+  catchingCamera: {fileID: 1801192893}
   defaultDistance: -10
   relativePostition: {x: 0, y: 0, z: 0}
   initialized: 0
