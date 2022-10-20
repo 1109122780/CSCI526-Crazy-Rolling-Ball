@@ -1129,7 +1129,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3138167770057594535, guid: ce33f659697f0db45b9d550904dc3566, type: 3}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6740788390136847464, guid: ce33f659697f0db45b9d550904dc3566, type: 3}
       propertyPath: m_Name
@@ -4503,6 +4503,10 @@ MonoBehaviour:
   roSpeed: 90
   scSpeed: 25
   limitAngle: 18
+  catchingCamera: {fileID: 0}
+  defaultDistance: -10
+  relativePostition: {x: 0, y: 0, z: 0}
+  initialized: 0
 --- !u!1 &967238599
 GameObject:
   m_ObjectHideFlags: 0
@@ -5009,6 +5013,7 @@ MonoBehaviour:
   information: {fileID: 0}
   sphere: {fileID: 1980722329}
   cube: {fileID: 1541711511}
+  superJump: 15
   smallSize: 0.5
   normalSize: 1
   largeSize: 1.5
@@ -9741,6 +9746,7 @@ MonoBehaviour:
   information: {fileID: 0}
   sphere: {fileID: 0}
   cube: {fileID: 0}
+  superJump: 15
   smallSize: 0.5
   normalSize: 1
   largeSize: 1.5

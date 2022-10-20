@@ -19,7 +19,7 @@ public class StarScript : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            information.GetComponent<InformationScript>().star++;
+            information.GetComponent<InformationScript>().star += 0.5;
         }
         Destroy(this.gameObject, 0.5f);
     }
