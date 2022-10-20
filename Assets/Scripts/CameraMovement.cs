@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
- 
+
 public class CameraMovement : MonoBehaviour
 {
     public Transform yAxis;
@@ -12,7 +12,7 @@ public class CameraMovement : MonoBehaviour
     public float roSpeed = 90;
     public float scSpeed = 25;
     public float limitAngle = 18;
-    private float hor,ver,scrollView;
+    private float hor, ver, scrollView;
     float x = 0, sc = 10;
     public Camera catchingCamera = null;
     private List<MeshRenderer> obstacleCollider;
@@ -38,13 +38,15 @@ public class CameraMovement : MonoBehaviour
     {
         // initialize the distance and the position after pushing any key
         // to avoid initialization before the camera be placed into the correct location
-        if(Input.anyKey && initialized == false){
+        if (Input.anyKey && initialized == false)
+        {
             defaultDistance = Vector3.Distance(catchingCamera.transform.position, player.position);
             relativePostition = player.position - catchingCamera.transform.position;
             initialized = true;
         }
-        
-        if(initialized == true){
+
+        if (initialized == true)
+        {
             Zoom();
             CameraSet();
             ColliderDetection();
@@ -72,48 +74,49 @@ public class CameraMovement : MonoBehaviour
 
     public void FixedUpdate()
     {
-        yAxis.position = Vector3.Lerp(yAxis.position,player.position+Vector3.up,Time.fixedDeltaTime*10f);
+        yAxis.position = Vector3.Lerp(yAxis.position, player.position + Vector3.up, Time.fixedDeltaTime * 10f);
     }
 
     void Zoom()
     {
         scrollView = Input.GetAxis("Mouse ScrollWheel");
-        if(scrollView != 0)
+        if (scrollView != 0)
         {
             sc -= scrollView * scSpeed;
             sc = Mathf.Clamp(sc, 3, 50);
-            zoomAxis.transform.localPosition = new Vector3(0,0, -sc);
-            
+            zoomAxis.transform.localPosition = new Vector3(0, 0, -sc);
+
             defaultDistance = Vector3.Distance(catchingCamera.transform.position, player.position);
             relativePostition = player.position - catchingCamera.transform.position;
         }
 
     }
 
-    void CameraSet()    
+    void CameraSet()
     {
         hor = Input.GetAxis("Mouse X");
         ver = Input.GetAxis("Mouse Y");
-        if (Input.GetMouseButton(0)){
-            if(hor != 0)
-                yAxis.Rotate(Vector3.up*roSpeed*hor*Time.fixedDeltaTime);
-            if(ver != 0)
+        if (Input.GetMouseButton(0))
+        {
+            if (hor != 0)
+                yAxis.Rotate(Vector3.up * roSpeed * hor * Time.fixedDeltaTime);
+            if (ver != 0)
             {
-                x += -ver*Time.fixedDeltaTime*roSpeed;
-                x = Mathf.Clamp(x,-limitAngle,limitAngle);
+                x += -ver * Time.fixedDeltaTime * roSpeed;
+                x = Mathf.Clamp(x, -limitAngle, limitAngle);
                 Quaternion q = Quaternion.identity;
-                q = Quaternion.Euler(new Vector3(x, xAxis.eulerAngles.y,xAxis.eulerAngles.z));
-                xAxis.rotation = Quaternion.Lerp(xAxis.rotation, q, roSpeed*Time.fixedDeltaTime);
+                q = Quaternion.Euler(new Vector3(x, xAxis.eulerAngles.y, xAxis.eulerAngles.z));
+                xAxis.rotation = Quaternion.Lerp(xAxis.rotation, q, roSpeed * Time.fixedDeltaTime);
             }
             relativePostition = player.position - catchingCamera.transform.position;
         }
     }
-    
+
     void ColliderDetection()
-    { 
-        #if UNITY_EDITOR
+    {
+#if UNITY_EDITOR
         Debug.DrawLine(player.position, transform.position, Color.red);
-        #endif
+#endif
         for (int i = 0; i < obstacleCollider.Count; i++)
         {
             tempRenderer = obstacleCollider[i];
@@ -129,17 +132,17 @@ public class CameraMovement : MonoBehaviour
         {
             Debug.Log(listHitObj[i].collider.name);
             RaycastHit hit = listHitObj[i];
-            if (hit.transform == player.transform)
+            if (hit.transform == player.transform || hit.collider.tag == "Star" || hit.collider.tag == "MovableBox")
             {
                 continue;
             }
-        // RaycastHit[] hit;
-        // hit = Physics.RaycastAll(player.position, transform.position);
-        // //  如果碰撞信息数量大于0条
-        // if (hit.Length > 0)
-        // {   // 设置障碍物透明度为0.5
-        //     for (int i = 0; i < hit.Length; i++)
-        //     {
+            // RaycastHit[] hit;
+            // hit = Physics.RaycastAll(player.position, transform.position);
+            // //  如果碰撞信息数量大于0条
+            // if (hit.Length > 0)
+            // {   // 设置障碍物透明度为0.5
+            //     for (int i = 0; i < hit.Length; i++)
+            //     {
             tempRenderer = hit.collider.gameObject.GetComponent<MeshRenderer>();
             // tempMaterial = hit.collider.gameObject.GetComponent<MeshRenderer>().material;
             obstacleCollider.Add(tempRenderer);
@@ -149,7 +152,7 @@ public class CameraMovement : MonoBehaviour
         }
         // }
     }
-       
+
     // 修改障碍物的透明度
     private void SetMaterialsAlpha(MeshRenderer renderer, float a)
     {
@@ -171,7 +174,7 @@ public class CameraMovement : MonoBehaviour
     // {
     //     finalOffset = transform.position - Target.transform.position;
     // }
- 
+
     // //Update is called once per frame
     // void LateUpdate()
     // {
