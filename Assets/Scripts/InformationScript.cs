@@ -15,7 +15,7 @@ public class InformationScript : MonoBehaviour
     public int timesE;
     public int timesF;
     public float score;
-    public double star;
+    public int star;
     public int shapeChange;
     public List<ShopItem> ShopItemList = new List<ShopItem>();
     // Start is called before the first frame update
