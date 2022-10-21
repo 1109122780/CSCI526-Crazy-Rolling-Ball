@@ -204,7 +204,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // New Feature: wind area created by pinwheel
-        if (other.gameObject.tag == "SpinningBlade")
+        if (other.gameObject.tag == "SpinningBlade" & Mathf.Abs(rb.transform.localScale.x - rb.GetComponent<SizeChange>().largeSize) <= 0.02)
         {
             Destroy(windArea);
             inWindArea = false;
@@ -317,15 +317,17 @@ public class PlayerMovement : MonoBehaviour
         // New Feature: wind area created by pinwheel
         if (windArea & inWindArea)
         {
-            if (
-                Mathf
-                    .Abs(rb.transform.localScale.x -
-                    rb.GetComponent<SizeChange>().largeSize) >
-                0.02
-            )
-                rb
-                    .AddForce(windArea.GetComponent<WindArea>().direction *
-                    windArea.GetComponent<WindArea>().strength);
+            if (Mathf.Abs(rb.transform.localScale.x - rb.GetComponent<SizeChange>().largeSize) > 0.02)
+            {
+                if (Mathf.Abs(rb.transform.localScale.x - rb.GetComponent<SizeChange>().normalSize) <= 0.02)
+                {
+                    rb.AddForce(windArea.GetComponent<WindArea>().horizontal_direction * windArea.GetComponent<WindArea>().strength);
+                } else
+                {
+                    rb.AddForce(windArea.GetComponent<WindArea>().horizontal_direction * windArea.GetComponent<WindArea>().strength);
+                    rb.AddForce(windArea.GetComponent<WindArea>().vertical_direction * windArea.GetComponent<WindArea>().strength);
+                }
+            }
         }
     }
 
