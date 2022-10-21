@@ -132,7 +132,7 @@ public class CameraMovement : MonoBehaviour
         {
             Debug.Log(listHitObj[i].collider.name);
             RaycastHit hit = listHitObj[i];
-            if (hit.transform == player.transform || hit.collider.tag == "Star" || hit.collider.tag == "MovableBox" || hit.collider.tag == "WindArea")
+            if (hit.transform == player.transform || hit.collider.tag == "Star" || hit.collider.tag == "MovableBox" || hit.collider.tag == "WindArea" || hit.collider.tag == "HiddenWall")
             {
                 continue;
             }
