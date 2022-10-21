@@ -14,7 +14,21 @@ public class LoseScript : MonoBehaviour
         information = GameObject.Find("Information");
         Scene scene = SceneManager.GetActiveScene();
         DateTime levelEndTime = DateTime.Now;
-        StartCoroutine(DataAnalyst.GetComponent<DataAnalystScript>().Post(information.GetComponent<InformationScript>().playerID, information.GetComponent<InformationScript>().levelID, scene.name, "False", information.GetComponent<InformationScript>().times_fall.ToString(), information.GetComponent<InformationScript>().times_QE.ToString(), "0", (levelEndTime - information.GetComponent<InformationScript>().levelStartTime).ToString(), information.GetComponent<InformationScript>().star.ToString(), information.GetComponent<InformationScript>().shapeChange.ToString()));
+        StartCoroutine(DataAnalyst.GetComponent<DataAnalystScript>().Post(
+            information.GetComponent<InformationScript>().playerID,
+            information.GetComponent<InformationScript>().levelID,
+            scene.name,
+            "False",
+            "0",
+            information.GetComponent<InformationScript>().timesFall.ToString(),
+            information.GetComponent<InformationScript>().timesQ.ToString(),
+            information.GetComponent<InformationScript>().timesE.ToString(),
+            information.GetComponent<InformationScript>().timesF.ToString(),
+            "0",
+            (levelEndTime - information.GetComponent<InformationScript>().levelStartTime).ToString(),
+            information.GetComponent<InformationScript>().star.ToString(),
+            information.GetComponent<InformationScript>().shapeChange.ToString()
+        ));
     }
 
 }

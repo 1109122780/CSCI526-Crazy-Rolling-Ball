@@ -175,7 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b0d205a0516d4626ae430f241559dab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DataAnalyst: {fileID: 0}
+  DataAnalyst: {fileID: 297227759}
   information: {fileID: 0}
 --- !u!114 &153419216
 MonoBehaviour:
@@ -2280,6 +2280,8 @@ MonoBehaviour:
   pauseMenuUI: {fileID: 2018961054}
   menu: Main Menu
   optionScene: Option Scene
+  information: {fileID: 0}
+  DataAnalyst: {fileID: 0}
 --- !u!114 &1062967660
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2809,6 +2811,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   currentScene: 0-1
+  DataAnalyst: {fileID: 297227759}
   Camera: {fileID: 231205864}
   moveForce: 100
   JumpGravity: 300

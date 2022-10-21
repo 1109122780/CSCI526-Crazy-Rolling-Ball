@@ -26,9 +26,23 @@ public class FinishLine : MonoBehaviour
             Scene scene = SceneManager.GetActiveScene();
             DateTime levelEndTime = DateTime.Now;
             // Record health:
-            // StartCoroutine(DataAnalyst.GetComponent<DataAnalystScript>().Post(information.GetComponent<InformationScript>().playerID, information.GetComponent<InformationScript>().levelID, scene.name, "True", Player.GetComponent<PlayerMovement>().health.ToString(), information.GetComponent<InformationScript>().times_fall.ToString(), information.GetComponent<InformationScript>().times_QE.ToString(), (levelEndTime - information.GetComponent<InformationScript>().levelStartTime).ToString(), information.GetComponent<InformationScript>().star.ToString(), information.GetComponent<InformationScript>().shapeChange.ToString()));
+            // StartCoroutine(DataAnalyst.GetComponent<DataAnalystScript>().Post(information.GetComponent<InformationScript>().playerID, information.GetComponent<InformationScript>().levelID, scene.name, "True", Player.GetComponent<PlayerMovement>().health.ToString(), information.GetComponent<InformationScript>().timesFall.ToString(), information.GetComponent<InformationScript>().timesQ.ToString(), (levelEndTime - information.GetComponent<InformationScript>().levelStartTime).ToString(), information.GetComponent<InformationScript>().star.ToString(), information.GetComponent<InformationScript>().shapeChange.ToString()));
             // Don't record health
-            StartCoroutine(DataAnalyst.GetComponent<DataAnalystScript>().Post(information.GetComponent<InformationScript>().playerID, information.GetComponent<InformationScript>().levelID, scene.name, "1", information.GetComponent<InformationScript>().times_reset.ToString(), information.GetComponent<InformationScript>().times_fall.ToString(), information.GetComponent<InformationScript>().times_QE.ToString(), (levelEndTime - information.GetComponent<InformationScript>().levelStartTime).ToString(), information.GetComponent<InformationScript>().star.ToString(), information.GetComponent<InformationScript>().shapeChange.ToString()));
+            StartCoroutine(DataAnalyst.GetComponent<DataAnalystScript>().Post(
+                information.GetComponent<InformationScript>().playerID,
+                information.GetComponent<InformationScript>().levelID,
+                scene.name,
+                "True",
+                "1",
+                information.GetComponent<InformationScript>().timesReset.ToString(),
+                information.GetComponent<InformationScript>().timesFall.ToString(),
+                information.GetComponent<InformationScript>().timesQ.ToString(),
+                information.GetComponent<InformationScript>().timesE.ToString(),
+                information.GetComponent<InformationScript>().timesF.ToString(),
+                (levelEndTime - information.GetComponent<InformationScript>().levelStartTime).ToString(),
+                information.GetComponent<InformationScript>().star.ToString(),
+                information.GetComponent<InformationScript>().shapeChange.ToString()
+            ));
         }
     }
 

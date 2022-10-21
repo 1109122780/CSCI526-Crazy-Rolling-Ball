@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657815, g: 0.49641192, b: 0.57481617, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2968,6 +2968,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   currentScene: 0-4
+  DataAnalyst: {fileID: 967238599}
   Camera: {fileID: 2066724561}
   moveForce: 100
   JumpGravity: 500
@@ -5050,6 +5051,8 @@ MonoBehaviour:
   pauseMenuUI: {fileID: 342822740}
   menu: Main Menu
   optionScene: Option Scene
+  information: {fileID: 0}
+  DataAnalyst: {fileID: 0}
 --- !u!114 &1548628628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6611,6 +6614,7 @@ MonoBehaviour:
   scSpeed: 25
   limitAngle: 18
   catchingCamera: {fileID: 2066724565}
+  materialBackup: []
   defaultDistance: -10
   relativePostition: {x: 0, y: 0, z: 0}
   initialized: 0

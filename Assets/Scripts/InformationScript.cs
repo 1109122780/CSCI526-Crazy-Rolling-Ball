@@ -9,9 +9,11 @@ public class InformationScript : MonoBehaviour
     public string levelID;
     public DateTime levelStartTime;
     public Boolean needInitialize;
-    public int times_reset;
-    public int times_fall;
-    public int times_QE;
+    public int timesReset;
+    public int timesFall;
+    public int timesQ;
+    public int timesE;
+    public int timesF;
     public float score;
     public double star;
     public int shapeChange;

@@ -78,7 +78,6 @@ public class SizeChange : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            information.GetComponent<InformationScript>().times_QE++;
             if (!jump_script.isgrounded)
             {
                 return;
@@ -87,6 +86,7 @@ public class SizeChange : MonoBehaviour
             {
                 return;
             }
+            information.GetComponent<InformationScript>().timesQ++;
             size = 2;
             jumpHigh = false;
         }
@@ -100,13 +100,13 @@ public class SizeChange : MonoBehaviour
             {
                 return;
             }
+            information.GetComponent<InformationScript>().timesF++;
             size = 1;
             jumpHigh = false;
         }
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-            information.GetComponent<InformationScript>().times_QE++;
             if (!jump_script.isgrounded)
             {
                 return;
@@ -115,6 +115,7 @@ public class SizeChange : MonoBehaviour
             {
                 size = 3;
             }
+            information.GetComponent<InformationScript>().timesE++;
             size = 3;
             jumpHigh = true;
         }
@@ -160,7 +161,7 @@ public class SizeChange : MonoBehaviour
     //         return;
     //     }
     //     if (Input.GetKeyDown(KeyCode.Q) & (jump_script.worldTag == 1 || jump_script.inTest)) {
-    //         // information.GetComponent<InformationScript>().times_QE++;
+    //         // information.GetComponent<InformationScript>().timesQ++;
     //         if(!jump_script.isgrounded) {
     //             return;
     //         }
@@ -209,7 +210,7 @@ public class SizeChange : MonoBehaviour
     //     }
 
     //     if (Input.GetKeyDown(KeyCode.E) & (jump_script.worldTag == 1 || jump_script.inTest)) {
-    //         // information.GetComponent<InformationScript>().times_QE++;
+    //         // information.GetComponent<InformationScript>().timesQ++;
     //         if(!jump_script.isgrounded) {
     //             return;
     //         }

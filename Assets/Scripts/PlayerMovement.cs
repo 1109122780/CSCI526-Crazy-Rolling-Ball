@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     // public int worldTag;
     [System.NonSerialized]
     public GameObject information;
+    public GameObject DataAnalyst;
 
     [System.NonSerialized]
     public Vector3 direction;
@@ -110,22 +112,40 @@ public class PlayerMovement : MonoBehaviour
             {
                 information.GetComponent<InformationScript>().needInitialize =
                     false;
-                SceneManager.LoadScene (currentScene);
+                SceneManager.LoadScene(currentScene);
                 Time.timeScale = 1;
-                information.GetComponent<InformationScript>().times_reset++;
+                information.GetComponent<InformationScript>().timesReset++;
                 return;
             }
             else
             {
                 gameObject.transform.position =
                     checkPoint.GetComponent<Transform>().position;
-                information.GetComponent<InformationScript>().times_reset++;
+                information.GetComponent<InformationScript>().timesReset++;
             }
         }
 
         // Enter the shop
         if (Input.GetKeyDown(KeyCode.T))
         {
+            Scene scene = SceneManager.GetActiveScene();
+            DateTime levelEndTime = DateTime.Now;
+            StartCoroutine(DataAnalyst.GetComponent<DataAnalystScript>().Post(
+                information.GetComponent<InformationScript>().playerID,
+                information.GetComponent<InformationScript>().levelID,
+                scene.name,
+                "False",
+                "1",
+                information.GetComponent<InformationScript>().timesReset.ToString(),
+                information.GetComponent<InformationScript>().timesFall.ToString(),
+                information.GetComponent<InformationScript>().timesQ.ToString(),
+                information.GetComponent<InformationScript>().timesE.ToString(),
+                information.GetComponent<InformationScript>().timesF.ToString(),
+                (levelEndTime - information.GetComponent<InformationScript>().levelStartTime).ToString(),
+                information.GetComponent<InformationScript>().star.ToString(),
+                information.GetComponent<InformationScript>().shapeChange.ToString()
+            ));
+
             SceneManager.LoadScene("Option Scene");
             Time.timeScale = 1;
             return;
@@ -138,16 +158,16 @@ public class PlayerMovement : MonoBehaviour
             {
                 information.GetComponent<InformationScript>().needInitialize =
                     false;
-                SceneManager.LoadScene (currentScene);
+                SceneManager.LoadScene(currentScene);
                 Time.timeScale = 1;
-                information.GetComponent<InformationScript>().times_fall++;
+                information.GetComponent<InformationScript>().timesFall++;
                 return;
             }
             else
             {
                 gameObject.transform.position =
                     checkPoint.GetComponent<Transform>().position;
-                information.GetComponent<InformationScript>().times_fall++;
+                information.GetComponent<InformationScript>().timesFall++;
             }
         }
 
@@ -186,7 +206,7 @@ public class PlayerMovement : MonoBehaviour
         // New Feature: wind area created by pinwheel
         if (other.gameObject.tag == "SpinningBlade")
         {
-            Destroy (windArea);
+            Destroy(windArea);
             inWindArea = false;
         }
 
@@ -292,7 +312,7 @@ public class PlayerMovement : MonoBehaviour
                 Input.GetAxis("Vertical"));
         float y = Camera.transform.rotation.eulerAngles.y;
         direction = Quaternion.Euler(0, y, 0) * direction;
-        moveCharacter (direction);
+        moveCharacter(direction);
 
         // New Feature: wind area created by pinwheel
         if (windArea & inWindArea)
