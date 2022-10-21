@@ -223,9 +223,11 @@ MonoBehaviour:
   playerID: 
   levelID: 
   needInitialize: 0
-  times_reset: 0
-  times_fall: 0
-  times_QE: 0
+  timesReset: 0
+  timesFall: 0
+  timesQ: 0
+  timesE: 0
+  timesF: 0
   score: 0
   star: 0
   shapeChange: 0
@@ -533,8 +535,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -203}
-  m_SizeDelta: {x: 354.5026, y: 57.1102}
+  m_AnchoredPosition: {x: 0, y: -72}
+  m_SizeDelta: {x: 354.503, y: 107.278}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1215988281
 MonoBehaviour:
@@ -557,19 +559,23 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 4beb055f07aaff244873dec698d0363e, type: 3}
-    m_FontSize: 30
+    m_Font: {fileID: 12800000, guid: 5dd49b3eacc540408c98eee0de38e0f1, type: 3}
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 3
-    m_MaxSize: 40
-    m_Alignment: 0
+    m_MinSize: 2
+    m_MaxSize: 254
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Please play in full screen!
+  m_Text: 'Please play in full screen!
+
+    Pause: Esc
+
+    Return to Menu: T'
 --- !u!222 &1215988282
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -695,7 +701,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -20}
+  m_AnchoredPosition: {x: 0, y: -175}
   m_SizeDelta: {x: 354.50256, y: 57.1102}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2081738737
@@ -711,7 +717,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0.7830189, g: 0.2984336, b: 0.2984336, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -719,19 +725,19 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 4beb055f07aaff244873dec698d0363e, type: 3}
+    m_Font: {fileID: 12800000, guid: 5dd49b3eacc540408c98eee0de38e0f1, type: 3}
     m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 3
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Press ANY KEY to start
+  m_Text: "Press ANY KEY to start\uFF01"
 --- !u!222 &2081738738
 CanvasRenderer:
   m_ObjectHideFlags: 0
