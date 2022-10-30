@@ -78,7 +78,7 @@ public class PlayerMovement : MonoBehaviour
         Time.timeScale = 1;
         hasCheckPoint = false;
         information = GameObject.Find("Information");
-
+        information.GetComponent<InformationScript>().star = 0;
         cubeMass = GetComponent<ChangeItem>().cubeMass;
 
         //Debug.Log(cubeMass);
@@ -106,7 +106,7 @@ public class PlayerMovement : MonoBehaviour
         //     Application.Quit();
         // }
         // Reset game when R is pressed:
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.U))
         {
             if (hasCheckPoint == false)
             {
@@ -125,10 +125,10 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
+        Scene scene = SceneManager.GetActiveScene();
         // Enter the shop
         if (Input.GetKeyDown(KeyCode.T))
         {
-            Scene scene = SceneManager.GetActiveScene();
             DateTime levelEndTime = DateTime.Now;
             StartCoroutine(DataAnalyst.GetComponent<DataAnalystScript>().Post(
                 information.GetComponent<InformationScript>().playerID,
@@ -176,7 +176,9 @@ public class PlayerMovement : MonoBehaviour
             !cube.activeInHierarchy &&
             Input.GetKeyDown(KeyCode.Space) &&
             isgrounded &&
-            GetComponent<SizeChange>().size != 2
+            GetComponent<SizeChange>().size != 2 &&
+            !scene.name.Equals("0-1") &&
+            !scene.name.Equals("0-2")
         )
         {
             if (bool_script.jumpLock)
@@ -197,7 +199,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if (
             other.gameObject.tag == "Ground" ||
-            other.gameObject.tag == "MovableBox"
+            other.gameObject.tag == "MovableBox"||
+            other.gameObject.tag == "Glass"
         )
         {
             isgrounded = true;
@@ -322,7 +325,7 @@ public class PlayerMovement : MonoBehaviour
                 if (Mathf.Abs(rb.transform.localScale.x - rb.GetComponent<SizeChange>().normalSize) <= 0.02)
                 {
                     rb.AddForce(windArea.GetComponent<WindArea>().horizontal_direction * windArea.GetComponent<WindArea>().strength);
-                } else
+                }else if (Mathf.Abs(rb.transform.localScale.x - rb.GetComponent<SizeChange>().smallSize) <= 0.02)
                 {
                     rb.AddForce(windArea.GetComponent<WindArea>().horizontal_direction * windArea.GetComponent<WindArea>().strength);
                     rb.AddForce(windArea.GetComponent<WindArea>().vertical_direction * windArea.GetComponent<WindArea>().strength);
@@ -335,7 +338,7 @@ public class PlayerMovement : MonoBehaviour
     {
         // if(isgrounded && timer <= 20)
         // {
-        rb.AddForce(direction * moveForce);
+        rb.velocity = new Vector3(direction.x* 15, rb.velocity.y, direction.z*15);
         // }
 
         // else

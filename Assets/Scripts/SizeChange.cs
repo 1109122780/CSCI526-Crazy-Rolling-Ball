@@ -74,7 +74,8 @@ public class SizeChange : MonoBehaviour
             return;
         }
 
-        if (SceneManager.GetActiveScene().name.Equals("2-1")) return;
+        string sceneName = SceneManager.GetActiveScene().name;
+        if (sceneName.Equals("0-1") || sceneName.Equals("0-2") || sceneName.Equals("0-3") || sceneName.Equals("2-1")) return;
 
         if (Input.GetKeyDown(KeyCode.Q))
         {
@@ -107,7 +108,7 @@ public class SizeChange : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if (!jump_script.isgrounded)
+            if (!jump_script.isgrounded || sceneName.Equals("0-4"))
             {
                 return;
             }
@@ -119,18 +120,21 @@ public class SizeChange : MonoBehaviour
             size = 3;
             jumpHigh = true;
         }
+    }
+    void FixedUpdate()
+    {
         if (size == 1 && transform.localScale.y != normalSize)
         {
             jump_script.jumpSpeed = normalJump;
             if (transform.localScale.y > normalSize)
             {
-                sizeFloat = 0.005f;
+                sizeFloat = 0.05f;
                 transform.localScale -=
                     new Vector3(sizeFloat, sizeFloat, sizeFloat);
             }
             else
             {
-                sizeFloat = 0.005f;
+                sizeFloat = 0.05f;
                 transform.localScale +=
                     new Vector3(sizeFloat, sizeFloat, sizeFloat);
             }
@@ -138,14 +142,14 @@ public class SizeChange : MonoBehaviour
         if (size == 2 && transform.localScale.y < largeSize)
         {
             jumpHigh = false;
-            sizeFloat = 0.005f;
+            sizeFloat = 0.05f;
             transform.localScale +=
                 new Vector3(sizeFloat, sizeFloat, sizeFloat);
         }
 
         if (size == 3 && transform.localScale.y > smallSize)
         {
-            sizeFloat = 0.005f;
+            sizeFloat = 0.05f;
             transform.localScale -=
                 new Vector3(sizeFloat, sizeFloat, sizeFloat);
             jump_script.jumpSpeed = superJump;
