@@ -103,7 +103,7 @@ public class CameraMovement : MonoBehaviour
             if (ver != 0)
             {
                 x += -ver * Time.fixedDeltaTime * roSpeed;
-                x = Mathf.Clamp(x, -limitAngle, limitAngle);
+                x = Mathf.Clamp(x, -limitAngle, 80);
                 Quaternion q = Quaternion.identity;
                 q = Quaternion.Euler(new Vector3(x, xAxis.eulerAngles.y, xAxis.eulerAngles.z));
                 xAxis.rotation = Quaternion.Lerp(xAxis.rotation, q, roSpeed * Time.fixedDeltaTime);
