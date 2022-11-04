@@ -8,7 +8,7 @@ public class WinPanel : MonoBehaviour
 {
     public Text message;
     public GameObject information;
-    public string optionScene;
+    // public string optionScene;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +30,6 @@ public class WinPanel : MonoBehaviour
 
     public void Exit()
     {
-        SceneManager.LoadScene(optionScene);
+        SceneManager.LoadScene("Level Option Scene");
     }
 }

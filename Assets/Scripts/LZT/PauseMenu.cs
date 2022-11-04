@@ -9,7 +9,7 @@ public class PauseMenu : MonoBehaviour
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
     public string menu;
-    public string optionScene;
+    // public string optionScene;
     public GameObject information;
     public GameObject DataAnalyst;
 
@@ -95,7 +95,8 @@ public class PauseMenu : MonoBehaviour
             information.GetComponent<InformationScript>().star.ToString(),
             information.GetComponent<InformationScript>().shapeChange.ToString()
         ));
-        SceneManager.LoadScene(optionScene);
+        // SceneManager.LoadScene(optionScene);
+        SceneManager.LoadScene("Level Option Scene");
     }
 
     // IEnumerator Wait()

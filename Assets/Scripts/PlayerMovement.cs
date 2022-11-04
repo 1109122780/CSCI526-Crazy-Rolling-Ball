@@ -146,7 +146,7 @@ public class PlayerMovement : MonoBehaviour
                 information.GetComponent<InformationScript>().shapeChange.ToString()
             ));
 
-            SceneManager.LoadScene("Option Scene");
+            SceneManager.LoadScene("Level Option Scene");
             Time.timeScale = 1;
             return;
         }
@@ -199,7 +199,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (
             other.gameObject.tag == "Ground" ||
-            other.gameObject.tag == "MovableBox"||
+            other.gameObject.tag == "MovableBox" ||
             other.gameObject.tag == "Glass"
         )
         {
@@ -325,7 +325,8 @@ public class PlayerMovement : MonoBehaviour
                 if (Mathf.Abs(rb.transform.localScale.x - rb.GetComponent<SizeChange>().normalSize) <= 0.02)
                 {
                     rb.AddForce(windArea.GetComponent<WindArea>().horizontal_direction * windArea.GetComponent<WindArea>().strength);
-                }else if (Mathf.Abs(rb.transform.localScale.x - rb.GetComponent<SizeChange>().smallSize) <= 0.02)
+                }
+                else if (Mathf.Abs(rb.transform.localScale.x - rb.GetComponent<SizeChange>().smallSize) <= 0.02)
                 {
                     rb.AddForce(windArea.GetComponent<WindArea>().horizontal_direction * windArea.GetComponent<WindArea>().strength);
                     rb.AddForce(windArea.GetComponent<WindArea>().vertical_direction * windArea.GetComponent<WindArea>().strength);
@@ -338,7 +339,7 @@ public class PlayerMovement : MonoBehaviour
     {
         // if(isgrounded && timer <= 20)
         // {
-        rb.velocity = new Vector3(direction.x* 15, rb.velocity.y, direction.z*15);
+        rb.velocity = new Vector3(direction.x * 15, rb.velocity.y, direction.z * 15);
         // }
 
         // else
