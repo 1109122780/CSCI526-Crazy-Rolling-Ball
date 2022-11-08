@@ -8,6 +8,7 @@ public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
+    public GameObject OptionMenuUI;
     public string menu;
     // public string optionScene;
     public GameObject information;
@@ -34,7 +35,17 @@ public class PauseMenu : MonoBehaviour
             }
         }
     }
+    public void Option()
+    {
+        pauseMenuUI.SetActive(false);
+        OptionMenuUI.SetActive(true);
+    }
 
+    public void ReturnPause()
+    {
+        pauseMenuUI.SetActive(true);
+        OptionMenuUI.SetActive(false);
+    }
     void Resume()
     {
         pauseMenuUI.SetActive(false);

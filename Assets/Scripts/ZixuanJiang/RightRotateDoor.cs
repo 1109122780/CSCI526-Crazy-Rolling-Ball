@@ -107,7 +107,7 @@ public class RightRotateDoor : MonoBehaviour
     {
         if (coll.gameObject.tag == "Player")
         {
-            if (Mathf.Abs(coll.gameObject.transform.localScale.x - coll.gameObject.GetComponent<SizeChange>().largeSize) < 0.02)
+            if (Mathf.Abs(coll.gameObject.transform.localScale.x - coll.gameObject.GetComponent<SizeChange>().largeSize) < 0.12)
             {
                 if (coll.gameObject.transform.localPosition.x < transform.localPosition.x & !isOpen)
                 {

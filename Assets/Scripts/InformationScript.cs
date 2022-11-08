@@ -56,6 +56,10 @@ public class InformationScript : MonoBehaviour
         StageItemList.Add(new StageItem("Stage 2", Resources.Load<Sprite>("StagePicture/Stage 2") as Sprite));
         LevelItemDict.Add("Stage 2", new List<LevelItem>());
         LevelItemDict["Stage 2"].Add(new LevelItem("2-1"));
+
+        StageItemList.Add(new StageItem("Test Stage", Resources.Load<Sprite>("StagePicture/Test") as Sprite));
+        LevelItemDict.Add("Test Stage", new List<LevelItem>());
+        LevelItemDict["Test Stage"].Add(new LevelItem("Test"));
     }
 }
 

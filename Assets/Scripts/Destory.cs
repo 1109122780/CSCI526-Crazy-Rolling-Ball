@@ -19,7 +19,7 @@ public class Destory : MonoBehaviour
     void OnCollisionEnter(Collision other)
     {
         var size = other.transform.GetComponent<Collider>().bounds.size;
-        if (other.gameObject.tag == "Player" && size.x > 0.5 * change)
+        if (other.gameObject.tag == "Player" && size.x > 1.1f)
         {
             Instantiate(destroy, other.transform.position, Quaternion.identity);
             Destroy(transform.gameObject);

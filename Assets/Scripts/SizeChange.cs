@@ -123,7 +123,7 @@ public class SizeChange : MonoBehaviour
     }
     void FixedUpdate()
     {
-        if (size == 1 && transform.localScale.y != normalSize)
+        if (size == 1 && transform.localScale.y != 1.05f)
         {
             jump_script.jumpSpeed = normalJump;
             if (transform.localScale.y > normalSize)
