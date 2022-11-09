@@ -178,7 +178,10 @@ public class PlayerMovement : MonoBehaviour
             isgrounded &&
             GetComponent<SizeChange>().size != 2 &&
             !scene.name.Equals("0-1") &&
-            !scene.name.Equals("0-2")
+            !scene.name.Equals("0-2") &&
+            !scene.name.Equals("3-1") &&
+            !scene.name.Equals("3-2") &&
+            !scene.name.Equals("3-3")
         )
         {
             if (bool_script.jumpLock)
