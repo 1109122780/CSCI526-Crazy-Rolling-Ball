@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44230872, g: 0.49134666, b: 0.5712238, a: 1}
+  m_IndirectSpecularColor: {r: 0.4423081, g: 0.49134582, b: 0.57122236, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5755,6 +5755,7 @@ GameObject:
   - component: {fileID: 1045036385}
   - component: {fileID: 1045036384}
   - component: {fileID: 1045036383}
+  - component: {fileID: 1045036391}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -5917,6 +5918,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1045036391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1045036382}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1167cc08b2ffe22499328bec3baba55d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Floaters: []
+  UnderWaterDrag: 3
+  UnderWaterAngularDrag: 1
+  AirDrag: 0
+  AirAngularDrag: 0.05
+  FloatingPower: 15
+  WaterHeight: 5
 --- !u!1 &1054495975
 GameObject:
   m_ObjectHideFlags: 0
