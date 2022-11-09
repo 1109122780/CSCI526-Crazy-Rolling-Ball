@@ -6,7 +6,6 @@ public class Destory : MonoBehaviour
 {
     private GameObject destroy;
     private GameObject player;
-    double change = 2;
     // Start is called before the first frame update
     void Start()
     {
