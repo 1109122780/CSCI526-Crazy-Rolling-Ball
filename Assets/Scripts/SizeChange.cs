@@ -39,6 +39,9 @@ public class SizeChange : MonoBehaviour
 
     public bool jumpHigh;
 
+    // Buoyancy script:
+    private BuoySetting buoyancy;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -47,6 +50,9 @@ public class SizeChange : MonoBehaviour
         jump_script =
             GameObject.FindWithTag("Player").GetComponent<PlayerMovement>();
         information = GameObject.Find("Information");
+
+        // get the buoyance script:
+        buoyancy = GameObject.FindWithTag("Player").GetComponent<BuoySetting>();
 
         normalJump = jump_script.jumpSpeed;
 
@@ -77,6 +83,7 @@ public class SizeChange : MonoBehaviour
         string sceneName = SceneManager.GetActiveScene().name;
         if (sceneName.Equals("0-1") || sceneName.Equals("0-2") || sceneName.Equals("0-3") || sceneName.Equals("2-1")) return;
 
+        // if Q is pressed:
         if (Input.GetKeyDown(KeyCode.Q))
         {
             if (!jump_script.isgrounded)
@@ -90,7 +97,12 @@ public class SizeChange : MonoBehaviour
             information.GetComponent<InformationScript>().timesQ++;
             size = 2;
             jumpHigh = false;
+
+            // disable the BuoySetting script on the player to remove the buoyancy (it will sink into water):
+            buoyancy.enabled = false;
         }
+
+        // if F is pressed:
         if (Input.GetKeyDown(KeyCode.F))
         {
             if (!jump_script.isgrounded)
@@ -104,8 +116,12 @@ public class SizeChange : MonoBehaviour
             information.GetComponent<InformationScript>().timesF++;
             size = 1;
             jumpHigh = false;
+
+            // enable the BuoySetting script on the player to have the buoyancy (it will float on the water):
+            buoyancy.enabled = true;
         }
 
+        // if E is pressed:
         if (Input.GetKeyDown(KeyCode.E))
         {
             if (!jump_script.isgrounded || sceneName.Equals("0-4"))
@@ -119,6 +135,9 @@ public class SizeChange : MonoBehaviour
             information.GetComponent<InformationScript>().timesE++;
             size = 3;
             jumpHigh = true;
+
+            // enable the BuoySetting script on the player to have the buoyancy (it will float on the water):
+            buoyancy.enabled = true;
         }
     }
     void FixedUpdate()

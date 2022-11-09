@@ -10,7 +10,7 @@ public class BuoySetting : MonoBehaviour
     public float AirDrag = 0f;
     public float AirAngularDrag = 0.05f;
     public float FloatingPower = 15f;
-    public float WaterHeight = 0f;
+    public float WaterHeight = 5f;
 
     private Rigidbody Rb;
     private GameObject sphere;
@@ -62,6 +62,7 @@ public class BuoySetting : MonoBehaviour
             SwitchState(false);
         }
     }
+
     void SwitchState(bool isUnderwater)
     {
         if (isUnderwater)

@@ -151,8 +151,8 @@ public class PlayerMovement : MonoBehaviour
             return;
         }
 
-        // If dropped the ball, show lose information:
-        if (transform.position.y < -30)
+        // If dropped the ball, reset:
+        if (transform.position.y < -50)
         {
             if (hasCheckPoint == false)
             {
