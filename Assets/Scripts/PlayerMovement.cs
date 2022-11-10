@@ -173,7 +173,7 @@ public class PlayerMovement : MonoBehaviour
 
         // If space key is pressed, we jump:
         if (
-            !cube.activeInHierarchy &&
+            //!cube.activeInHierarchy &&
             Input.GetKeyDown(KeyCode.Space) &&
             isgrounded &&
             GetComponent<SizeChange>().size != 2 &&
@@ -226,14 +226,38 @@ public class PlayerMovement : MonoBehaviour
                 other.gameObject.GetComponent<Renderer>().sharedMaterial
             )
             {
-                Vector3 forceDirection =
-                    other.gameObject.transform.position - transform.position;
-                forceDirection.y = 0;
-                forceDirection.Normalize();
+                //Vector3 forceDirection =
+                //    other.gameObject.transform.position - transform.position;
+
+                ////foreach(ContactPoint hitPos in other.contacts)
+                ////{
+                ////    Debug.Log(hitPos.normal);
+                ////}
+
+                //Debug.Log(other.contacts[0].normal);
+                //// if the cube is above the box, don't move
+                //if (forceDirection.y < 0) return;
+
+                //forceDirection.y = 0;
+                //// Set x direction or z direction to 0
+                //if (Mathf.Abs(forceDirection.x) >= Mathf.Abs(forceDirection.z))
+                //{
+                //    forceDirection.z = 0;
+                //}
+                //else
+                //{
+                //    forceDirection.x = 0;
+                //}
+                //forceDirection.Normalize();
+                Vector3 forceDirection = other.contacts[0].normal * -1;
+                //Debug.Log(forceDirection);
+                //Debug.Log(transform.position);
+                Debug.Log(other.gameObject.name);
                 rigidbody1
                     .AddForceAtPosition(forceDirection * forceMagnitude,
                     transform.position,
                     ForceMode.Force);
+
             }
             else
             {
@@ -254,10 +278,26 @@ public class PlayerMovement : MonoBehaviour
             other.gameObject.GetComponent<Renderer>().sharedMaterial
         )
         {
-            Vector3 forceDirection =
-                other.gameObject.transform.position - transform.position;
-            forceDirection.y = 0;
-            forceDirection.Normalize();
+            //Vector3 forceDirection =
+            //    other.gameObject.transform.position - transform.position;
+            ////Debug.Log(forceDirection);
+            //// if the cube is above the box, don't move
+            //if (forceDirection.y < 0) return;
+
+            //forceDirection.y = 0;
+            //// Set x direction or z direction to 0
+            //if (Mathf.Abs(forceDirection.x) >= Mathf.Abs(forceDirection.z))
+            //{
+            //    forceDirection.z = 0;
+            //} else
+            //{
+            //    forceDirection.x = 0;
+            //}
+            //forceDirection.Normalize();
+            Vector3 forceDirection = other.contacts[0].normal * -1;
+            //Debug.Log(forceDirection);
+            //Debug.Log(transform.position);
+            Debug.Log(other.gameObject.name);
             rigidbody1
                 .AddForceAtPosition(forceDirection * forceMagnitude,
                 transform.position,

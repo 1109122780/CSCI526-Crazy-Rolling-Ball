@@ -30,6 +30,12 @@ public class SizeChange : MonoBehaviour
 
     public float largeSize = 1.5f;
 
+    public float cubeNormalSize = 1f;
+
+    public float cubeHeightMax = 3.5f;
+
+    public float cubeWidthMax = 3.5f;
+
     private float sizeFloat = 0.005f;
 
     // private float positonFloat = 0.005f;
@@ -68,93 +74,224 @@ public class SizeChange : MonoBehaviour
 
     void Update()
     {
-        if (cube.activeInHierarchy)
-        {
-            transform.localScale = new Vector3(1, 1, 1);
-            return;
-        }
+        
 
         string sceneName = SceneManager.GetActiveScene().name;
-        if (sceneName.Equals("0-1") || sceneName.Equals("0-2") || sceneName.Equals("0-3") || sceneName.Equals("2-1")) return;
+        //if (sceneName.Equals("0-1") || sceneName.Equals("0-2") || sceneName.Equals("0-3") || sceneName.Equals("2-1")) return;
+        if (sceneName.Equals("0-1") || sceneName.Equals("0-2") || sceneName.Equals("0-3")) return;
 
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (cube.activeInHierarchy)
         {
-            if (!jump_script.isgrounded)
-            {
-                return;
-            }
-            if (canChange == false)
-            {
-                return;
-            }
-            information.GetComponent<InformationScript>().timesQ++;
-            size = 2;
-            jumpHigh = false;
-        }
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            if (!jump_script.isgrounded)
-            {
-                return;
-            }
-            if (canChange == false)
-            {
-                return;
-            }
-            information.GetComponent<InformationScript>().timesF++;
-            size = 1;
-            jumpHigh = false;
-        }
 
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            if (!jump_script.isgrounded || sceneName.Equals("0-4"))
+            if (Input.GetKeyDown(KeyCode.Q))
             {
-                return;
+                if (!jump_script.isgrounded)
+                {
+                    return;
+                }
+                if (canChange == false)
+                {
+                    return;
+                }
+                information.GetComponent<InformationScript>().timesQ++;
+                size = 2;
+                jumpHigh = false;
             }
-            if (canChange == false)
+            if (Input.GetKeyDown(KeyCode.F))
             {
+                if (!jump_script.isgrounded)
+                {
+                    return;
+                }
+                if (canChange == false)
+                {
+                    return;
+                }
+                information.GetComponent<InformationScript>().timesF++;
+                size = 1;
+                jumpHigh = false;
+            }
+
+            if (Input.GetKeyDown(KeyCode.X))
+            {
+                if (!jump_script.isgrounded || sceneName.Equals("0-4"))
+                {
+                    return;
+                }
+                if (canChange == false)
+                {
+                    size = 3;
+                }
+                information.GetComponent<InformationScript>().timesE++;
                 size = 3;
+                jumpHigh = true;
             }
-            information.GetComponent<InformationScript>().timesE++;
-            size = 3;
-            jumpHigh = true;
+            if (Input.GetKeyDown(KeyCode.Z))
+            {
+                if (!jump_script.isgrounded || sceneName.Equals("0-4"))
+                {
+                    return;
+                }
+                if (canChange == false)
+                {
+                    size = 4;
+                }
+                //information.GetComponent<InformationScript>().timesE++;
+                size = 4;
+            }
+        } else
+        {
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                if (!jump_script.isgrounded)
+                {
+                    return;
+                }
+                if (canChange == false)
+                {
+                    return;
+                }
+                information.GetComponent<InformationScript>().timesQ++;
+                size = 2;
+                jumpHigh = false;
+            }
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                if (!jump_script.isgrounded)
+                {
+                    return;
+                }
+                if (canChange == false)
+                {
+                    return;
+                }
+                information.GetComponent<InformationScript>().timesF++;
+                size = 1;
+                jumpHigh = false;
+            }
+
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                if (!jump_script.isgrounded || sceneName.Equals("0-4"))
+                {
+                    return;
+                }
+                if (canChange == false)
+                {
+                    size = 3;
+                }
+                information.GetComponent<InformationScript>().timesE++;
+                size = 3;
+                jumpHigh = true;
+            }
         }
+
+        
     }
     void FixedUpdate()
     {
-        if (size == 1 && transform.localScale.y != 1.05f)
+        if (cube.activeInHierarchy)
         {
-            jump_script.jumpSpeed = normalJump;
-            if (transform.localScale.y > normalSize)
+            if (size == 1 && transform.localScale.y != 1.05f)
             {
-                sizeFloat = 0.05f;
-                transform.localScale -=
-                    new Vector3(sizeFloat, sizeFloat, sizeFloat);
+                jump_script.jumpSpeed = normalJump;
+                if (transform.localScale.y > cubeNormalSize) makeCubeHigher(false);
+                if (transform.localScale.x > cubeNormalSize) makeCubeWider(false, new Vector3(1, 0, 0));
+                if (transform.localScale.z > cubeNormalSize) makeCubeWider(false, new Vector3(0, 0, 1));
             }
-            else
+            if (size == 3 && transform.localScale.x < cubeWidthMax)
             {
+                makeCubeWider(true, new Vector3(1, 0, 0));
+                if (transform.localScale.y > cubeNormalSize) makeCubeHigher(false);
+                if (transform.localScale.z > cubeNormalSize) makeCubeWider(false, new Vector3(0, 0, 1));
+            }
+
+            if (size == 4 && transform.localScale.z < cubeWidthMax)
+            {
+                makeCubeWider(true, new Vector3(0, 0, 1));
+                if (transform.localScale.y > cubeNormalSize) makeCubeHigher(false);
+                if (transform.localScale.x > cubeNormalSize) makeCubeWider(false, new Vector3(1, 0, 0));
+            }
+
+            if (size == 2 && transform.localScale.y < cubeHeightMax)
+            {
+                jumpHigh = false;
+                makeCubeHigher(true);
+                if (transform.localScale.x > cubeNormalSize) makeCubeWider(false, new Vector3(1, 0, 0));
+                if (transform.localScale.z > cubeNormalSize) makeCubeWider(false, new Vector3(0, 0, 1));
+
+                //jump_script.jumpSpeed = superJump;
+            }
+        } else
+        {
+            if (size == 1 && transform.localScale.y != 1.05f)
+            {
+                jump_script.jumpSpeed = normalJump;
+                if (transform.localScale.y > normalSize)
+                {
+                    sizeFloat = 0.05f;
+                    transform.localScale -=
+                        new Vector3(sizeFloat, sizeFloat, sizeFloat);
+                }
+                else
+                {
+                    sizeFloat = 0.05f;
+                    transform.localScale +=
+                        new Vector3(sizeFloat, sizeFloat, sizeFloat);
+                }
+            }
+            if (size == 2 && transform.localScale.y < largeSize)
+            {
+                jumpHigh = false;
                 sizeFloat = 0.05f;
                 transform.localScale +=
                     new Vector3(sizeFloat, sizeFloat, sizeFloat);
             }
-        }
-        if (size == 2 && transform.localScale.y < largeSize)
-        {
-            jumpHigh = false;
-            sizeFloat = 0.05f;
-            transform.localScale +=
-                new Vector3(sizeFloat, sizeFloat, sizeFloat);
+
+            if (size == 3 && transform.localScale.y > smallSize)
+            {
+                sizeFloat = 0.05f;
+                transform.localScale -=
+                    new Vector3(sizeFloat, sizeFloat, sizeFloat);
+                jump_script.jumpSpeed = superJump;
+            }
         }
 
-        if (size == 3 && transform.localScale.y > smallSize)
+    }
+
+    public void normalize()
+    {
+        transform.localScale = new Vector3(1, 1, 1);
+    }
+
+    private void makeCubeWider(bool wider, Vector3 scaleSize)
+    {
+        sizeFloat = 0.05f;
+        if (wider)
         {
-            sizeFloat = 0.05f;
-            transform.localScale -=
-                new Vector3(sizeFloat, sizeFloat, sizeFloat);
-            jump_script.jumpSpeed = superJump;
+            transform.localScale += sizeFloat * scaleSize;
+                //new Vector3(sizeFloat, 0, 0);
+        } else
+        {
+            transform.localScale -= sizeFloat * scaleSize;
+                //new Vector3(sizeFloat, 0, 0);
         }
     }
+
+    private void makeCubeHigher(bool higher)
+    {
+        sizeFloat = 0.05f;
+        if (higher)
+        {
+            transform.localScale +=
+                new Vector3(0, sizeFloat, 0);
+        } else
+        {
+            transform.localScale -=
+                new Vector3(0, sizeFloat, 0);
+        }
+    }
+
     // Update is called once per frame
     // void Update()
     // {

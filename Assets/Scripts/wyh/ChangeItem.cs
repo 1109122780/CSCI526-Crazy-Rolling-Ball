@@ -74,6 +74,9 @@ public class ChangeItem : MonoBehaviour
     {
         gameObject.GetComponent<PlayerMovement>().speed += speedChange;
         gameObject.GetComponent<Rigidbody>().mass = sphereMass;
+
+        GetComponent<SizeChange>().size = 1;
+        GetComponent<SizeChange>().normalize();
         changeSphereColor();
         cube.SetActive(false);
         //sphere.SetActive(true);
@@ -91,6 +94,8 @@ public class ChangeItem : MonoBehaviour
     {
         gameObject.GetComponent<PlayerMovement>().speed -= speedChange;
         gameObject.GetComponent<Rigidbody>().mass = cubeMass;
+        GetComponent<SizeChange>().size = 1;
+        GetComponent<SizeChange>().normalize();
         changeCubeColor(targetMaterial);
         rb.freezeRotation = true;
         //sphere.SetActive(false);
