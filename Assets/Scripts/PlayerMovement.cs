@@ -151,8 +151,8 @@ public class PlayerMovement : MonoBehaviour
             return;
         }
 
-        // If dropped the ball, show lose information:
-        if (transform.position.y < -30)
+        // If dropped the ball, reset:
+        if (transform.position.y < -50)
         {
             if (hasCheckPoint == false)
             {
@@ -178,7 +178,10 @@ public class PlayerMovement : MonoBehaviour
             isgrounded &&
             GetComponent<SizeChange>().size != 2 &&
             !scene.name.Equals("0-1") &&
-            !scene.name.Equals("0-2")
+            !scene.name.Equals("0-2") &&
+            !scene.name.Equals("3-1") &&
+            !scene.name.Equals("3-2") &&
+            !scene.name.Equals("3-3")
         )
         {
             if (bool_script.jumpLock)
