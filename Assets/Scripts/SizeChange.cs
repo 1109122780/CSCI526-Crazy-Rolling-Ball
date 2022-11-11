@@ -38,6 +38,8 @@ public class SizeChange : MonoBehaviour
 
     private float sizeFloat = 0.005f;
 
+    private BuoySetting buoyancy;
+
     // private float positonFloat = 0.005f;
     public bool canChange = true;
 
@@ -53,7 +55,7 @@ public class SizeChange : MonoBehaviour
         jump_script =
             GameObject.FindWithTag("Player").GetComponent<PlayerMovement>();
         information = GameObject.Find("Information");
-
+        buoyancy = GameObject.FindWithTag("Player").GetComponent<BuoySetting>();
         normalJump = jump_script.jumpSpeed;
 
         for (int i = 0; i < gameObject.transform.childCount; i++)
@@ -96,6 +98,7 @@ public class SizeChange : MonoBehaviour
                 information.GetComponent<InformationScript>().timesQ++;
                 size = 2;
                 jumpHigh = false;
+                buoyancy.enabled = false;
             }
             if (Input.GetKeyDown(KeyCode.F))
             {
@@ -110,6 +113,7 @@ public class SizeChange : MonoBehaviour
                 information.GetComponent<InformationScript>().timesF++;
                 size = 1;
                 jumpHigh = false;
+                buoyancy.enabled = true;
             }
 
             if (Input.GetKeyDown(KeyCode.X))
@@ -125,6 +129,7 @@ public class SizeChange : MonoBehaviour
                 information.GetComponent<InformationScript>().timesE++;
                 size = 3;
                 jumpHigh = true;
+                buoyancy.enabled = true;
             }
             if (Input.GetKeyDown(KeyCode.Z))
             {
@@ -138,6 +143,7 @@ public class SizeChange : MonoBehaviour
                 }
                 //information.GetComponent<InformationScript>().timesE++;
                 size = 4;
+                buoyancy.enabled = true;
             }
         } else
         {
@@ -154,6 +160,7 @@ public class SizeChange : MonoBehaviour
                 information.GetComponent<InformationScript>().timesQ++;
                 size = 2;
                 jumpHigh = false;
+                buoyancy.enabled = false;
             }
             if (Input.GetKeyDown(KeyCode.F))
             {
@@ -168,6 +175,7 @@ public class SizeChange : MonoBehaviour
                 information.GetComponent<InformationScript>().timesF++;
                 size = 1;
                 jumpHigh = false;
+                buoyancy.enabled = true;
             }
 
             if (Input.GetKeyDown(KeyCode.E))
@@ -183,6 +191,7 @@ public class SizeChange : MonoBehaviour
                 information.GetComponent<InformationScript>().timesE++;
                 size = 3;
                 jumpHigh = true;
+                buoyancy.enabled = true;
             }
         }
 

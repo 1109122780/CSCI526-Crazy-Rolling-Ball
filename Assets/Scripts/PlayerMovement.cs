@@ -112,7 +112,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 information.GetComponent<InformationScript>().needInitialize =
                     false;
-                SceneManager.LoadScene(currentScene);
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
                 Time.timeScale = 1;
                 information.GetComponent<InformationScript>().timesReset++;
                 return;
@@ -383,9 +383,12 @@ public class PlayerMovement : MonoBehaviour
     {
         // if(isgrounded && timer <= 20)
         // {
-        rb.velocity = new Vector3(direction.x * 15, rb.velocity.y, direction.z * 15);
+        // rb.velocity = new Vector3(direction.x * 15, rb.velocity.y, direction.z * 15);
         // }
-
+        rb.AddForce(direction*1000f);
+        rb.velocity =new Vector3(Mathf.Clamp(rb.velocity.x, direction.x*-speed, direction.x*speed),
+                rb.velocity.y,
+                Mathf.Clamp(rb.velocity.z, direction.z*-speed, direction.z*speed));
         // else
         //     rb.AddForce(direction*10f);
 
