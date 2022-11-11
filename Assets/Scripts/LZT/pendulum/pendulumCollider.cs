@@ -12,14 +12,22 @@ public class pendulumCollider : MonoBehaviour
         player = GameObject.Find("Player");
     }
 
-    // private void OnCollisionEnter(Collision other)
-    // {
-    //     player.GetComponent<SizeChange>().canChange = false;
-    // }
+    private void OnCollisionEnter(Collision other)
+    {
+        player
+            .GetComponent<Rigidbody>()
+            .AddForce(new Vector3(-500, 300, 0) * 100);
+    }
+
     private void OnCollisionStay(Collision other)
     {
         //Debug.Log("while");
         player.GetComponent<SizeChange>().canChange = false;
+
+        // player
+        //     .GetComponent<Rigidbody>()
+        //     .AddForce(new Vector3(-20, 0, 0) * 1000);
+        //player.GetComponent<Rigidbody>().AddForce(transform.forward * 500);
     }
 
     private void OnCollisionExit(Collision other)
