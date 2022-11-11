@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 117287409}
   - component: {fileID: 117287408}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: CurrentStage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -158,7 +158,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 170.4}
+  m_AnchoredPosition: {x: 0, y: 170.39996}
   m_SizeDelta: {x: 500, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &117287408
@@ -415,6 +415,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   information: {fileID: 0}
+  currentStage: {fileID: 117287408}
   levelItemPrefab: {fileID: 8216374719927998756, guid: 82863479e91ee48f2a3e5e558fe52801, type: 3}
   levelSelect: {fileID: 419322699}
 --- !u!1 &280041219
