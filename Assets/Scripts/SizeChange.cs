@@ -26,7 +26,7 @@ public class SizeChange : MonoBehaviour
 
     public float smallSize = 0.5f;
 
-    public float normalSize = 1f;
+    public float normalSize = 1.05f;
 
     public float largeSize = 1.5f;
 

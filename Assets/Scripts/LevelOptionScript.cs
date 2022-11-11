@@ -9,13 +9,15 @@ using TMPro;
 public class LevelOptionScript : MonoBehaviour
 {
     public GameObject information;
+    public TextMeshProUGUI currentStage;
     [SerializeField] GameObject levelItemPrefab;
     [SerializeField] Transform levelSelect;
     // Start is called before the first frame update
     void Start()
     {
         information = GameObject.Find("Information");
-        foreach (LevelItem levelItem in information.GetComponent<InformationScript>().LevelItemDict[information.GetComponent<InformationScript>().currentStage])
+        currentStage.text = information.GetComponent<InformationScript>().currentStage;
+        foreach (LevelItem levelItem in information.GetComponent<InformationScript>().LevelItemDict[currentStage.text])
         {
             GameObject button = (GameObject)Instantiate(levelItemPrefab);
             button.GetComponent<Button>().onClick.AddListener(ChooseLevel);

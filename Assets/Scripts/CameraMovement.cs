@@ -130,9 +130,9 @@ public class CameraMovement : MonoBehaviour
         RaycastHit[] listHitObj = Physics.RaycastAll(transform.position, tarDir, tarDis);
         for (int i = 0; i < listHitObj.Length; i++)
         {
-            //Debug.Log(listHitObj[i].collider.name);
+            // Debug.Log(listHitObj[i].collider.name);
             RaycastHit hit = listHitObj[i];
-            if (hit.transform == player.transform || hit.collider.tag == "Star" || hit.collider.tag == "MovableBox" || hit.collider.tag == "WindArea" || hit.collider.tag == "HiddenWall"||hit.collider.tag == "Glass"||hit.collider.tag == "Invisible")
+            if (hit.transform == player.transform || hit.collider.tag == "Star" || hit.collider.tag == "MovableBox" || hit.collider.tag == "WindArea" || hit.collider.tag == "HiddenWall" || hit.collider.tag == "Glass" || hit.collider.tag == "Invisible" || hit.collider.tag == "Magnet")
             {
                 continue;
             }
