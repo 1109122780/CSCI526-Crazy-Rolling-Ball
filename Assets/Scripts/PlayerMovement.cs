@@ -210,9 +210,10 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // New Feature: wind area created by pinwheel
-        if (other.gameObject.tag == "SpinningBlade" & Mathf.Abs(rb.transform.localScale.x - rb.GetComponent<SizeChange>().largeSize) <= 0.02)
+        if (other.gameObject.tag == "SpinningBlade" & Mathf.Abs(rb.transform.localScale.x - rb.GetComponent<SizeChange>().largeSize) <= 0.05)
         {
             Destroy(windArea);
+            Destroy(GameObject.Find("AnimatedWind"));
             inWindArea = false;
         }
 
@@ -363,13 +364,13 @@ public class PlayerMovement : MonoBehaviour
         // New Feature: wind area created by pinwheel
         if (windArea & inWindArea)
         {
-            if (Mathf.Abs(rb.transform.localScale.x - rb.GetComponent<SizeChange>().largeSize) > 0.02)
+            if (Mathf.Abs(rb.transform.localScale.x - rb.GetComponent<SizeChange>().largeSize) > 0.05)
             {
-                if (Mathf.Abs(rb.transform.localScale.x - rb.GetComponent<SizeChange>().normalSize) <= 0.02)
+                if (Mathf.Abs(rb.transform.localScale.x - rb.GetComponent<SizeChange>().normalSize) <= 0.05)
                 {
                     rb.AddForce(windArea.GetComponent<WindArea>().horizontal_direction * windArea.GetComponent<WindArea>().strength);
                 }
-                else if (Mathf.Abs(rb.transform.localScale.x - rb.GetComponent<SizeChange>().smallSize) <= 0.02)
+                else if (Mathf.Abs(rb.transform.localScale.x - rb.GetComponent<SizeChange>().smallSize) <= 0.05)
                 {
                     rb.AddForce(windArea.GetComponent<WindArea>().horizontal_direction * windArea.GetComponent<WindArea>().strength);
                     rb.AddForce(windArea.GetComponent<WindArea>().vertical_direction * windArea.GetComponent<WindArea>().strength);

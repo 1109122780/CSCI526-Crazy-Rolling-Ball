@@ -27,7 +27,7 @@ public class RotateVertical : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            if (Mathf.Abs(collision.gameObject.transform.localScale.x - collision.gameObject.GetComponent<SizeChange>().largeSize) < 0.02)
+            if (Mathf.Abs(collision.gameObject.transform.localScale.x - collision.gameObject.GetComponent<SizeChange>().largeSize) <= 0.05)
             {
                 m_EulerAngleVelocity = new Vector3(0, 0, 0);
             }
