@@ -33,9 +33,6 @@ public class InformationScript : MonoBehaviour
         ShopItemList.Add(new ShopItem(0, "IncreaseHealth", 100, 1, Resources.Load<Sprite>("ItemsIcon/Item1") as Sprite));
         ShopItemList.Add(new ShopItem(1, "Invincible", 200, 1, Resources.Load<Sprite>("ItemsIcon/Item2") as Sprite));
 
-        // StageItemList.Add(new StageItem("Tutorial", null, new List<LevelItem>()));
-        // StageItemList.Add(new StageItem("Stage 1", null, new List<LevelItem>()));
-        // StageItemList.Add(new StageItem("Stage 2", null, new List<LevelItem>()));
         StageItemList.Add(new StageItem("Tutorial", Resources.Load<Sprite>("StagePicture/Tutorial") as Sprite));
         LevelItemDict.Add("Tutorial", new List<LevelItem>());
         LevelItemDict["Tutorial"].Add(new LevelItem("0-1"));
@@ -44,33 +41,36 @@ public class InformationScript : MonoBehaviour
         LevelItemDict["Tutorial"].Add(new LevelItem("0-4"));
         LevelItemDict["Tutorial"].Add(new LevelItem("0-5"));
 
-        StageItemList.Add(new StageItem("Stage 1", Resources.Load<Sprite>("StagePicture/Stage 1") as Sprite));
-        LevelItemDict.Add("Stage 1", new List<LevelItem>());
-        LevelItemDict["Stage 1"].Add(new LevelItem("1-1"));
-        LevelItemDict["Stage 1"].Add(new LevelItem("1-1-2"));
-        LevelItemDict["Stage 1"].Add(new LevelItem("1-2"));
-        LevelItemDict["Stage 1"].Add(new LevelItem("1-3"));
-        LevelItemDict["Stage 1"].Add(new LevelItem("1-4"));
-        LevelItemDict["Stage 1"].Add(new LevelItem("1-5"));
-        LevelItemDict["Stage 1"].Add(new LevelItem("1-6"));
-        LevelItemDict["Stage 1"].Add(new LevelItem("1-7"));
+        StageItemList.Add(new StageItem("Pendulum", Resources.Load<Sprite>("StagePicture/Pendulum") as Sprite));
+        LevelItemDict.Add("Pendulum", new List<LevelItem>());
+        LevelItemDict["Pendulum"].Add(new LevelItem("1-1"));
+        LevelItemDict["Pendulum"].Add(new LevelItem("1-2"));
+        LevelItemDict["Pendulum"].Add(new LevelItem("1-3"));
+        LevelItemDict["Pendulum"].Add(new LevelItem("1-4"));
+        LevelItemDict["Pendulum"].Add(new LevelItem("1-5"));
 
-        StageItemList.Add(new StageItem("Stage 2", Resources.Load<Sprite>("StagePicture/Stage 2") as Sprite));
-        LevelItemDict.Add("Stage 2", new List<LevelItem>());
-        LevelItemDict["Stage 2"].Add(new LevelItem("2-1"));
-        LevelItemDict["Stage 2"].Add(new LevelItem("2-2"));
+        StageItemList.Add(new StageItem("Shape Change", Resources.Load<Sprite>("StagePicture/Shape Change") as Sprite));
+        LevelItemDict.Add("Shape Change", new List<LevelItem>());
+        LevelItemDict["Shape Change"].Add(new LevelItem("2-1"));
+        LevelItemDict["Shape Change"].Add(new LevelItem("2-2"));
 
-        StageItemList.Add(new StageItem("Buoyancy", null));
+        StageItemList.Add(new StageItem("Buoyancy", Resources.Load<Sprite>("StagePicture/Buoyancy") as Sprite));
         LevelItemDict.Add("Buoyancy", new List<LevelItem>());
         LevelItemDict["Buoyancy"].Add(new LevelItem("3-1"));
         LevelItemDict["Buoyancy"].Add(new LevelItem("3-2"));
         LevelItemDict["Buoyancy"].Add(new LevelItem("3-3"));
 
-        StageItemList.Add(new StageItem("Magnet", null));
+        StageItemList.Add(new StageItem("Magnet", Resources.Load<Sprite>("StagePicture/Magnet") as Sprite));
         LevelItemDict.Add("Magnet", new List<LevelItem>());
         LevelItemDict["Magnet"].Add(new LevelItem("4-1"));
         LevelItemDict["Magnet"].Add(new LevelItem("4-2"));
-        // LevelItemDict["Buoyancy"].Add(new LevelItem("4-3"));
+
+        StageItemList.Add(new StageItem("Challenge", Resources.Load<Sprite>("StagePicture/Challenge") as Sprite));
+        LevelItemDict.Add("Challenge", new List<LevelItem>());
+        LevelItemDict["Challenge"].Add(new LevelItem("M-1"));
+        LevelItemDict["Challenge"].Add(new LevelItem("M-2"));
+        LevelItemDict["Challenge"].Add(new LevelItem("M-3"));
+        // LevelItemDict["Buoyancy"].Add(new LevelItem("5-3"));
 
         // StageItemList.Add(new StageItem("Test Stage", Resources.Load<Sprite>("StagePicture/Test") as Sprite));
         // LevelItemDict.Add("Test Stage", new List<LevelItem>());
