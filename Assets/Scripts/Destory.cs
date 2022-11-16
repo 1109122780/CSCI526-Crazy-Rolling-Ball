@@ -16,7 +16,11 @@ public class Destory : MonoBehaviour
     // Update is called once per frame
     
     void OnCollisionEnter(Collision other)
-    {
+    {   
+        if(destroy) {
+            Debug.Log("ColliderDestroy found "+ destroy);
+
+        }
         var size = other.transform.GetComponent<Collider>().bounds.size;
         if (other.gameObject.tag == "Player" && size.x > 1.1f)
         {
