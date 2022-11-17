@@ -64,6 +64,7 @@ public class InformationScript : MonoBehaviour
         LevelItemDict.Add("Magnet", new List<LevelItem>());
         LevelItemDict["Magnet"].Add(new LevelItem("4-1"));
         LevelItemDict["Magnet"].Add(new LevelItem("4-2"));
+        LevelItemDict["Magnet"].Add(new LevelItem("4-3"));
 
         StageItemList.Add(new StageItem("WestWorld", Resources.Load<Sprite>("StagePicture/5-1 Great Egpyt") as Sprite));
         LevelItemDict.Add("WestWorld", new List<LevelItem>());

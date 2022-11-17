@@ -43,7 +43,7 @@ public class FinishLine : MonoBehaviour
                 information.GetComponent<InformationScript>().star.ToString(),
                 information.GetComponent<InformationScript>().shapeChange.ToString()
             ));
-            information.GetComponent<InformationScript>().LevelItemDict[information.GetComponent<InformationScript>().currentStage][scene.name[scene.name.Length - 1] - '1'].star = information.GetComponent<InformationScript>().star;
+            information.GetComponent<InformationScript>().LevelItemDict[information.GetComponent<InformationScript>().currentStage][scene.name[scene.name.Length - 1] - '1'].star = Math.Max(information.GetComponent<InformationScript>().star, information.GetComponent<InformationScript>().LevelItemDict[information.GetComponent<InformationScript>().currentStage][scene.name[scene.name.Length - 1] - '1'].star);
             if (information.GetComponent<InformationScript>().star == 3) information.GetComponent<InformationScript>().LevelItemDict[information.GetComponent<InformationScript>().currentStage][scene.name[scene.name.Length - 1] - '1'].trophy = 1;
         }
     }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -76,7 +77,7 @@ public class SizeChange : MonoBehaviour
 
     void Update()
     {
-        
+
 
         string sceneName = SceneManager.GetActiveScene().name;
         //if (sceneName.Equals("0-1") || sceneName.Equals("0-2") || sceneName.Equals("0-3") || sceneName.Equals("2-1")) return;
@@ -145,7 +146,8 @@ public class SizeChange : MonoBehaviour
                 size = 4;
                 buoyancy.enabled = true;
             }
-        } else
+        }
+        else
         {
             if (Input.GetKeyDown(KeyCode.Q))
             {
@@ -173,9 +175,24 @@ public class SizeChange : MonoBehaviour
                     return;
                 }
                 information.GetComponent<InformationScript>().timesF++;
-                size = 1;
-                jumpHigh = false;
-                buoyancy.enabled = true;
+                if (size == 1)
+                {
+                    string stage = sceneName.Split('-')[0];
+                    string level = sceneName.Split('-')[1];
+                    if (Int32.Parse(stage) == 4 && Int32.Parse(level) >= 3)
+                    {
+                        Material positive = Resources.Load<Material>("MagnetMaterials/PlayerColor") as Material;
+                        Material negative = Resources.Load<Material>("MagnetMaterials/NegativePlayerColor") as Material;
+                        if (gameObject.GetComponent<Renderer>().sharedMaterial == positive) gameObject.GetComponent<MeshRenderer>().material = negative;
+                        else gameObject.GetComponent<MeshRenderer>().material = positive;
+                    }
+                }
+                else
+                {
+                    size = 1;
+                    jumpHigh = false;
+                    buoyancy.enabled = true;
+                }
             }
 
             if (Input.GetKeyDown(KeyCode.E))
@@ -194,8 +211,6 @@ public class SizeChange : MonoBehaviour
                 buoyancy.enabled = true;
             }
         }
-
-        
     }
     void FixedUpdate()
     {
@@ -231,7 +246,8 @@ public class SizeChange : MonoBehaviour
 
                 //jump_script.jumpSpeed = superJump;
             }
-        } else
+        }
+        else
         {
             if (size == 1 && transform.localScale.y != 1.05f)
             {
@@ -279,11 +295,12 @@ public class SizeChange : MonoBehaviour
         if (wider)
         {
             transform.localScale += sizeFloat * scaleSize;
-                //new Vector3(sizeFloat, 0, 0);
-        } else
+            //new Vector3(sizeFloat, 0, 0);
+        }
+        else
         {
             transform.localScale -= sizeFloat * scaleSize;
-                //new Vector3(sizeFloat, 0, 0);
+            //new Vector3(sizeFloat, 0, 0);
         }
     }
 
@@ -294,7 +311,8 @@ public class SizeChange : MonoBehaviour
         {
             transform.localScale +=
                 new Vector3(0, sizeFloat, 0);
-        } else
+        }
+        else
         {
             transform.localScale -=
                 new Vector3(0, sizeFloat, 0);
