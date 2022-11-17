@@ -368,12 +368,12 @@ public class PlayerMovement : MonoBehaviour
             {
                 if (Mathf.Abs(rb.transform.localScale.x - rb.GetComponent<SizeChange>().normalSize) <= 0.05)
                 {
-                    rb.AddForce(windArea.GetComponent<WindArea>().horizontal_direction * windArea.GetComponent<WindArea>().strength);
+                    rb.AddForce(windArea.GetComponent<WindArea>().horizontal_direction * windArea.GetComponent<WindArea>().horizontal_strength);
                 }
                 else if (Mathf.Abs(rb.transform.localScale.x - rb.GetComponent<SizeChange>().smallSize) <= 0.05)
                 {
-                    rb.AddForce(windArea.GetComponent<WindArea>().horizontal_direction * windArea.GetComponent<WindArea>().strength);
-                    rb.AddForce(windArea.GetComponent<WindArea>().vertical_direction * windArea.GetComponent<WindArea>().strength);
+                    rb.AddForce(windArea.GetComponent<WindArea>().horizontal_direction * windArea.GetComponent<WindArea>().horizontal_strength);
+                    rb.AddForce(windArea.GetComponent<WindArea>().vertical_direction * windArea.GetComponent<WindArea>().vertical_strength);
                 }
             }
         }
