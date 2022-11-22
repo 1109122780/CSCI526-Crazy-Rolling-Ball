@@ -53,6 +53,7 @@ public class InformationScript : MonoBehaviour
         LevelItemDict.Add("Shape Change", new List<LevelItem>());
         LevelItemDict["Shape Change"].Add(new LevelItem("2-1"));
         LevelItemDict["Shape Change"].Add(new LevelItem("2-2"));
+        LevelItemDict["Shape Change"].Add(new LevelItem("2-3"));
 
         StageItemList.Add(new StageItem("Buoyancy", Resources.Load<Sprite>("StagePicture/Buoyancy") as Sprite));
         LevelItemDict.Add("Buoyancy", new List<LevelItem>());
@@ -66,9 +67,14 @@ public class InformationScript : MonoBehaviour
         LevelItemDict["Magnet"].Add(new LevelItem("4-2"));
         LevelItemDict["Magnet"].Add(new LevelItem("4-3"));
 
-        StageItemList.Add(new StageItem("WestWorld", Resources.Load<Sprite>("StagePicture/5-1 Great Egpyt") as Sprite));
+        StageItemList.Add(new StageItem("WestWorld", Resources.Load<Sprite>("StagePicture/WestWorld") as Sprite));
         LevelItemDict.Add("WestWorld", new List<LevelItem>());
         LevelItemDict["WestWorld"].Add(new LevelItem("5-1"));
+
+        StageItemList.Add(new StageItem("Monster", Resources.Load<Sprite>("StagePicture/Monster") as Sprite));
+        LevelItemDict.Add("Monster", new List<LevelItem>());
+        LevelItemDict["Monster"].Add(new LevelItem("6-1"));
+        LevelItemDict["Monster"].Add(new LevelItem("6-2"));
 
         StageItemList.Add(new StageItem("Challenge", Resources.Load<Sprite>("StagePicture/Challenge") as Sprite));
         LevelItemDict.Add("Challenge", new List<LevelItem>());
