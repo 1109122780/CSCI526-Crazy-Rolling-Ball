@@ -33,9 +33,13 @@ public class SizeChange : MonoBehaviour
 
     public float cubeNormalSize = 1f;
 
+    public float cubeHighWidth = 0.5f;
+
     public float cubeHeightMax = 3.5f;
 
     public float cubeWidthMax = 3.5f;
+
+    public float cubeWideHeight = 0.5f;
 
     private float sizeFloat = 0.005f;
 
@@ -219,30 +223,35 @@ public class SizeChange : MonoBehaviour
             if (size == 1 && transform.localScale.y != 1.05f)
             {
                 jump_script.jumpSpeed = normalJump;
-                if (transform.localScale.y > cubeNormalSize) makeCubeHigher(false);
-                if (transform.localScale.x > cubeNormalSize) makeCubeWider(false, new Vector3(1, 0, 0));
-                if (transform.localScale.z > cubeNormalSize) makeCubeWider(false, new Vector3(0, 0, 1));
+                if (transform.localScale.y > cubeNormalSize + 0.05f) makeCubeHigher(false, new Vector3(0, 2, 0));
+                else if (transform.localScale.y < cubeNormalSize - 0.05f) makeCubeHigher(true, new Vector3(0, 2, 0));
+
+                if (transform.localScale.x > cubeNormalSize + 0.05f) makeCubeWider(false, new Vector3(2, 0, 0));
+                else if (transform.localScale.x < cubeNormalSize - 0.05f) makeCubeWider(true, new Vector3(2, 0, 0));
+
+                if (transform.localScale.z > cubeNormalSize + 0.05f) makeCubeWider(false, new Vector3(0, 0, 2));
+                else if (transform.localScale.z < cubeNormalSize - 0.05f) makeCubeWider(true, new Vector3(0, 0, 2));
             }
             if (size == 3 && transform.localScale.x < cubeWidthMax)
             {
                 makeCubeWider(true, new Vector3(1, 0, 0));
-                if (transform.localScale.y > cubeNormalSize) makeCubeHigher(false);
-                if (transform.localScale.z > cubeNormalSize) makeCubeWider(false, new Vector3(0, 0, 1));
+                if (transform.localScale.y > cubeWideHeight) makeCubeHigher(false, new Vector3(0, 2, 0));
+                if (transform.localScale.z > cubeNormalSize) makeCubeWider(false, new Vector3(0, 0, 2));
             }
 
             if (size == 4 && transform.localScale.z < cubeWidthMax)
             {
                 makeCubeWider(true, new Vector3(0, 0, 1));
-                if (transform.localScale.y > cubeNormalSize) makeCubeHigher(false);
-                if (transform.localScale.x > cubeNormalSize) makeCubeWider(false, new Vector3(1, 0, 0));
+                if (transform.localScale.y > cubeWideHeight) makeCubeHigher(false, new Vector3(0, 2, 0));
+                if (transform.localScale.x > cubeNormalSize) makeCubeWider(false, new Vector3(2, 0, 0));
             }
 
             if (size == 2 && transform.localScale.y < cubeHeightMax)
             {
                 jumpHigh = false;
-                makeCubeHigher(true);
-                if (transform.localScale.x > cubeNormalSize) makeCubeWider(false, new Vector3(1, 0, 0));
-                if (transform.localScale.z > cubeNormalSize) makeCubeWider(false, new Vector3(0, 0, 1));
+                makeCubeHigher(true, new Vector3(0, 1, 0));
+                if (transform.localScale.x > cubeHighWidth) makeCubeWider(false, new Vector3(2, 0, 0));
+                if (transform.localScale.z > cubeHighWidth) makeCubeWider(false, new Vector3(0, 0, 2));
 
                 //jump_script.jumpSpeed = superJump;
             }
@@ -304,18 +313,16 @@ public class SizeChange : MonoBehaviour
         }
     }
 
-    private void makeCubeHigher(bool higher)
+    private void makeCubeHigher(bool higher, Vector3 scaleSize)
     {
         sizeFloat = 0.05f;
         if (higher)
         {
-            transform.localScale +=
-                new Vector3(0, sizeFloat, 0);
+            transform.localScale += sizeFloat * scaleSize;
         }
         else
         {
-            transform.localScale -=
-                new Vector3(0, sizeFloat, 0);
+            transform.localScale -= sizeFloat * scaleSize;
         }
     }
 
