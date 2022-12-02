@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657815, g: 0.49641192, b: 0.57481617, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.5748171, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2294,11 +2294,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 333587524089905050, guid: ce33f659697f0db45b9d550904dc3566, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -40
+      value: -49
       objectReference: {fileID: 0}
     - target: {fileID: 333587524089905050, guid: ce33f659697f0db45b9d550904dc3566, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 25
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 333587524089905050, guid: ce33f659697f0db45b9d550904dc3566, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2335,10 +2335,34 @@ PrefabInstance:
     - target: {fileID: 765389658750099525, guid: ce33f659697f0db45b9d550904dc3566, type: 3}
       propertyPath: StarText
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 128201746}
     - target: {fileID: 3138167770057594535, guid: ce33f659697f0db45b9d550904dc3566, type: 3}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3524115218864076445, guid: ce33f659697f0db45b9d550904dc3566, type: 3}
+      propertyPath: m_Size.x
+      value: 0.3968882
+      objectReference: {fileID: 0}
+    - target: {fileID: 3524115218864076445, guid: ce33f659697f0db45b9d550904dc3566, type: 3}
+      propertyPath: m_Size.y
+      value: 0.5174484
+      objectReference: {fileID: 0}
+    - target: {fileID: 3524115218864076445, guid: ce33f659697f0db45b9d550904dc3566, type: 3}
+      propertyPath: m_Size.z
+      value: 0.36618018
+      objectReference: {fileID: 0}
+    - target: {fileID: 3524115218864076445, guid: ce33f659697f0db45b9d550904dc3566, type: 3}
+      propertyPath: m_Center.x
+      value: -0.008232795
+      objectReference: {fileID: 0}
+    - target: {fileID: 3524115218864076445, guid: ce33f659697f0db45b9d550904dc3566, type: 3}
+      propertyPath: m_Center.y
+      value: 0.027447224
+      objectReference: {fileID: 0}
+    - target: {fileID: 3524115218864076445, guid: ce33f659697f0db45b9d550904dc3566, type: 3}
+      propertyPath: m_Center.z
+      value: 0.007896021
       objectReference: {fileID: 0}
     - target: {fileID: 3524115218864076445, guid: ce33f659697f0db45b9d550904dc3566, type: 3}
       propertyPath: m_IsTrigger
@@ -4786,8 +4810,10 @@ MonoBehaviour:
   normalSize: 1
   largeSize: 1.5
   cubeNormalSize: 1
+  cubeHighWidth: 0.5
   cubeHeightMax: 3.5
   cubeWidthMax: 3.5
+  cubeWideHeight: 0.5
   canChange: 1
   size: 1
   jumpHigh: 0
@@ -5783,7 +5809,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh58376
+  m_Name: pb_Mesh200294
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -16041,7 +16067,7 @@ PrefabInstance:
     - target: {fileID: 765389658750099525, guid: ce33f659697f0db45b9d550904dc3566, type: 3}
       propertyPath: StarText
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1366263465}
     - target: {fileID: 3138167770057594535, guid: ce33f659697f0db45b9d550904dc3566, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -17001,8 +17027,10 @@ MonoBehaviour:
   normalSize: 1
   largeSize: 1.5
   cubeNormalSize: 1
+  cubeHighWidth: 0.5
   cubeHeightMax: 3.5
   cubeWidthMax: 3.5
+  cubeWideHeight: 0.5
   canChange: 1
   size: 1
   jumpHigh: 0
@@ -17091,7 +17119,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh57748
+  m_Name: pb_Mesh199692
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -17408,7 +17436,7 @@ PrefabInstance:
     - target: {fileID: 765389658750099525, guid: ce33f659697f0db45b9d550904dc3566, type: 3}
       propertyPath: StarText
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1366263465}
     - target: {fileID: 3138167770057594535, guid: ce33f659697f0db45b9d550904dc3566, type: 3}
       propertyPath: m_IsTrigger
       value: 1

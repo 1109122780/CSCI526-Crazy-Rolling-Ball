@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657815, g: 0.49641192, b: 0.57481617, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.5748171, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1973,7 +1973,7 @@ PrefabInstance:
     - target: {fileID: 765389658750099525, guid: ce33f659697f0db45b9d550904dc3566, type: 3}
       propertyPath: StarText
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1366263465}
     - target: {fileID: 3138167770057594535, guid: ce33f659697f0db45b9d550904dc3566, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -2801,7 +2801,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Here comes the coil spring!
+  m_text: Here comes the spring box!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
@@ -4683,8 +4683,10 @@ MonoBehaviour:
   normalSize: 1
   largeSize: 1.5
   cubeNormalSize: 1
+  cubeHighWidth: 0.5
   cubeHeightMax: 3.5
   cubeWidthMax: 3.5
+  cubeWideHeight: 0.5
   canChange: 1
   size: 1
   jumpHigh: 0
@@ -5570,8 +5572,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 9.5, y: 15}
-  m_SizeDelta: {x: 6, y: 5}
+  m_AnchoredPosition: {x: 10, y: 15}
+  m_SizeDelta: {x: 12, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1161738615
 MonoBehaviour:
@@ -5593,7 +5595,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: It works just like the seasaw
+  m_text: Step on it, grow big, and become small
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
@@ -5940,7 +5942,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: d13a65c9499b6e447b2811cb6d25ef0c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7597,7 +7599,7 @@ PrefabInstance:
     - target: {fileID: 765389658750099525, guid: ce33f659697f0db45b9d550904dc3566, type: 3}
       propertyPath: StarText
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1366263465}
     - target: {fileID: 3138167770057594535, guid: ce33f659697f0db45b9d550904dc3566, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -8651,8 +8653,10 @@ MonoBehaviour:
   normalSize: 1
   largeSize: 1.5
   cubeNormalSize: 1
+  cubeHighWidth: 0.5
   cubeHeightMax: 3.5
   cubeWidthMax: 3.5
+  cubeWideHeight: 0.5
   canChange: 1
   size: 1
   jumpHigh: 0
@@ -9076,7 +9080,7 @@ PrefabInstance:
     - target: {fileID: 765389658750099525, guid: ce33f659697f0db45b9d550904dc3566, type: 3}
       propertyPath: StarText
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 128201746}
     - target: {fileID: 3138167770057594535, guid: ce33f659697f0db45b9d550904dc3566, type: 3}
       propertyPath: m_IsTrigger
       value: 1
