@@ -12,7 +12,6 @@ public class PlayerMovement : MonoBehaviour
     // public float fallSpeed = -8;
     // public int health = 3;
     // public GameObject lose;
-    public string currentScene;
 
     // public int colorTag;
     // public int worldTag;
@@ -106,13 +105,14 @@ public class PlayerMovement : MonoBehaviour
         //     Application.Quit();
         // }
         // Reset game when R is pressed:
+        Scene scene = SceneManager.GetActiveScene();
         if (Input.GetKeyDown(KeyCode.U))
         {
             if (hasCheckPoint == false)
             {
                 information.GetComponent<InformationScript>().needInitialize =
                     false;
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                SceneManager.LoadScene(scene.name);
                 Time.timeScale = 1;
                 information.GetComponent<InformationScript>().timesReset++;
                 return;
@@ -125,7 +125,6 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        Scene scene = SceneManager.GetActiveScene();
         // Enter the shop
         if (Input.GetKeyDown(KeyCode.T))
         {
@@ -158,7 +157,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 information.GetComponent<InformationScript>().needInitialize =
                     false;
-                SceneManager.LoadScene(currentScene);
+                SceneManager.LoadScene(scene.name);
                 Time.timeScale = 1;
                 information.GetComponent<InformationScript>().timesFall++;
                 return;
